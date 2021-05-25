@@ -1,6 +1,8 @@
 .. toctree::
    :maxdepth: 3
 
+   sinewave.rst
+
 .. _refEDay1:
 
 .. |Ve| replace:: V\ :sub:`e`\
@@ -12,8 +14,9 @@
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
 
+********************************
 Exercises Day 1
-================================
+********************************
 
 We’re going to go through the basic electronics you will need to understand the equivalent circuit of the electrode, below:
 
@@ -29,7 +32,7 @@ We’re going to go through the basic electronics you will need to understand th
     </div>
 
 1.	Using a multimeter
-***************************
+###################################
     A.	Make sure the multimeter has batteries installed and is set to ‘Ω’. Put the red lead in the port marked ‘VmAuA’ and the black one in the port marked COM.
     B.	Use your multimeter to measure any 3 different resistors in the kit. Check whether the resistance values you read correspond to the bands on the resistors. How is your multimeter measuring this resistance?
     C.	Measure the voltage across a battery. What does it mean if you record a negative voltage?
@@ -82,7 +85,7 @@ F.	We can see that digital pin 13 has (LED) written beside it. Attach readout wi
     </div>
 
 2.	Using an oscilloscope
-**************************
+###################################
 A. Your Picoscope comes with two probes, you only need one. Connect it to the ‘A’ port on your oscilloscope.
 B. Set the slider on the probe itself to ‘1x’. Connect your PicoScope to your pc and open up the Picoscope software.
 C. Use the PicoScope to measure the blink signal at the readout wires, as you did with your multimeter. Make sure you play around to find nice X and Y scaling. What shape & amplitude does the signal have?
@@ -124,7 +127,7 @@ F.	Connect your oscilloscope probe to A14 and visualise the signal in your PicoS
     </div>
 
 3. Ohm’s Law
-***************
+###################################
 During this course, we’ll be using a circuit simulator to build our circuits online. This allows us to quickly test our ideas and understanding, and make predictions about what will happen when we build the circuit in real life.
 Ohm’s law describes how potential (V), current (I) and resistance (R) are related:
 
@@ -148,7 +151,7 @@ Right-click on the top wire in the circuit, and then select Edit to display the 
 current in the circuit responds.
 
 4.	Resistors
-********************************************
+###################################
 Here’s another simulation demonstrating Ohm’s law. This time, the current moves from a 5 Volt voltage source (bright green) into ground (grey, earth), across one of two resistors.
 
 .. raw:: html
@@ -164,9 +167,9 @@ A.	Display the voltage and current over both resistors in the ‘scope’ (right
 B.	What will happen to the voltage and current over the left-hand resistor? Double the value in the simulator and see if your predictions were correct.
 
 5.	Voltage Divider
-************************************
+###################################
 In simulator
-################
+***********************************
 When we measure how much voltage is provided by a voltage source (such as a battery, or the output from the Teensy), we always measure it relative to a point that we consider 0V. In a circuit powered by a battery, we consider the negative terminal to be at 0V. If there is a connection to earth, or ground, this is taken as 0V.
 
 Voltage (potential energy) ‘drops’ over each resistor, as potential energy is converted to another form of energy (such as heat or light). In a circuit powered by a 9V battery, all 9V of potential energy from our battery source *must* drop over circuit components, so that we end up back at 0V.
@@ -190,7 +193,8 @@ That means that, in a circuit with multiple resistors in series, the ratio of th
 A.	Using the simulator (here’s an empty full-screen https://tinyurl.com/y477e9qd) build a voltage divider circuit in which you use a battery and two resistors to provide an 800 mV output voltage |Vout|.
 
 On breadboard
-################
+***********************************
+
 We’ll now build the circuit you just designed in real life, using a solderless breadboard.
 
 B.	Use the battery holder and two AA batteries to create a 3V source. Use any two resistors from your kit to build a voltage divider, as shown below. If your multimeter doesn’t fit in the breadboard holes, you can place a short piece of wire at each point you want to measure.
@@ -213,12 +217,12 @@ B.	Use the battery holder and two AA batteries to create a 3V source. Use any tw
   Bonus exercise: Replace one of the resistors to make your output voltage as small as you can get it. What’s the smallest reading you can still pick up with your multimeter? How does this compare to the amplitude of a spike measured in the extracellular space?
 
 6. Capacitors
-******************
+###################################
 
 .. warning:: Always check whether your capacitors are polarised or non-polarised. Polarised capacitors must be used in a specific orientation. Usually, ceramic (the yellow ones in your kit) capacitors are not polarised and you can use them in either direction, whereas tube-shaped electrolytic capacitors (the black and blue ones in your kit) **are** polarised. The negative pin is indicated by a ‘-’ marking, and the positive leg is often longer.
 
 Capacitors, direct current
-################################
+***********************************
 Capacitors are made of two conducting plates, separated by an insulating material that prevents the plates from touching. Charges cannot jump through the insulating layer. Instead, charges collect on one plate, forming an electric field that pushes away similar charges on the opposite plate. This movement of charge is what gives us current flow in the circuit, even though charges cannot flow directly through the capacitor.
 
 .. math::
@@ -262,7 +266,7 @@ C.	In this configuration, you will need to move the + leg of the cap (where the 
 D.	Change the value of the resistor. What does this change in your trace? Can you explain why?
 
 Alternating signal (AC)
-#########################
+***********************************
 So far, we have mostly used resistances and Ohm's law to describe how the circuit resists direct current flow. This is applicable to direct current situations (such as batteries), but the action potentials and LFPs we measure from neurons can go in both directions- they are alternating currents. So, how do resistances and capacitors ‘resist’ alternate current flow?
 Alternating currents have different frequencies. Action potentials cause very fast changes in current (and potential), whereas synaptic inputs and their sums are much slower. We have to make sure the frequencies we are interested in can travel through our recording circuit.
 Here is a demo where an alternating signal increases and decreases in frequency. At the bottom of the page, you can see the wave visualised.
@@ -306,7 +310,7 @@ Where f is the frequency with which the current alternates, and C is the capacit
 When you see a capacitor in a circuit, you know you need to think about the frequency of the signal. Steady direct current has no frequency, so X\ :sub:`c` is infinite: capacitors only pass alternating signals.
 
 Capacitive voltage divider
-###################################
+***********************************
 Because capacitors impede current flow, we can use them to build voltage dividers, just like the resistor divider shown above. Here is an example:
 
 .. raw:: html
@@ -321,7 +325,7 @@ Because capacitors impede current flow, we can use them to build voltage divider
 A.	Try changing the capacitance values C for the first capacitor. How does this change your output voltage?
 
 7. The equivalent circuit of the electrode
-*********************************************
+##############################################
 In the theory handout, we discussed how we can represent an electrode as a circuit containing a resistance and a capacitance. We’ll now build this equivalent circuit in the simulator. We will use this to examine the relationship between |Vec| and |Vin|, i.e., how faithfully the electrode transfers the signal from our neuron to our recording system.
 
 A.	Use the simulator to build the equivalent circuit of the electrode as shown below:
@@ -359,7 +363,8 @@ G.	What is the ratio between |Ce| and |Cs| at the moment? How much of our voltag
 Save your circuit (export as link/text) and let your TA know you are finished.
 
 Acknowledgements
-===============================
+##############################################
+
 Written by:
 
 * Alexandra Leighton
@@ -376,6 +381,6 @@ With material from:
 * Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp.
 
 Licensing
-===============
+##############################################
 
 This work is licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/

@@ -1,6 +1,8 @@
 .. toctree::
    :maxdepth: 3
 
+    Firmata.rst
+
 .. _refEDay3TA:
 
 .. |Ve| replace:: V\ :sub:`e`\
@@ -12,8 +14,9 @@
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
 
+***********************************
 Exercises Day 3 TA
-================================
+***********************************
 
 .. note::
   By the end of day everyone should have EMG working. Signals don't have to be perfect, but movement should be detectable. This day is usually a lot of debugging and going over things that have been covered before, making sure everyone understands what is going on.
@@ -31,7 +34,7 @@ Today we are going to build an EMG circuit! We'll use the electrodes in your kit
     </div>
 
 Electrodes
-***********
+###################################
 .. warning::
 
   Your kit contains surface electrodes that we will use for EMG. These measurements involve attaching yourself to a circuit, so follow these rules to be safe:
@@ -43,7 +46,7 @@ Electrodes
 The electrodes clip onto the cable with three wires. We’ll be using an audio-to-breadboard jack to get the signal from the electrodes into the breadboard.
 
 Instrumentation Amplifier
-**************************
+###################################
 
 `This <https://www.analog.com/media/en/technical-documentation/data-sheets/AD622.pdf>`_ is the datasheet for the instrumentation amplifier in your kit.
 
@@ -57,7 +60,7 @@ Instrumentation Amplifier
 
 
 EMG circuit
-************
+###################################
 .. warning::
   The disposable electrodes in the kit are single-use, so do not attach them until you are sure your circuit is working and that you have the correct position (see below).
 
@@ -115,7 +118,7 @@ Place the measurement and reference electrode very close together, on the part o
 
 
 Streaming data from a microcontroller
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+***********************************
 
 We’re going to start streaming data to the pc, by using our Teensy microcontroller to digitize the analog signals we collect.
 
@@ -131,7 +134,7 @@ D. Connect this to a 'Csv Writer' node to save your signals.
   It should work with just ‘AnalogInput’. It’s nicer to use the ‘CreateArduino’ node and specify the Teensy, this also allows you to set the sampling interval, so you can increase it if the computer is struggling. Use .csvwriter to save signals.
 
 Shifting the signal
-^^^^^^^^^^^^^^^^^^^^^
+***********************************
 The EMG signal is from -3 to +3V, but we can only digitize positive voltages. With a simple trick we can shift the signal up from -3 to 3V exactly into the 0-3V range we want, while still providing the amplifier with a -3 to +3V range.
 
 .. raw:: html
@@ -154,7 +157,7 @@ This voltage divider is not going to mess with our signal, because the signal is
 
 
 Acknowledgements
-===============================
+###################################
 Written by:
 
 * Alexandra Leighton
@@ -170,6 +173,6 @@ With material from:
 * Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for TENSS)
 
 Licensing
-===============
+###################################
 
 This work is licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/

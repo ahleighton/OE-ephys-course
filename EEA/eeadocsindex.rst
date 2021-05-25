@@ -1,5 +1,5 @@
 .. toctree::
-   :hidden:
+   :titlesonly:
 
    safety.rst
    software_requirements.rst
@@ -17,8 +17,13 @@
 
 .. _refeeadocsindex:
 
+*******************************
 EEA Course Documents
 *******************************
+
+Materials for students
+############################
+
 Preparation
 ===================
 :ref:`Software to Download <refeeasoftware>`
@@ -51,7 +56,7 @@ Day 4
 
 
 Versions for teaching/teaching assistants
-*******************************************************************
+###########################################
 (include some teaching notes)
 
 :ref:`Exercises day 1 TA <refEDay1TA>`

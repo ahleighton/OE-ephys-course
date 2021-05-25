@@ -2,8 +2,9 @@
 
 .. _Sinewave:
 
+***********************************
 Sinewave
-============
+***********************************
 
 // Copy this text to a new sketch in the Arduino software (clear the default 'void loop etc first) and save as Sinewave.ino
 

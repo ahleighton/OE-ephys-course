@@ -2,6 +2,7 @@
 
 .. _soldiffamp:
 
+=========================
 Differential Amplifier
 =========================
 .. raw:: html

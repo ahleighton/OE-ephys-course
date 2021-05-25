@@ -3,8 +3,9 @@
 
 .. _refeeasoftware:
 
+***********************************
 Software Requirements
-================================
+***********************************
 
 Download & install the software for the oscilloscope here:
 <https://www.picotech.com/downloads>_

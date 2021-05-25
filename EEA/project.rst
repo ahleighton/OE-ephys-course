@@ -3,8 +3,10 @@
 
 .. _refproject:
 
+***********************************
 Project
-#############
+***********************************
+
 The final exercise is to work on your own project. This can really be about anything
 you find interesting. Possibilities are:
 

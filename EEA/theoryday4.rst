@@ -3,8 +3,9 @@
 
 .. _refTDay4:
 
+***********************************
 Theory Day 4:
-====================================================
+***********************************
 
 Now that we have all the steps of our acquisition system, we can talk about how to digitize our signals and combine multiple datastreams.
 
@@ -20,13 +21,13 @@ Now that we have all the steps of our acquisition system, we can talk about how 
     </div>
 
 Talk: Acquisition and Synchronization
-*****************************************
+###################################
 One of the most common pitfalls in Neuroscience is correctly synchronizing multiple datastreams. How do you know whether your imaging and electrophysiology are aligned in time? How many different clocks do you have on your set up, and which of those can you trust?
 
 `Filipe Carvalho's talk on synchronizing data acquisition <https://youtu.be/F0uwA3RUlB0>`_
 
 Digitization
-****************
+###################################
 The purpose of digitization is to convert amplified signals into digital values. Why do we digitize neural signals? So that we can process and store them.
 First, the output of the amplifier (Vout) should match the digitizer dynamic range. Your analog signal should ‘occupy’, as much as possible, all discrete values in the digitization range. In other words, digitization range should match maximum analog signal. If the dynamic range is too small the signal will saturate, and if it is too large it will decrease effective signal resolution.
 
@@ -63,12 +64,12 @@ In practice, many ADCs still use the same basic idea of using op-amps as compara
 
 Typically AD converters have 12 to 16 bit resolution (4096 to 65536 discrete values) for neural signals, which is usually enough because of the size of the signals we want (spikes etc), and because the thermal noise floor of typical electrodes is similar to the achievable resolution anyway: better digitizers would just measure more of that noise. If you want to read more about that, have a look `here. <http://deuterontech.com/wp-content/uploads/2015/10/Deuteron_Noise_and_Interference.pdf>`_
 
-Acquiring data with Bonsai
-***********************************
+Acquiring and synchronizing data with Bonsai
+###################################
 If you want to use Bonsai to work more on your EMG acquisition, you can find a helpful introduction `here <https://neurogears.org/wustl-2019/worksheets/acquisition/>`_. The most relevant of these exercises are available as a pdf here, :download:`ex_day_4 <../_static/images/EEA/day_4_bonsai.pdf>`, slightly adjusted for this course.
 
 Project
-*********************
+###################################
 The final part of the course is to work on your own project. This can really be about anything
 you find interesting. Possibilities are:
 

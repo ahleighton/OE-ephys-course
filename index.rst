@@ -1,14 +1,15 @@
 .. toctree::
-  :hidden:
+   :titlesonly:
 
-   /EEA/kitlist
-   /EEA/eeadocsindex
-   /EEA/disclaimer_terms_conditions
+   /EEA/kitlist.rst
+   /EEA/eeadocsindex.rst
+   /EEA/disclaimer_terms_conditions.rst
 
 .. _refeea:
 
+****************************************************************
 Open Ephys Extracellular Electrophysiology Acquisition Course
-==============================================================
+****************************************************************
 
 These are the course materials for the Open Ephys course on Extracellular Electrophysiology Acquisition.
 This course consists of recorded lectures and hands-on electronics exercises, for which you will need some specific equipment.

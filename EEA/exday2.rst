@@ -12,11 +12,12 @@
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
 
+********************************
 Exercises Day 2
-================================
+********************************
 
 Impedance
-***********
+###################################
 
 Previously, we built the circuit below using the circuit simulator. We saw that the electrode cannot drive a cable that has a shunt capacitance, but that an amplifier can protect our signal source and provide current to power the rest of the circuit.
 
@@ -32,12 +33,12 @@ Previously, we built the circuit below using the circuit simulator. We saw that 
 A.	Open the simulator link. In the long wire configuration, swap out the 20pF and 100pF capacitor for a 1MOhm and 22kOhm resistor. What changes?
 
 Operational Amplifiers
-***********************
+###################################
 Using an operational amplifier (op-amp) means we draw (almost) no current, which means we can measure voltages even if they come from things that can’t deliver current (like our cells).
 Let’s build the above example from the simulator in real life, on the breadboard! We’ll treat the ‘Blink’ example as our neuronal data and see what happens to this signal if we just have a wire, and then see the effect of replacing this wire with an op-amp.
 
 Build voltage rails
-####################
+***********************************
 .. warning::
   Make sure that the pins from the batteries do not touch, and if they’re not in use, best to put some tape on them so they don’t touch things. ‘Short-circuiting’ the batteries (connecting them without any sort of resistance) causes a huge current to flow from the + to -, enough to... melt stuff.
 
@@ -61,7 +62,7 @@ To do this we use a common trick and turn two regular power supplies into a bipo
     Remember or label which side is +3 and which is -3
 
 Add bypass capacitors
-######################
+***********************************
 Bypass capacitors are simply small capacitors that act like little secondary batteries. In our case we’ll add two 100nF (marked 104) caps, one to each rail, so GND to 3V and GND to -3V. The reason is that the batteries we use have what's called a high ESR - ‘equivalent series resistance’ and some capacitance, so they are not great at quickly providing current. This means that when our op-amp starts doing stuff, it can run out of current for a very short time, until the battery can drive the rails back to their original voltage. This is bad for the signal quality and causes all kinds of issues. So, we give the rails the ability to very quickly provide a small amount of current from these small capacitors. We’re exploiting the fact that these caps have very low ESR and can provide current pretty much instantaneously. If the battery briefly can’t provide current, the bypass capacitors will discharge, providing quick back-up current. The fact that they’re too small to power anything for more than a millisecond does not matter here, at that point the batteries have caught up.
 
 A. Add two 100nF (marked 104) caps, one to each rail, so connecting GND to 3V and connecting GND to -3V (see image below).
@@ -75,7 +76,7 @@ A. Add two 100nF (marked 104) caps, one to each rail, so connecting GND to 3V an
     </div>
 
 Build 'long wire' equivalent circuit
-#######################################
+***********************************
 
 Now we will build the equivalent of having an electrode picking up a neuronal signal, and a long wire connecting this electrode to the recording system, without a headstage in between.
 We’re going to build the circuit below (note the square wave input, just like the blink example). We’re using resistors to model our electrode and shunt voltage divider. For now, we don't need the voltage rails, they will be used to power our amplifier later.
@@ -142,7 +143,7 @@ We’re going to build the circuit below (note the square wave input, just like 
 7. How much signal is lost by this ‘recording system’?
 
 Replace 'long wire' with 'headstage'
-####################################
+***********************************
 
 Now we will keep almost everything the same, but we will replace our long wire with a 'headstage'. We will use only the most basic part of the headstage, an operational amplifier.
 
@@ -197,11 +198,12 @@ Now measure the same three points as before and complete this table:
   The wire now cannot destroy our signal, because even though we did not amplify it at all (we only have unity gain) we ‘buffered’ it. Now the op-amp can push as much current into the wire as is needed and your signal makes it through.
 
 Differential Signals
-*********************
+###################################
+
 A.	Measure across your fingers with the oscilloscope 1x probe. How big is the amplitude of this signal? Compare this to the size of a spike, around 100 µV.  Could you see a spike on top of that noise?
 
 Reference Electrodes
-#######################
+***********************************
 So far, we have only considered the signal coming into our recording electrode, relative to ground. We will now add a reference electrode in the simulator.
 
 You can think of the small square waves as spikes you are trying to detect, and the sine wave (that both reference and your measurement electrode share) as background- maybe slow EEG signals or 50Hz noise, which is likely to be present at both electrodes.
@@ -317,7 +319,8 @@ So, can we use this shiny new differential amplifier to record neural signals? W
 Puzzle for extra credit: How can we preserve the nice differential properties of the amplifier we just built, but still have our signals go straight into like a ‘+’ terminal on an op-amp to avoid impedance imbalances, and to avoid drawing current through voltage dividers? Extra hint: op-amps are cheap.
 
 Acknowledgements
-===============================
+###################################
+
 Written by:
 
 * Alexandra Leighton
@@ -334,6 +337,6 @@ With material from:
 * Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp
 
 Licensing
-===============
+###################################
 
 This work is licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/

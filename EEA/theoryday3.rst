@@ -12,8 +12,9 @@
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
 
+***********************************
 Theory Day 3
-=================
+***********************************
 
 Last time, we saw that an instrumentation amplifier should be pretty good at creating a proper differential signal, even if it is riding on top of a pretty large ‘noise’ signal. Today we will go over filters, put an instrumentation amplifier circuit together, and record some EMG signals.
 
@@ -29,14 +30,14 @@ Last time, we saw that an instrumentation amplifier should be pretty good at cre
     </div>
 
 Today's Talks
-****************
+###################################
 
 `Link to Jakob Voigts' talk about Instrumentation Amplifiers. <https://www.youtube.com/watch?v=uPcv0gBjqbA>`_
 
 `Link to Jakob Voigts' talk about Ground vs Reference. <https://www.youtube.com/watch?v=YE2cdXtzlF4>`_
 
 Instrumentation amplifiers
-****************************
+###################################
 Let's quickly revisit why we can't just use 1 operational amplifier to get a nice signal.
 
 .. raw:: html
@@ -72,7 +73,7 @@ Here it is in the simulator:
     </div>
 
 Common mode rejection ratio (CMMR)
-####################################
+***********************************
 
 When the input impedances of the differential amplifier weren’t matched, part of the input signal that was common to both inputs, and thus should be cancelled out, actually appeared in the output. A common way to model how well an amplifier subtracts one input to the other is the following:
 We define each input (+ and -) to be a sum of an individual voltage (V1 or V2) plus a voltage common to both. In our arms, or the brain of an animal, this common voltage (Vc) could be electrical noise or muscle activity we are not interested in and want to discard. In this case, the inputs would be:
@@ -118,7 +119,7 @@ The higher the CMRR, the better the amplifier is at cancelling out the signals c
 Instrumentation amplifiers are not completely immune to common input noise. They are real circuits and, as such, there are multiple ways for these common signals to bleed out into the output. They have, however, a very high CMRR. Comparing the two devices we’ve been using, the operational amplifier LM358 has a CMRR of 80dB while the instrumentation amplifier has a CMRR of 120dB, 100 times higher! (Sounds underwhelming? Remember decibels are logarithmic; the difference between 80 and 120 dB in terms of sound is the difference between a toilet flushing and a jet engine).
 
 High pass and low pass filtering
-************************************
+###################################
 Filters are used to remove certain frequencies from our data. We can do this in hardware or in software. Usually hardware filtering (implemented in the amplifier circuit) is used to increase (apparent) signal to noise ratio by rejecting unwanted frequencies and to prevent signal aliasing (e.g., bandpass between 0.5 and 2 kHz).
 Remember the exercise where we measured the voltage across our fingers with the oscilloscope, and saw very high values. Even with a differential amplifier, we usually have a decent amount of slow (~<10Hz or so) voltages that are simply too big for the amplifier or ADC (analog to digital converter). Any voltages above or below the amplifier rails (or above/below the input range of the digitizer) will be ‘clipped’ and all we’ll see is a constant value.
 The solution is to remove the large amplitude slow components, so we can fit the lower amplitude, faster, interesting components into our dynamic range.
@@ -142,7 +143,7 @@ Therefore, high-pass filters first remove the large DC offsets present at the el
     </div>
 
 Low-pass filters
-###################
+***********************************
 These filters block high frequencies. This is basically another voltage divider, with a frequency-dependent component. You’ve already seen one of these when you charged/discharged a capacitor! The exponential decay of the capacitor gets convolved with our signal. Remember that the impedance of our capacitor decreases as the signal frequency increases. At low frequencies, the high impedance of the capacitor means we get a large voltage drop over the capacitor, and more of our input signal can reach our Vout.
 
 You can test some examples  with the circuit simulator `here. <https://www.falstad.com/circuit/e-filt-lopass.html>`_
@@ -156,7 +157,7 @@ You can test some examples  with the circuit simulator `here. <https://www.falst
     </div>
 
 High-pass filters
-##################
+***********************************
 
 This is the same `idea. <https://www.falstad.com/circuit/e-filt-hipass.html>`_
 With increasing signal frequency, the impedance of the capacitor decreases (day 1), reducing the voltage drop over the capacitor and sending more signal to the output.
@@ -173,7 +174,7 @@ With increasing signal frequency, the impedance of the capacitor decreases (day 
 These are called ‘RC filters’ because they’re built from a resistor (R) and a capacitor (C). Because there's only one of each, we call them ‘single pole’. In real life, filters are built from more than one pair in order to get specific characteristics. This goes beyond the scope of this course but there are entire classes on this topic.
 
 Why do we need a ground electrode?
-***********************************
+###################################
 
 When we build our EMG circuit, we will use three electrodes: measurement (+), reference (-), and ground. Why do we have a ground electrode when we already have ‘+’ and ‘-’ inputs? This is a bit tricky, and there's multiple ways to understand it. We’ll go over them and discuss as needed.
 First off, remember the common mode rejection ratio. If our amplifier is good at rejecting 99.99% of the common mode, but 0.01% make it through, in the range of volts, this could still be enough to prevent us from resolving microvolt spikes.
@@ -199,7 +200,7 @@ Practically, all this means that we want to ground our subjects as well as possi
 One more detail: ground is not (always) earth, in many cases it is just a certain circuit we treat as 0. That circuit can have noise on it, just like any other circuit. If the ground has a lot of 50/60Hz noise, we’ll be charging and discharging the animal (any animal is also a capacitor) constantly through the ground connection. If the ground screw/electrode is low enough impedance and close to our recording site, we’ll manage to keep the animal’s voltage equal to the changing GND level and we won't notice this noise. However, if we put the ground screw/electrode too far away from where we record, e.g. we put the ground connection on the tail (extreme example), then the head of the animal won’t be sufficiently charged/discharged and we’ll encounter what will look like 50/60Hz noise in our tetrode recordings.
 
 Acknowledgements
-===============================
+###################################
 Written by:
 
 * Alexandra Leighton
@@ -216,6 +217,6 @@ With material from:
 * Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp
 
 Licensing
-===============
+###################################
 
 This work is licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/

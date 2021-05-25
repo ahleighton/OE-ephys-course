@@ -16,6 +16,7 @@
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
 
+=======================================
 Theory Day 2: Impedance and Amplifiers
 =======================================
 
