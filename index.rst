@@ -1,4 +1,9 @@
-:notoc:
+.. toctree::
+  :hidden:
+
+   /EEA/kitlist
+   /EEA/eeadocsindex
+   /EEA/disclaimer_terms_conditions
 
 .. _refeea:
 
@@ -10,7 +15,7 @@ This course consists of recorded lectures and hands-on electronics exercises, fo
 To follow this course, you can either:
 
 - Apply to the course, taught by the Open Ephys team to receive a NeuroKit and teaching through Cajal Training here: http://cajal-training.org/neurokit/
-- Buy the tools yourself and work through the materials here, ask questions on our forum: ** TO DO FORUM**
+- Buy the tools yourself and work through the materials here (scroll down to download as pdf).
 
 .. raw:: html
 
