@@ -8,17 +8,17 @@ EEA Course Documents
 
    safety.rst
    software_requirements.rst
+   theoryday1.rst
    exday1.rst
+   theoryday2.rst
    exday2.rst
    exday3.rst
-   exday1TA.rst
-   exday2TA.rst
-   exday3TA.rst
-   theoryday1.rst
-   theoryday2.rst
    theoryday3.rst
    theoryday4.rst
    project.rst
+   exday1TA.rst
+   exday2TA.rst
+   exday3TA.rst
 
 Materials for students
 ############################
@@ -57,7 +57,7 @@ Day 4
 Versions for teaching/teaching assistants
 ###########################################
 These versions include some teaching notes, and may also be useful for students
-who are taking the course on their own. 
+who are taking the course on their own.
 
 :ref:`Exercises day 1 TA <refEDay1TA>`
 

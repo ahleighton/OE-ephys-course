@@ -1,8 +1,3 @@
-.. toctree::
-   :maxdepth: 3
-
-   sinewave.rst
-
 .. _refEDay1TA:
 
 .. |Ve| replace:: V\ :sub:`e`\
@@ -102,6 +97,12 @@ F.	We can see that digital pin 13 has (LED) written beside it. Attach readout wi
 
 2.	Using an oscilloscope
 ###################################
+
+.. toctree::
+   :hidden:
+
+   sinewave.rst
+
 A. Your Picoscope comes with two probes, you only need one. Connect it to the ‘A’ port on your oscilloscope.
 B. Set the slider on the probe itself to ‘1x’. Connect your PicoScope to your pc and open up the Picoscope software.
 C. Use the PicoScope to measure the blink signal at the readout wires, as you did with your multimeter. Make sure you play around to find nice X and Y scaling. What shape & amplitude does the signal have?
