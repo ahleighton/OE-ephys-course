@@ -1,7 +1,7 @@
 .. toctree::
    :maxdepth: 3
 
-    Firmata.rst
+   Firmata.rst
 
 .. _refEDay3TA:
 
@@ -118,7 +118,7 @@ Place the measurement and reference electrode very close together, on the part o
 
 
 Streaming data from a microcontroller
-***********************************
+****************************************
 
 We’re going to start streaming data to the pc, by using our Teensy microcontroller to digitize the analog signals we collect.
 

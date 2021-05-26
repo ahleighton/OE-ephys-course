@@ -1,5 +1,4 @@
-.. toctree::
-   :maxdepth: 3
+:notoc:
 
 .. _refeeasafety:
 
@@ -15,7 +14,7 @@ A.	Never connect the + and – terminals of your batteries, without a resistor i
 B.	It's good practice to wire up your circuit first, and double check connections, before connecting your batteries. Disconnect them again before changing your circuit.
 C.	When you are not using the batteries, either remove them from the battery holder or cover the ends of the wires of the batter holder in tape, to make sure they cannot touch.
 
-2.	Take care with the EMG electrodes
+2.	EMG electrodes
 ###################################
 These measurements involve attaching yourself to a circuit, so we have to be careful.
 A.	Never use anything other than the recommended batteries to power your circuit. Do not connect your circuit to mains supply for power, ground, anything.

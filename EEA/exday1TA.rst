@@ -385,7 +385,7 @@ Because capacitors impede current flow, we can use them to build voltage divider
 A.	Try changing the capacitance values C for the first capacitor. How does this change your output voltage?
 
 7. The equivalent circuit of the electrode
-###################################
+##############################################
 In the theory handout, we discussed how we can represent an electrode as a circuit containing a resistance and a capacitance. We’ll now build this equivalent circuit in the simulator. We will use this to examine the relationship between |Vec| and |Vin|, i.e., how faithfully the electrode transfers the signal from our neuron to our recording system.
 
 A.	Use the simulator to build the equivalent circuit of the electrode as shown below:
@@ -428,11 +428,11 @@ Save your circuit (export as link/text)!
 Wrap Up by TA
 ###################################
 As a group, go through a simulation circuit of the electrode equivalent circuit with an alternating signal. Show that:
-* A tetrode can’t drive this long wire with shunt capacitance
- 	-- We draw a load of current
-  -- We get tiny output signal
-* Replace the wire with an amp.
- -- Now it doesn’t matter whether it’s a capacitor or a resistor!
+
+* A tetrode can’t drive this long wire with shunt capacitance, because:
+a. We draw a load of current
+b. We get tiny output signal
+* Replace the wire with an amp. Now it doesn’t matter whether it’s a capacitor or a resistor!
 
 To show this, you can use `this circuit. <https://tinyurl.com/yzh2vvuj>`_
 

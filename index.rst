@@ -1,9 +1,9 @@
 .. toctree::
-   :titlesonly:
+  :hidden:
 
-   /EEA/kitlist.rst
-   /EEA/eeadocsindex.rst
-   /EEA/disclaimer_terms_conditions.rst
+  /EEA/kitlist.rst
+  /EEA/eeadocsindex.rst
+  /EEA/disclaimer_terms_conditions.rst
 
 .. _refeea:
 

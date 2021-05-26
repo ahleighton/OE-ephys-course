@@ -23,7 +23,7 @@ from datetime import datetime, timezone
 
 project = "Open Ephys EEA Course Materials"
 copyright = "2010-{}, Open Ephys, OEPS & Contributors".format(datetime.now(timezone.utc).year)
-author = "OE, OEPS & Contributors "
+author = "Open Ephys, OEPS & Contributors"
 
 # The short X.Y version
 version = "0.0"
@@ -122,7 +122,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (main_doc, "oe_eea_docs.tex", "Open Ephys EEA Materials", "Alex Leighton", "manual"),
+    (main_doc, "oe_eea_docs.tex", "Open Ephys EEA Materials", "Open Ephys, OEPS & Contributors", "manual"),
 ]
 
 

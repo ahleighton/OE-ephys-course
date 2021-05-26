@@ -1,5 +1,10 @@
+.. _refeeadocsindex:
+
+*******************************
+EEA Course Documents
+*******************************
 .. toctree::
-   :titlesonly:
+   :hidden:
 
    safety.rst
    software_requirements.rst
@@ -14,12 +19,6 @@
    theoryday3.rst
    theoryday4.rst
    project.rst
-
-.. _refeeadocsindex:
-
-*******************************
-EEA Course Documents
-*******************************
 
 Materials for students
 ############################
@@ -57,7 +56,8 @@ Day 4
 
 Versions for teaching/teaching assistants
 ###########################################
-(include some teaching notes)
+These versions include some teaching notes, and may also be useful for students
+who are taking the course on their own. 
 
 :ref:`Exercises day 1 TA <refEDay1TA>`
 

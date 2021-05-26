@@ -1,5 +1,3 @@
-.. toctree::
-   :maxdepth: 3
 
 .. _refEDay2:
 
@@ -294,7 +292,16 @@ E.	Add a constant +2.5 V to the input. What happens to the output?
 
 Because the initial input was already inverted, by adding to that we have now effectively subtracted one voltage from another. We are close to having what we want, we just need to replace the stable offset voltage at ‘+’ with the 2nd signal we wish to subtract (our reference).
 
-F. Replace the +2.5 signal with your reference electrode. Does this work? What went wrong? Try to figure this out but don’t get stuck forever. Solution here: :ref:`soldiffamp`.
+F. Replace the +2.5 signal with your reference electrode. Does this work? What went wrong?
+
+Try to fix this circuit before looking at the solution below, but don’t get stuck forever.
+
+Solution: :ref:`soldiffamp`
+
+.. toctree::
+   :hidden:
+   /EEA/ampvoltagediv.rst
+   /EEA/soldiffamp.rst
 
 - Measurement electrode input (spikes) YES
 - Reference electrode input (common noise) YES

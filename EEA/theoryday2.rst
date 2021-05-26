@@ -17,7 +17,7 @@
 .. |Vout| replace:: V\ :sub:`out`\
 
 =======================================
-Theory Day 2: Impedance and Amplifiers
+Theory Day 2
 =======================================
 
 We are trying to:

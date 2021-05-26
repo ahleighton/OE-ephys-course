@@ -325,6 +325,12 @@ G.	In the simulator, re-create a differential amplifier.
   The reference coming into the - means that the amplifier no longer has to provide this output in order to make the + and – match, so we get rid of the shared signal.
   Need to look at difference: want: https://tinyurl.com/y4aps4r2
 
+Solution here:
+  .. toctree::
+    :maxdepth: 2
+
+    Differential Amplifier
+
   - Measurement electrode input (spikes) YES
   - Reference electrode input (common noise) YES
   - Output: Reference subtracted from measurement, multiplied by gain YES
