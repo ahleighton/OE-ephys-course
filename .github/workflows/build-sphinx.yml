@@ -34,14 +34,11 @@ jobs:
       - name: Build docs 🔧
         run: pipenv run make html
 
-      # Logically, this should come before the build step. However, doing that
-      # somehow screws up the sphinx environement s.t. that local wavedrom
-      # scripts in _static are not avaialble.
-      - name: Test links 🧪
-        run: pipenv run make linkcheck
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: docs/html # The folder the action should deploy.
+
+      - name: Test links 🧪
+        run: pipenv run make linkcheck
