@@ -195,10 +195,10 @@ html_theme_options = {
 #html_favicon = "_static/images/favicon.png"
 #
 html_context = {
-     "github_user": "empty",
-     "github_repo": "no",
-     "github_version": "master",
-     "doc_path": "docs",
+     "github_user": "ahleighton",
+     "github_repo": "OE-ephys-course",
+     "github_version": "main",
+     "doc_path": "main",
      "css_files": ["_static/theme_overrides.css", "_static/sphinx_tabs/tabs.css"],
 }
 

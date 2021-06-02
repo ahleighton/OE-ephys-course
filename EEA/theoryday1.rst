@@ -1,6 +1,3 @@
-.. toctree::
-   :maxdepth: 3
-
 .. _refTDay1:
 
 .. |Na+| replace:: Na\ :sup:`+`\
