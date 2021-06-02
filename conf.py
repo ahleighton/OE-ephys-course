@@ -198,8 +198,8 @@ html_context = {
      "github_user": "ahleighton",
      "github_repo": "OE-ephys-course",
      "github_version": "main",
-     "doc_path": "main",
-     "css_files": ["_static/theme_overrides.css", "_static/sphinx_tabs/tabs.css"],
+     "doc_path": "source",
+     "css_files": ["_static/theme_overrides.css"],
 }
 
 linkcheck_anchors = False
