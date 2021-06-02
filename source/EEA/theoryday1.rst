@@ -308,7 +308,7 @@ This work is licensed under CC BY-SA 4.0. To view a copy of this license, visit 
 
 References
 ###################################
-Bard, A. J., & Faulkner, L. R. (2001). Electrochemical methods Fundamentals and Applications. Molecular Biology (Second, Vol. 8). John Wiley & Sons, Inc. http://doi.org/10.1016/B978- 0-08-098353-0.00003-8
+Bard, A. J., & Faulkner, L. R. (2001). Electrochemical methods Fundamentals and Applications. Molecular Biology (Second, Vol. 8). John Wiley & Sons, Inc.
 
 Buzsaki, G., Anastassiou, C.A., and Koch, C. (2012). The origin of extracellular fields and currents - EEG, ECoG, LFP and spikes. Nat Rev Neurosci 13, 407–420.
 
