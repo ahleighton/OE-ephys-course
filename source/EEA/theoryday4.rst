@@ -24,7 +24,9 @@ Talk: Acquisition and Synchronization
 ###################################
 One of the most common pitfalls in Neuroscience is correctly synchronizing multiple datastreams. How do you know whether your imaging and electrophysiology are aligned in time? How many different clocks do you have on your set up, and which of those can you trust?
 
-`Filipe Carvalho's talk on synchronizing data acquisition <https://youtu.be/F0uwA3RUlB0>`_
+.. raw:: html
+
+  <iframe width="982" height="552" src="https://www.youtube.com/embed/F0uwA3RUlB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Digitization
 ###################################
