@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theory Day 2 &#8212; Open Ephys EEA Course Materials 0.0.0 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exercises Day 2" href="exday2.html" />
+    <link rel="prev" title="Sinewave" href="sinewave.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../index.html">
+<p class="title">Open Ephys EEA Course Materials</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="kitlist.html">
+  NeuroKit Contents
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="eeadocsindex.html">
+  EEA Course Documents
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="disclaimer_terms_conditions.html">
+  Terms and Conditions
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="safety.html">
+   Safety &amp; Good Practices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="software_requirements.html">
+   Software Requirements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="theoryday1.html">
+   Theory Day 1
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="exday1.html">
+   Exercises Day 1
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sinewave.html">
+     Sinewave
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Theory Day 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exday2.html">
+   Exercises Day 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Firmata.html">
+   Firmata
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exday3.html">
+   Exercises Day 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="theoryday3.html">
+   Theory Day 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="theoryday4.html">
+   Theory Day 4:
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project.html">
+   Project
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="exday1TA.html">
+   Exercises Day 1 (TA)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sinewave.html">
+     Sinewave
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="exday2TA.html">
+   Exercises Day 2 TA
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Firmata.html">
+   Firmata
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exday3TA.html">
+   Exercises Day 3 TA
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#today-s-talks">
+   Today’s Talks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#impedance">
+   Impedance
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resistors">
+     Resistors
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#capacitors">
+     Capacitors
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-is-impedance-important">
+   Why is impedance important?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#electrode-impedance">
+     Electrode Impedance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recording-system-impedance">
+     Recording System Impedance
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#amplifiers">
+   Amplifiers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#amplifier-impedance">
+     Amplifier Impedance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shunt-impedance">
+     Shunt Impedance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#effective-amplifier-input-impedance">
+     Effective amplifier input impedance
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencing">
+   Referencing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differential-amplifiers">
+   Differential Amplifiers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgements">
+   Acknowledgements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#licensing">
+   Licensing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <span class="target" id="reftday2"></span><div class="section" id="theory-day-2">
+<h1>Theory Day 2<a class="headerlink" href="#theory-day-2" title="Permalink to this headline">¶</a></h1>
+<p>We are trying to:</p>
+<ul class="simple">
+<li><p>Detect an electric potential difference.</p></li>
+<li><p>Amplify this tiny signal.</p></li>
+<li><p>Filter frequencies that are not of interest.</p></li>
+<li><p>Digitize the signal for data visualisation and recording.</p></li>
+</ul>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
+    <div class="card text-center intro-card border-white">
+    <img src="../_static/images/EEA/eea_fig-5.png" class="card-img-top">
+      <div class="card-body">
+      <h5 class="card-title" > Figure 1: The equivalent circuit of the electrode</h5>
+      </div>
+    </div>
+</div><p>Yesterday, we discussed how the electrode can detect changes in an electric potential difference. Today and tomorrow, we will expand upon what happens in the headstage. This is where the signal is amplified, filtered and digitized. We will cover how we can get as much signal as possible to our computer without drawing (too much) current from the brain and disturbing our system.</p>
+<div class="section" id="today-s-talks">
+<h2>Today’s Talks<a class="headerlink" href="#today-s-talks" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://youtu.be/fVloDI4b1ts">Link to Joana Neto’s talk about impedance.</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=NP6nE5P82e8">Link to Jakob Voigts’ talk about Buffer Op-amps.</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=91SVSdoEFzU">Link to Jakob Voigts’ talk about Differential Amplifiers.</a></p>
+</div>
+<div class="section" id="impedance">
+<h2>Impedance<a class="headerlink" href="#impedance" title="Permalink to this headline">¶</a></h2>
+<p>If we apply an alternating voltage to a resistor, capacitor or circuit, and measure the current flow, we can determine the impedance Z, measured in Ohm. The impedance represents opposition to current flow, allowing us to describe the relationship between voltage and current for time-varying signals. Just as with resistance and Ohm’s Law, the impedance Z assumes an AC current of a specific frequency and can be computed as:</p>
+<div class="math notranslate nohighlight">
+\[Z = \frac{V(t)}{I(t)}\]</div>
+<p>Impedance can be represented as a vector defined in terms of magnitude and phase (θ). Therefore, impedance provides both the magnitude and phase relationship between V and I over a broad frequency range (from 1 Hz to 10 kHz). Let’s examine the response of resistors and capacitors to an applied sinusoidal voltage (an alternating signal).</p>
+<div class="section" id="resistors">
+<h3>Resistors<a class="headerlink" href="#resistors" title="Permalink to this headline">¶</a></h3>
+<p>For resistors, the impedance magnitude (Z) is constant and does not vary with the frequency of signal applied. The impedance follows Ohm’s Law (V = IR), which doesn’t take the frequency of the signal into account.</p>
+</div>
+<div class="section" id="capacitors">
+<h3>Capacitors<a class="headerlink" href="#capacitors" title="Permalink to this headline">¶</a></h3>
+<p>In contrast, for a capacitor the current is 90° out of phase with the voltage, and the magnitude of impedance decreases as the frequency increases. We can therefore only describe the impedance of a capacitor at a certain frequency.</p>
+<div class="math notranslate nohighlight">
+\[Zc = \frac{1}{2 \pi fC}\]</div>
+<p>So the magnitude of impedance of a capacitor will decrease with increasing frequency. The larger the capacitance C, the lower the impedance at a specific frequency.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If you want to play around with this idea before moving on, try plotting the relationship between impedance and frequency for a capacitor with C = 2. Then plot the same line for C = 20. What is the difference? Remember that we are interested in signals that last 1 ms, so are around 1kHz.</p>
+</div>
+</div>
+</div>
+<div class="section" id="why-is-impedance-important">
+<h2>Why is impedance important?<a class="headerlink" href="#why-is-impedance-important" title="Permalink to this headline">¶</a></h2>
+<p>We saw in our equivalent circuits, that currents coming from our neurons can be lost to ground by passing through the electrode circuit and the shunt capacitance (C<sub>sh</sub>), causing a difference between Vec and Vin.</p>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
+    <div class="card text-center intro-card border-white">
+    <img src="../_static/images/EEA/eea_fig-9.png" class="card-img-top">
+    </div>
+</div><p>We can just replace these components with a representation of the impedance (Z) they provide.</p>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
+    <div class="card text-center intro-card border-white">
+    <img src="../_static/images/EEA/eea_fig-27.png" class="card-img-top">
+    </div>
+</div><p>This gives us a voltage divider, similar to the one we built yesterday, where:</p>
+<div class="math notranslate nohighlight">
+\[Vin = \frac{ZCs}{ZCs+Ze} Vec\]</div>
+<p>Therefore, the ratio of impedance between the electrode and shunt capacitance determines how much of our electrode tip voltage reaches the rest of the recording system.</p>
+<p>To get more of our voltage V<sub>e</sub> into our recording system, we can adjust this ratio by:</p>
+<ol class="arabic simple">
+<li><p>Reducing the electrode impedance Z<sub>e</sub></p></li>
+<li><p>Increasing the shunt impedance Z C<sub>sh</sub></p></li>
+</ol>
+<div class="section" id="electrode-impedance">
+<h3>Electrode Impedance<a class="headerlink" href="#electrode-impedance" title="Permalink to this headline">¶</a></h3>
+<p>The impedance of an electrode is a measure of its ability to resist the flow of charge across the electrode-solution interface (i.e., across the electronic conductor (metal) and ionic conductor (extracellular fluid)). It is the impedance of the whole electrode equivalent circuit we built yesterday, consisting of the resistance of the solution (R<sub>s</sub>), the resistance of the electrode metal (R<sub>m</sub>) and the resistance (R<sub>e</sub>) and capacitance (C<sub>e</sub>) of the double layer at the electrode-solution interface.
+Since R<sub>e</sub> is large, in the order of several megohms, and R<sub>s</sub> and R<sub>m</sub> are low (Ohms), the equivalent circuit is dominated by the double-layer capacitor, C<sub>e</sub>.  Therefore, in practice, the electrode is primarily a capacitor in series with R<sub>m</sub> and R<sub>s</sub> , whose leakage resistance Re, while not negligible, does not make an important contribution (Robinson, 1968).</p>
+<p>So far, we know that the impedance magnitude of a capacitor decreases with increased capacitance, and that electrode impedance is dominated by double layer capacitor, C<sub>e</sub>. Therefore, to decrease our electrode impedance, we need to increase the electrode capacitance C<sub>e</sub>. How can we increase the value of C<sub>e</sub>?</p>
+<div class="math notranslate nohighlight">
+\[C = \frac{\epsilon}{A}\]</div>
+<p>The capacitance of a capacitor, in Farads, is proportional to the area of the capacitor plates (A) divided by the distance (d) between them. ε is the electrostatic constant. To make C bigger, we can increase A by increasing the surface area of the electrode. We can also coat electrodes with materials complemented with pseudo-capacitance, such as conducting polymers or transition metal oxide films, such as IrOx (Green, Lovell, Wallace, &amp; Poole-Warren, 2008; Musa, 2011).
+Electrode impedance magnitude is often measured at 1 kHz, before and after electrode coating, showing an impedance decrease up to 10-fold (Neto et al., 2018). By increasing the capacitance (C<sub>e</sub>) of our electrode, the electrode impedance (Z<sub>e</sub>) will be smaller, preserving more of our signal amplitude at V<sub>in</sub> (V<sub>in</sub> = V<sub>ec</sub>). Electrodes impedance values are in the kOhm to MOhm range at 1 kHz.</p>
+</div>
+<div class="section" id="recording-system-impedance">
+<h3>Recording System Impedance<a class="headerlink" href="#recording-system-impedance" title="Permalink to this headline">¶</a></h3>
+<p>The building blocks of the recording system are amplifiers. These integrated circuits provide incredibly high ‘input impedance’. It is as if any input has to cross a huge resistor first before getting to the amplifier.</p>
+</div>
+</div>
+<div class="section" id="amplifiers">
+<h2>Amplifiers<a class="headerlink" href="#amplifiers" title="Permalink to this headline">¶</a></h2>
+<p>Let’s go over what an operational amplifier does.</p>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center mx-auto" style = "max-width: 100%">
+    <div class="card text-center intro-card border-white">
+    <img src="../_static/images/EEA/eea_fig-28.png" class="card-img-top">
+    </div>
+</div><p>The operational amplifier has two inputs, and basically takes the voltage difference between them. If that difference is positive, it connects its output to one ‘power rail’, like for example 3V, and if it’s negative it connects its output to the other rail, that could be ground, or -3V. Another way to say the same thing would be that it amplifies the difference between its input with a huge factor, also called ‘gain’.</p>
+<p>While doing that, the operational amplifier draws basically no current on its inputs.</p>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center mx-auto" style = "max-width: 100%">
+    <div class="card text-center intro-card border-white">
+    <img src="../_static/images/EEA/eea_fig-29.png" class="card-img-top">
+    </div>
+</div><p>If we connect the output of the operational amplifier to the ‘-’ input, then the following happens:</p>
+<ul class="simple">
+<li><p>Initially, the operational amplifier will output a very high voltage if the difference across it inputs is positive, and a very low one if its negative (like we said, the gain is extremely high).</p></li>
+<li><p>If we connect the output back to ‘-’, this behaviour will keep the voltages at its ‘+’ and ‘-’ inputs the same. Any positive difference between its input terminals will lead to a higher voltage applied to the ‘-’ input, bringing them back together, and vice-versa.</p></li>
+<li><p>Now, <em>the ‘-’ input is always actively driven to follow the voltage on the ‘+’ input</em>. This means that whatever voltage we connect to the ‘+’ input can be measured just by looking at the ‘-’ input (which is connected to / the same as the output).</p></li>
+</ul>
+<p>We can look at the voltage that is on ‘+’ by just measuring the output of the operational amplifier, BUT because the ‘+’ input draws almost no current at all (in other words, very high input impedance), we can now measure weak signals. The output of the operational amplifier on the other hand side has very low output impedance, in other words we can draw a lot of current from it and it will keep its voltage.</p>
+<p>You can run this example in the simulator, and see if what we said above about the operational amplifier makes sense. You should see that the operational amplifier stops the cable from drawing current from the electrode, and that the operational amplifier instead manages to ‘drive’ the cable effortlessly, by providing a lot of current.</p>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center mx-auto" style = "max-width: 100%">
+    <div class="card text-center intro-card border-white">
+    <img src="../_static/images/EEA/eea_fig-30.png" class="card-img-top">
+          <a href="https://tinyurl.com/y6pvxdx9" class="btn btn-light stretched-link">Simulator Link</a>
+    </div>
+</div><p>Our electrodes will be attached to a headstage, which contains an amplifier. This amplification step performs several functions:</p>
+<ul class="simple">
+<li><p>Prevents us from drawing current from the brain and allows to drive current to ADC and computer</p></li>
+<li><p>Rejects common mode noise</p></li>
+<li><p>Increases the range of the signal to fit the dynamic range of our digitizer</p></li>
+</ul>
+<div class="section" id="amplifier-impedance">
+<h3>Amplifier Impedance<a class="headerlink" href="#amplifier-impedance" title="Permalink to this headline">¶</a></h3>
+<p>The input impedance of an amplifier is very high. This means that the circuit acts as though the current has to cross a very high resistor to actually enter the amplifier. The amplifier input impedance, Z<sub>a</sub> represents its tendency to oppose the flow of current from the electrodes through the amplifier to ground. This high impedance prevents us from drawing current from the brain to ground. By designing amplifiers which have high input impedances, the current flow becomes low (Ferree et al., 2001).</p>
+<p>Here is the amplifier added into our circuit diagram:</p>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center mx-auto" style = "max-width: 100%">
+    <div class="card text-center intro-card border-white">
+    <img src="../_static/images/EEA/eea_fig-31.png" class="card-img-top">
+    </div>
+</div><p>The path from our neuronal currents first crosses the electrode and then goes either through the amplifier to ground, or through shunting routes (C<sub>sh</sub> and R<sub>sh</sub>) to ground. The amplifier has its own (very high) impedance Z<sub>a</sub>.</p>
+<p>The output impedance of amplifiers is very low. Low impedance means that a lot of current can flow. This current enables the driving of the signal through all the subsequent circuits (e.g., interconnect lines, multiplexer, and ADC). By placing an amplifier in our circuit, we make sure that the rest of our recording circuit is driven by current provided by the amplifier, not by current provided by the neurons.</p>
+</div>
+<div class="section" id="shunt-impedance">
+<h3>Shunt Impedance<a class="headerlink" href="#shunt-impedance" title="Permalink to this headline">¶</a></h3>
+<p>Shunt impedance is the total impedance of shunt capacitance C<sub>sh</sub> and shunt resistance R<sub>sh</sub>. Remember that any two conducting surfaces, with a non-conducting layer in between, <em>is</em> a capacitor. Shunt capacitance arises mainly from the capacitance across the thin insulation isolating an electrode shaft and the surrounding electrolyte, as well as the cumulative capacitance along cables and connectors (Robinson, 1968). Being capacitive, the impedance decreases with signal frequency (Nelson et al., 2008). Therefore, to create a large shunt impedance, the shunt capacitance should be small:</p>
+<div class="math notranslate nohighlight">
+\[Z = \frac{1}{2 \pi fC}\]</div>
+<p>Basically, the more signal takes this route to ground, the less signal we will pick up in our recording signal. Though there is also a resistive shunt element (R<sub>sh</sub>), at the high frequencies we are interested in the capacitive component will usually have the largest effect (because of its low impedance), so R<sub>sh</sub> is often ignored.</p>
+</div>
+<div class="section" id="effective-amplifier-input-impedance">
+<h3>Effective amplifier input impedance<a class="headerlink" href="#effective-amplifier-input-impedance" title="Permalink to this headline">¶</a></h3>
+<p>The ‘effective amplifier input impedance’, Z<sub>a</sub>’ is the total impedance to the ground seen from the electrode. This includes the path through the amplifier AND the path through the parallel shunting routes (shunt resistance and capacitance) to ground outside the amplifier.</p>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center mx-auto" style = "max-width: 50%">
+    <div class="card text-center intro-card border-white">
+    <img src="../_static/images/EEA/eea_fig-32.png" class="card-img-top">
+    </div>
+</div><div class="math notranslate nohighlight">
+\[Vin = \frac{Za'}{Za' + Ze} Ve\]</div>
+<p>Z<sub>a</sub>’ = ‘effective amplifier’ impedance (Z<sub>a</sub> + Z C<sub>sh</sub> + R<sub>sh</sub>)
+Z<sub>e</sub> = electrode impedance</p>
+<p>The ratio between the effective amplifier impedance and the electrode impedance determines how much of our precious signal we can pick up. This is particularly important when the electrodes have a large impedance themselves and are therefore more susceptible to attenuation by shunt capacitance (Obien et al., 2015; Robinson, 1968). For instance, the shunt capacitance for a tungsten wire (~50 to 100 pF) is usually higher than for a silicon probe (5-20 pF/cm). (Why? Think of what makes a capacitor, and the relative shape and conductances of these electrodes).</p>
+<p>To have no net current flowing, the shunt and amplifier impedance should be infinite. Moreover, if Z<sub>a</sub>’ is not substantially greater than Z<sub>e</sub>, V<sub>in</sub> will be much lower than V<sub>ec</sub>. The best-case scenario is to have high Z<sub>a</sub>’ and low Z<sub>e</sub>. To have low Z<sub>a</sub>’, we need amplifiers with high input impedance and low shunt capacitance (high impedance).</p>
+</div>
+</div>
+<div class="section" id="referencing">
+<h2>Referencing<a class="headerlink" href="#referencing" title="Permalink to this headline">¶</a></h2>
+<p>We live in an (electrically) very noisy world. We always have to measure our signal as the difference between two points- one is our recording electrode. The other point is our reference, which can be another electrode in the brain or a screw in the animal’s skull. The choice you make here is very important for your recording: the amplifier will output the difference between your recording electrode and your reference point. That means that the amplifier will do its best to get rid of any signal that the two share. If the recording electrode picks up 50 Hz noise generated by the mains power supply in the walls, you want the amplifier to get rid of it, so it’s best to use a reference point that will also pick up this noise. However, if your reference is picking up signals that you are interested in, the amplifier will get rid of those too. To choose an appropriate reference, you have to decide what qualifies as noise in your experiment.</p>
+</div>
+<div class="section" id="differential-amplifiers">
+<h2>Differential Amplifiers<a class="headerlink" href="#differential-amplifiers" title="Permalink to this headline">¶</a></h2>
+<p>The amplification of the potential difference between the microelectrode and the reference electrode (on the order of microvolts) is a crucial step, and is accomplished with differential amplifiers that amplify the differences, rejecting the noise that is often introduced as common-mode potential in the circuit (i.e., noise identical in the recording and reference electrodes typically caused by motion artifacts and capacitive coupling of the body and electrode lead with power line fields (Nunez &amp; Srinivasan, 2009)). The grounding assists the common-mode rejection properties of the amplifier by allowing it to more accurately measure differences of potential between two recording electrodes (Cadwell and Villarreal, 1999). (Nunez, pag 43,44). Therefore, high gain differential amplifiers are used to boost the signals to the larger voltage levels (Vout = gain x Vin) required by the ADC and to reject common-mode noise.</p>
+</div>
+<div class="section" id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p>Written by:</p>
+<ul class="simple">
+<li><p>Alexandra Leighton</p></li>
+<li><p>Joana Neto</p></li>
+<li><p>Jakob Voigts</p></li>
+<li><p>Aarón Cuevas López</p></li>
+</ul>
+<p>With material from:</p>
+<ul class="simple">
+<li><p>Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018.</p></li>
+<li><p>Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at  <a class="reference external" href="https://www.tenss.ro/">TENSS</a>)</p></li>
+<li><p>Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for  <a class="reference external" href="https://www.tenss.ro/">TENSS</a>)</p></li>
+<li><p>Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp</p></li>
+</ul>
+</div>
+<div class="section" id="licensing">
+<h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
+<p>This work is licensed under CC BY-SA 4.0. To view a copy of this license, visit <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>Ferree, T.C., Luu, P., Russell, G.S., and Tucker, D.M. (2001). Scalp electrode impedance, infection risk, and EEG data quality. Clinical Neurophysiology 112, 536–544.</p>
+<p>Nelson, M.J., Pouget, P., Nilsen, E.A., Patten, C.D., and Schall, J.D. (2008). Review of signal distortion through metal microelectrode recording circuits and filters. Journal of Neuroscience Methods 169, 141–157.</p>
+<p>Neto, J.P., Baião, P., Lopes, G., Frazão, J., Nogueira, J., Fortunato, E., Barquinha, P., and Kampff, A.R. (2018). Does Impedance Matter When Recording Spikes With Polytrodes? Front. Neurosci. 12, 715.</p>
+<p>Obien, M.E.J., Deligkaris, K., Bullmann, T., Bakkum, D.J., and Frey, U. (2015). Revealing neuronal function through microelectrode array recordings. Front. Neurosci. 8.</p>
+<p>Robinson, D.A. (1968). The electrical properties of metal microelectrodes. Proc. IEEE 56, 1065–1071.</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="sinewave.html" title="previous page">Sinewave</a>
+    <a class='right-next' id="next-link" href="exday2.html" title="next page">Exercises Day 2</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2010-2021, Open Ephys, OEPS &amp; Contributors.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
