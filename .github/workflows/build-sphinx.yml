@@ -1,0 +1,48 @@
+name: CI
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    #runs-on: ubuntu-18.04-huge # for local with act
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies 📦
+        run: |
+          pip install pipenv
+          pipenv install
+
+      - name: Build docs 🔧
+        run: pipenv run make html
+
+      # Logically, this should come before the build step. However, doing that
+      # somehow screws up the sphinx environement s.t. that local wavedrom
+      # scripts in _static are not avaialble.
+      #- name: Test links 🧪
+      #  run: pipenv run make linkcheck
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: docs/html # The folder the action should deploy.
