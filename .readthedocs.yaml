@@ -17,7 +17,3 @@ python:
    version: 3.8
    install:
    - requirements: source/requirements.txt
-
-install:
-  - pip install pipenv
-  - pipenv install
