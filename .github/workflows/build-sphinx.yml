@@ -1,13 +1,13 @@
-name: build-sphinx-to-gh-pages
+name: CI
 
-env:
-  GITHUB_ACTOR: ahleighton
-  GITHUB_REPOSITORY: ahleighton/OE-ephys-course
-  GITHUB_TOKEN: ${{ secrets.CREATE_DEMO_SECRET }}
-
+# Controls when the action will run.
 on:
+  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ docs-config ]
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -31,14 +31,18 @@ jobs:
         run: |
           pip install pipenv
           pipenv install
+
       - name: Build docs 🔧
         run: pipenv run make html
+
+      # Logically, this should come before the build step. However, doing that
+      # somehow screws up the sphinx environement s.t. that local wavedrom
+      # scripts in _static are not avaialble.
+      - name: Test links 🧪
+        run: pipenv run make linkcheck
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
-          branch: docs-config # The branch the action should deploy to.
+          branch: gh-pages # The branch the action should deploy to.
           folder: docs/html # The folder the action should deploy.
-
-      - name: Test links 🧪
-        run: pipenv run make linkcheck
