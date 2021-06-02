@@ -74,7 +74,7 @@ A. Add two 100nF (marked 104) caps, one to each rail, so connecting GND to 3V an
     </div>
 
 Build 'long wire' equivalent circuit
-***********************************
+****************************************
 
 Now we will build the equivalent of having an electrode picking up a neuronal signal, and a long wire connecting this electrode to the recording system, without a headstage in between.
 We’re going to build the circuit below (note the square wave input, just like the blink example). We’re using resistors to model our electrode and shunt voltage divider. For now, we don't need the voltage rails, they will be used to power our amplifier later.
@@ -141,7 +141,7 @@ We’re going to build the circuit below (note the square wave input, just like 
 7. How much signal is lost by this ‘recording system’?
 
 Replace 'long wire' with 'headstage'
-***********************************
+**************************************
 
 Now we will keep almost everything the same, but we will replace our long wire with a 'headstage'. We will use only the most basic part of the headstage, an operational amplifier.
 

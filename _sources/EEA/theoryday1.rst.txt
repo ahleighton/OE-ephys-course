@@ -21,6 +21,11 @@ When comparing different techniques, it’s important to understand:
 Introduction
 ###################################
 
+.. raw:: html
+
+  <iframe width="982" height="552" src="https://www.youtube.com/embed/vE5lZWPT4hQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 .. list-table:: Table 1; Overview of Extracellular Electrophysiology Methods
    :widths: 25 25 25 25
    :header-rows: 1

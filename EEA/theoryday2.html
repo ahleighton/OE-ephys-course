@@ -241,11 +241,6 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#today-s-talks">
-   Today’s Talks
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#impedance">
    Impedance
   </a>
@@ -364,15 +359,9 @@
       </div>
     </div>
 </div><p>Yesterday, we discussed how the electrode can detect changes in an electric potential difference. Today and tomorrow, we will expand upon what happens in the headstage. This is where the signal is amplified, filtered and digitized. We will cover how we can get as much signal as possible to our computer without drawing (too much) current from the brain and disturbing our system.</p>
-<div class="section" id="today-s-talks">
-<h2>Today’s Talks<a class="headerlink" href="#today-s-talks" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://youtu.be/fVloDI4b1ts">Link to Joana Neto’s talk about impedance.</a></p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=NP6nE5P82e8">Link to Jakob Voigts’ talk about Buffer Op-amps.</a></p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=91SVSdoEFzU">Link to Jakob Voigts’ talk about Differential Amplifiers.</a></p>
-</div>
 <div class="section" id="impedance">
 <h2>Impedance<a class="headerlink" href="#impedance" title="Permalink to this headline">¶</a></h2>
-<p>If we apply an alternating voltage to a resistor, capacitor or circuit, and measure the current flow, we can determine the impedance Z, measured in Ohm. The impedance represents opposition to current flow, allowing us to describe the relationship between voltage and current for time-varying signals. Just as with resistance and Ohm’s Law, the impedance Z assumes an AC current of a specific frequency and can be computed as:</p>
+<iframe width="560" height="340" src="https://www.youtube.com/embed/fVloDI4b1ts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>If we apply an alternating voltage to a resistor, capacitor or circuit, and measure the current flow, we can determine the impedance Z, measured in Ohm. The impedance represents opposition to current flow, allowing us to describe the relationship between voltage and current for time-varying signals. Just as with resistance and Ohm’s Law, the impedance Z assumes an AC current of a specific frequency and can be computed as:</p>
 <div class="math notranslate nohighlight">
 \[Z = \frac{V(t)}{I(t)}\]</div>
 <p>Impedance can be represented as a vector defined in terms of magnitude and phase (θ). Therefore, impedance provides both the magnitude and phase relationship between V and I over a broad frequency range (from 1 Hz to 10 kHz). Let’s examine the response of resistors and capacitors to an applied sinusoidal voltage (an alternating signal).</p>
@@ -460,7 +449,7 @@ Electrode impedance magnitude is often measured at 1 kHz, before and after elect
 <li><p>Rejects common mode noise</p></li>
 <li><p>Increases the range of the signal to fit the dynamic range of our digitizer</p></li>
 </ul>
-<div class="section" id="amplifier-impedance">
+<iframe width="560" height="340" src="https://www.youtube.com/embed/NP6nE5P82e8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="section" id="amplifier-impedance">
 <h3>Amplifier Impedance<a class="headerlink" href="#amplifier-impedance" title="Permalink to this headline">¶</a></h3>
 <p>The input impedance of an amplifier is very high. This means that the circuit acts as though the current has to cross a very high resistor to actually enter the amplifier. The amplifier input impedance, Z<sub>a</sub> represents its tendency to oppose the flow of current from the electrodes through the amplifier to ground. This high impedance prevents us from drawing current from the brain to ground. By designing amplifiers which have high input impedances, the current flow becomes low (Ferree et al., 2001).</p>
 <p>Here is the amplifier added into our circuit diagram:</p>
@@ -499,7 +488,7 @@ Z<sub>e</sub> = electrode impedance</p>
 </div>
 <div class="section" id="differential-amplifiers">
 <h2>Differential Amplifiers<a class="headerlink" href="#differential-amplifiers" title="Permalink to this headline">¶</a></h2>
-<p>The amplification of the potential difference between the microelectrode and the reference electrode (on the order of microvolts) is a crucial step, and is accomplished with differential amplifiers that amplify the differences, rejecting the noise that is often introduced as common-mode potential in the circuit (i.e., noise identical in the recording and reference electrodes typically caused by motion artifacts and capacitive coupling of the body and electrode lead with power line fields (Nunez &amp; Srinivasan, 2009)). The grounding assists the common-mode rejection properties of the amplifier by allowing it to more accurately measure differences of potential between two recording electrodes (Cadwell and Villarreal, 1999). (Nunez, pag 43,44). Therefore, high gain differential amplifiers are used to boost the signals to the larger voltage levels (Vout = gain x Vin) required by the ADC and to reject common-mode noise.</p>
+<iframe width="560" height="340" src="https://www.youtube.com/embed/91SVSdoEFzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>The amplification of the potential difference between the microelectrode and the reference electrode (on the order of microvolts) is a crucial step, and is accomplished with differential amplifiers that amplify the differences, rejecting the noise that is often introduced as common-mode potential in the circuit (i.e., noise identical in the recording and reference electrodes typically caused by motion artifacts and capacitive coupling of the body and electrode lead with power line fields (Nunez &amp; Srinivasan, 2009)). The grounding assists the common-mode rejection properties of the amplifier by allowing it to more accurately measure differences of potential between two recording electrodes (Cadwell and Villarreal, 1999). (Nunez, pag 43,44). Therefore, high gain differential amplifiers are used to boost the signals to the larger voltage levels (Vout = gain x Vin) required by the ADC and to reject common-mode noise.</p>
 </div>
 <div class="section" id="acknowledgements">
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>

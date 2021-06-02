@@ -26,15 +26,13 @@ Last time, we saw that an instrumentation amplifier should be pretty good at cre
         </div>
     </div>
 
-Today's Talks
-###################################
-
-`Link to Jakob Voigts' talk about Instrumentation Amplifiers. <https://www.youtube.com/watch?v=uPcv0gBjqbA>`_
-
-`Link to Jakob Voigts' talk about Ground vs Reference. <https://www.youtube.com/watch?v=YE2cdXtzlF4>`_
-
 Instrumentation amplifiers
 ###################################
+
+.. raw:: html
+
+  <iframe width="982" height="552" src="https://www.youtube.com/embed/uPcv0gBjqbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Let's quickly revisit why we can't just use 1 operational amplifier to get a nice signal.
 
 .. raw:: html
@@ -68,6 +66,7 @@ Here it is in the simulator:
         <a href="https://tinyurl.com/yjxekrv5" class="btn btn-light stretched-link">Simulator Link</a>
         </div>
     </div>
+
 
 Common mode rejection ratio (CMMR)
 ***********************************
@@ -155,7 +154,6 @@ You can test some examples  with the circuit simulator `here. <https://www.falst
 
 High-pass filters
 ***********************************
-
 This is the same `idea. <https://www.falstad.com/circuit/e-filt-hipass.html>`_
 With increasing signal frequency, the impedance of the capacitor decreases (day 1), reducing the voltage drop over the capacitor and sending more signal to the output.
 
@@ -172,6 +170,10 @@ These are called ‘RC filters’ because they’re built from a resistor (R) an
 
 Why do we need a ground electrode?
 ###################################
+
+.. raw:: html
+
+  <iframe width="982" height="552" src="https://www.youtube.com/embed/YE2cdXtzlF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 When we build our EMG circuit, we will use three electrodes: measurement (+), reference (-), and ground. Why do we have a ground electrode when we already have ‘+’ and ‘-’ inputs? This is a bit tricky, and there's multiple ways to understand it. We’ll go over them and discuss as needed.
 First off, remember the common mode rejection ratio. If our amplifier is good at rejecting 99.99% of the common mode, but 0.01% make it through, in the range of volts, this could still be enough to prevent us from resolving microvolt spikes.

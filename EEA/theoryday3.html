@@ -241,11 +241,6 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#today-s-talks">
-   Today’s Talks
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#instrumentation-amplifiers">
    Instrumentation amplifiers
   </a>
@@ -320,14 +315,9 @@
       <h5 class="card-title" > Figure 1: The equivalent circuit of the electrode</h5>
       </div>
     </div>
-</div><div class="section" id="today-s-talks">
-<h2>Today’s Talks<a class="headerlink" href="#today-s-talks" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=uPcv0gBjqbA">Link to Jakob Voigts’ talk about Instrumentation Amplifiers.</a></p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=YE2cdXtzlF4">Link to Jakob Voigts’ talk about Ground vs Reference.</a></p>
-</div>
-<div class="section" id="instrumentation-amplifiers">
+</div><div class="section" id="instrumentation-amplifiers">
 <h2>Instrumentation amplifiers<a class="headerlink" href="#instrumentation-amplifiers" title="Permalink to this headline">¶</a></h2>
-<p>Let’s quickly revisit why we can’t just use 1 operational amplifier to get a nice signal.</p>
+<iframe width="982" height="552" src="https://www.youtube.com/embed/uPcv0gBjqbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>Let’s quickly revisit why we can’t just use 1 operational amplifier to get a nice signal.</p>
 <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
     <div class="card text-center intro-card border-white">
     <img src="../_static/images/EEA/eea_fig-49.png" class="card-img-top">
@@ -412,7 +402,7 @@ With increasing signal frequency, the impedance of the capacitor decreases (day 
 </div>
 <div class="section" id="why-do-we-need-a-ground-electrode">
 <h2>Why do we need a ground electrode?<a class="headerlink" href="#why-do-we-need-a-ground-electrode" title="Permalink to this headline">¶</a></h2>
-<p>When we build our EMG circuit, we will use three electrodes: measurement (+), reference (-), and ground. Why do we have a ground electrode when we already have ‘+’ and ‘-’ inputs? This is a bit tricky, and there’s multiple ways to understand it. We’ll go over them and discuss as needed.
+<iframe width="982" height="552" src="https://www.youtube.com/embed/YE2cdXtzlF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>When we build our EMG circuit, we will use three electrodes: measurement (+), reference (-), and ground. Why do we have a ground electrode when we already have ‘+’ and ‘-’ inputs? This is a bit tricky, and there’s multiple ways to understand it. We’ll go over them and discuss as needed.
 First off, remember the common mode rejection ratio. If our amplifier is good at rejecting 99.99% of the common mode, but 0.01% make it through, in the range of volts, this could still be enough to prevent us from resolving microvolt spikes.
 As a more concrete way to think about it regarding the circuit: imagine you just walked across a carpet and you’re charged to 10kV. Now you want to do a differential measurement of EMG (or EEG). In theory, as far as we’ve really talked about till now, this should work via the magic of common-mode rejection. However, remember the circuit that is inside the instrumentation amp:</p>
 <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
