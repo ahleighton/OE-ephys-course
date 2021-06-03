@@ -382,7 +382,6 @@ p {
   margin: 0.3em 0;
 }
 
-
 /* Shadow around images and stay in column bounds*/
 
 img {
@@ -393,6 +392,12 @@ img {
   -moz-box-shadow: 8px 8px 3px #ccc;
   -webkit-box-shadow: 8px 8px 3px #ccc;
   -khtml-box-shadow: 8px 8px 3px #ccc;*/
+}
+
+img.align-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 

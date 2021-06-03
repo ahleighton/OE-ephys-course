@@ -3,7 +3,7 @@
 .. _ampvoltagediv:
 
 ***********************************
-Amplifier with Voltage divider
+Amplifier with Voltage Divider
 ***********************************
 
 .. raw:: html

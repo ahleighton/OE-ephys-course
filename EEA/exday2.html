@@ -151,10 +151,17 @@
    Theory Day 2
   </a>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Exercises Day 2
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Firmata.html">
@@ -183,10 +190,10 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="exday1TA.html">
-   Exercises Day 1 (TA)
+   Exercises Day 1 TA
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -202,18 +209,13 @@
   <a class="reference internal" href="exday2TA.html">
    Exercises Day 2 TA
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="simple">
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Firmata.html">
-   Firmata
-  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="exday3TA.html">
@@ -278,8 +280,38 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reference-electrodes">
-     Reference Electrodes
+    <a class="reference internal nav-link" href="#connect-reference-electrode">
+     Connect reference electrode
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#provide-negative-feedback">
+     Provide negative feedback
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#feed-back-only-50-of-signal">
+     Feed back only 50% of signal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-inverting-op-amp">
+     Build inverting op-amp
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#replace-ground-with-dc-signal">
+     Replace ground with DC signal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-reference-input-to">
+     Add reference input to ‘+’
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#final-differential-amplifier">
+     Final Differential Amplifier
     </a>
    </li>
   </ul>
@@ -315,17 +347,15 @@
               
               <div>
                 
-  <span class="target" id="refeday2"></span><div class="section" id="exercises-day-2">
+  <div class="toctree-wrapper compound">
+</div>
+<span class="target" id="refeday2"></span><div class="section" id="exercises-day-2">
 <h1>Exercises Day 2<a class="headerlink" href="#exercises-day-2" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="impedance">
 <h2>Impedance<a class="headerlink" href="#impedance" title="Permalink to this headline">¶</a></h2>
 <p>Previously, we built the circuit below using the circuit simulator. We saw that the electrode cannot drive a cable that has a shunt capacitance, but that an amplifier can protect our signal source and provide current to power the rest of the circuit.</p>
-<div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-34.png" class="card-img-top">
-    <a href="https://tinyurl.com/yf9jdf2b" class="btn btn-light stretched-link">Simulator Link</a>
-    </div>
-</div><ol class="upperalpha simple">
+<a class="reference external image-reference" href="https://tinyurl.com/yf9jdf2b"><img alt="../_images/eea_fig-34.png" class="align-center" src="../_images/eea_fig-34.png" /></a>
+<ol class="upperalpha simple">
 <li><p>Open the simulator link. In the long wire configuration, swap out the 20pF and 100pF capacitor for a 1MOhm and 22kOhm resistor. What changes?</p></li>
 </ol>
 </div>
@@ -341,12 +371,8 @@ Let’s build the above example from the simulator in real life, on the breadboa
 </div>
 <p>First, we need to make the ‘rails’ that will provide the voltage for our op-amp. - this means that we need to have a positive and negative voltage ready, so that we can amplify a signal that lives around some reference level that we shall call 0 volt. If we only have 0 and +3V then any negative signal will floor and stay at 0.</p>
 <p>To do this we use a common trick and turn two regular power supplies into a bipolar power supply. In our case we use batteries, because they’re cheap and pretty much fully noise-free. One pair of batteries provides 3V relative to ground, 0V. Both ground rails are connected. The second pair of batteries is reversed to provide -3V relative to ground, so that we get a + and a – voltage.</p>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-35.png" class="card-img-top">
-      <h5 class="card-title" > Bipolar power supply on the breadboard </h5>
-    </div>
-</div><div class="admonition tip">
+<img alt="../_images/eea_fig-35.png" class="align-center" src="../_images/eea_fig-35.png" />
+<div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Check which way up your breadboard is (keep the blue line at the top). Following the figures precisely will make debugging much easier later on.</p>
 </div>
@@ -361,21 +387,13 @@ Let’s build the above example from the simulator in real life, on the breadboa
 <ol class="upperalpha simple">
 <li><p>Add two 100nF (marked 104) caps, one to each rail, so connecting GND to 3V and connecting GND to -3V (see image below).</p></li>
 </ol>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-36.png" class="card-img-top">
-    </div>
-</div></div>
+<img alt="../_images/eea_fig-36.png" class="align-center" src="../_images/eea_fig-36.png" />
+</div>
 <div class="section" id="build-long-wire-equivalent-circuit">
 <h3>Build ‘long wire’ equivalent circuit<a class="headerlink" href="#build-long-wire-equivalent-circuit" title="Permalink to this headline">¶</a></h3>
 <p>Now we will build the equivalent of having an electrode picking up a neuronal signal, and a long wire connecting this electrode to the recording system, without a headstage in between.
 We’re going to build the circuit below (note the square wave input, just like the blink example). We’re using resistors to model our electrode and shunt voltage divider. For now, we don’t need the voltage rails, they will be used to power our amplifier later.</p>
-<blockquote>
-<div><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-37.png" class="card-img-top">
-    </div>
-</div></div></blockquote>
+<img alt="../_images/eea_fig-37.png" class="align-center" src="../_images/eea_fig-37.png" />
 <ol class="arabic simple">
 <li><p>Upload the Blink example to your teensy (or just run it if still loaded).</p></li>
 <li><p>Send the teensy output through a 1MOhm resistor. This makes it behave a bit like a biological signal coming from an electrode.</p></li>
@@ -383,22 +401,13 @@ We’re going to build the circuit below (note the square wave input, just like 
 <li><p>Add one ‘readout’ wire connected to ground (for your oscilloscope ground lead)</p></li>
 <li><p>Connect a second readout wire so that you can measure the output voltage of your system.</p></li>
 </ol>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-38.png" class="card-img-top">
-    </div>
-</div><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-39.png" class="card-img-top">
-    </div>
-</div><ol class="arabic simple" start="6">
+<img alt="../_images/eea_fig-38.png" class="align-center" src="../_images/eea_fig-38.png" />
+<img alt="../_images/eea_fig-39.png" class="align-center" src="../_images/eea_fig-39.png" />
+<ol class="arabic simple" start="6">
 <li><p>Now measure the output with the oscilloscope at the points marked by red arrows in the image below, and complete the first column of the table below:</p></li>
 </ol>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-40.png" class="card-img-top">
-    </div>
-</div><table class="colwidths-given table">
+<img alt="../_images/eea_fig-40.png" class="align-center" src="../_images/eea_fig-40.png" />
+<table class="colwidths-given table">
 <colgroup>
 <col style="width: 40%" />
 <col style="width: 30%" />
@@ -434,37 +443,25 @@ We’re going to build the circuit below (note the square wave input, just like 
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="7">
-<li><p>How much signal is lost by this ‘recording system’?</p></li>
-</ol>
+<p>How much signal is lost by this ‘recording system’?</p>
 </div>
 <div class="section" id="replace-long-wire-with-headstage">
 <h3>Replace ‘long wire’ with ‘headstage’<a class="headerlink" href="#replace-long-wire-with-headstage" title="Permalink to this headline">¶</a></h3>
 <p>Now we will keep almost everything the same, but we will replace our long wire with a ‘headstage’. We will use only the most basic part of the headstage, an operational amplifier.</p>
 <p>This is the op-amp you have.  Make sure you’re looking at the op-amp (LM358P), not the instrumentation amp (AD622). The op-amp should say ‘LM358’ on it.</p>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 60%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-41.png" class="card-img-top">
-    </div>
-</div><ol class="arabic simple">
+<a class="reference internal image-reference" href="../_images/eea_fig-41.png"><img alt="../_images/eea_fig-41.png" class="align-center" src="../_images/eea_fig-41.png" style="width: 284.0px; height: 265.0px;" /></a>
+<ol class="arabic simple">
 <li><p>Place the op-amp on your breadboard, with the semicircle cutout on the left.</p></li>
 <li><p>Connect the +3 voltage rail to ‘Vcc+’ and the -3 voltage rail to ‘Vcc-‘</p></li>
 <li><p>Put the electrode output wire into the + input of your op-amp, and the output of the op-amp into the ‘wire’ simulation circuit.</p></li>
 <li><p>Feed the output of the op-amp, back into the – input.</p></li>
 </ol>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-42.png" class="card-img-top">
-    </div>
-</div>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-43.png" class="card-img-top">
-    </div>
-</div><p>Now measure the same three points as before and complete this table:</p>
+<img alt="../_images/eea_fig-42.png" class="align-center" src="../_images/eea_fig-42.png" />
+<img alt="../_images/eea_fig-43.png" class="align-center" src="../_images/eea_fig-43.png" />
+<p>Now measure the same three points as before and complete this table:</p>
 <blockquote>
-<div><table class="colwidths-given table" id="id2">
-<caption><span class="caption-text">Measuring Signal Amplitude</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<div><table class="colwidths-given table" id="id1">
+<caption><span class="caption-text">Measuring Signal Amplitude</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 40%" />
 <col style="width: 30%" />
@@ -509,58 +506,56 @@ We’re going to build the circuit below (note the square wave input, just like 
 </div>
 <div class="section" id="differential-signals">
 <h2>Differential Signals<a class="headerlink" href="#differential-signals" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+</div>
 <ol class="upperalpha simple">
 <li><p>Measure across your fingers with the oscilloscope 1x probe. How big is the amplitude of this signal? Compare this to the size of a spike, around 100 µV.  Could you see a spike on top of that noise?</p></li>
 </ol>
-<div class="section" id="reference-electrodes">
-<h3>Reference Electrodes<a class="headerlink" href="#reference-electrodes" title="Permalink to this headline">¶</a></h3>
 <p>So far, we have only considered the signal coming into our recording electrode, relative to ground. We will now add a reference electrode in the simulator.</p>
 <p>You can think of the small square waves as spikes you are trying to detect, and the sine wave (that both reference and your measurement electrode share) as background- maybe slow EEG signals or 50Hz noise, which is likely to be present at both electrodes.</p>
-<p>Our ‘goal’ circuit has the following properties:</p>
+<p>Step-by-step, we are going to build our ‘goal’ circuit has the following properties:</p>
 <ul class="simple">
-<li><p>Measurement electrode input (spikes)</p></li>
-<li><p>Reference electrode input (common noise)</p></li>
+<li><p>Input from the measurement electrode (spikes)</p></li>
+<li><p>Input from the reference electrode (common noise)</p></li>
 <li><p>Output: Reference subtracted from measurement, multiplied by gain</p></li>
 <li><p>Does not draw current from cells</p></li>
 </ul>
-<div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 75%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-44.png" class="card-img-top">
-    <a href="https://tinyurl.com/y5pw86ox" class="btn btn-light stretched-link">Simulator Link</a>
-    </div>
-</div><ol class="upperalpha simple">
-<li><p>Connect the reference and spike signal to your simulated electrode circuit, and in turn to the op-amp in open-loop configuration. Connect the output of the amplifier to the PC. Run the simulation. What (in V) is the amplifier giving as output?</p></li>
+<a class="reference external image-reference" href="https://tinyurl.com/y5pw86ox"><img alt="../_images/eea_fig-44.png" class="align-center" src="../_images/eea_fig-44.png" /></a>
+<div class="section" id="connect-reference-electrode">
+<h3>Connect reference electrode<a class="headerlink" href="#connect-reference-electrode" title="Permalink to this headline">¶</a></h3>
+<ol class="upperalpha simple">
+<li><p>Connect the reference and spike signal directly to your simulated electrode circuit, and in turn to the op-amp in open-loop configuration. Connect the output of the amplifier to the PC. Run the simulation. What (in V) is the amplifier giving as output?</p></li>
 </ol>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-45.png" class="card-img-top">
-    </div>
-</div><p>We have successfully subtracted the reference signal (as the output displays square waves), and our input signal is protected (no current is being drawn), but the output is saturating. This is a consequence of the huge gain of the op-amp mentioned earlier. This means we can’t just use it as a differential amplifier- any tiny difference between the inverting and non-inverting inputs will get amplified so much that the output will saturate, and be equal to whatever voltage is powering the amplifier (in this case, + and - 15 V).</p>
+<a class="reference external image-reference" href="https://tinyurl.com/y5pw86ox"><img alt="../_images/eea_fig-45.png" class="align-center" src="../_images/eea_fig-45.png" /></a>
+<p>We have successfully subtracted the reference signal (as the output displays square waves), and our input signal is protected (no current is being drawn), but the output is saturating. This is a consequence of the huge gain of the op-amp mentioned earlier. This means we can’t just use it as a differential amplifier- any tiny difference between the inverting and non-inverting inputs will get amplified so much that the output will saturate, and be equal to whatever voltage is powering the amplifier (in this case, + and - 15 V).</p>
 <ul class="simple">
 <li><p>Measurement electrode input (spikes) YES</p></li>
 <li><p>Reference electrode input (common noise) YES</p></li>
 <li><p>Output: Reference subtracted from measurement, multiplied by gain YES… but gain is too large!</p></li>
 <li><p>Does not draw current from cells YES</p></li>
 </ul>
+</div>
+<div class="section" id="provide-negative-feedback">
+<h3>Provide negative feedback<a class="headerlink" href="#provide-negative-feedback" title="Permalink to this headline">¶</a></h3>
 <p>We need to do something to prevent our amplifier from always hitting power-rail values. We can provide negative feedback to the amplifier by looping the output back and feeding it into one of the terminals. The amplifier is going to do the same thing as before; output the difference between + and - multiplied by its huge gain. The output will rise rapidly, however this time, as soon as it reaches the value of the + terminal, the + and – are the same value and there’s no difference left to amplify.</p>
 <ol class="upperalpha simple" start="2">
 <li><p>Put the reference signal to one side/ delete it for now. Connect the amplifier output to the inverting input. What happens to your output now? What is the gain?</p></li>
 </ol>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-46.png" class="card-img-top">
-    </div>
-</div><p>We’ve stopped it saturating, but we still can’t amplify, or subtract our reference electrode.</p>
+<img alt="../_images/eea_fig-46.png" class="align-center" src="../_images/eea_fig-46.png" />
 <ul class="simple">
 <li><p>Measurement electrode input (spikes) YES</p></li>
 <li><p>Reference electrode input (common noise) NO</p></li>
 <li><p>Output: Reference subtracted from measurement, multiplied by gain NO</p></li>
 <li><p>Does not draw current from cells YES</p></li>
 </ul>
+<p>We’ve stopped it saturating, but we still can’t amplify, or subtract our reference electrode.</p>
+</div>
+<div class="section" id="feed-back-only-50-of-signal">
+<h3>Feed back only 50% of signal<a class="headerlink" href="#feed-back-only-50-of-signal" title="Permalink to this headline">¶</a></h3>
 <p>Let’s start with amplifying.</p>
-<p>If we only feedback 50% of the output voltage, the amplifier will again detect a difference between the + and - terminals, and will increase (double) its output voltage until - and + are equal once more. We can vary the proportion of the output voltage that we feed back, in order to adjust the gain of our amplifier. To do so, we need to divide the voltage into the part we want to send to the amplifier, and the part we want to get rid of, which we can route to ground.</p>
+<p>If we only feed back 50% of the output voltage, the amplifier will again detect a difference between the + and - terminals, and will increase (double) its output voltage until - and + are equal once more. We can vary the proportion of the output voltage that we feed back, in order to adjust the gain of our amplifier. To do so, we need to divide the voltage into the part we want to send to the amplifier, and the part we want to get rid of, which we can route to ground.</p>
 <ol class="upperalpha simple" start="3">
-<li><p>Add resistors to your simulated circuit to build an amplifier with a gain of 2, using what you learned about voltage dividers on day 1. The answer is here: <a class="reference internal" href="ampvoltagediv.html#ampvoltagediv"><span class="std std-ref">Amplifier with Voltage divider</span></a>, but try it on your own first.</p></li>
+<li><p>Add resistors to your simulated circuit to build an amplifier with a gain of 2, using what you learned about voltage dividers on day 1. The answer is here: <a class="reference internal" href="ampvoltagediv.html#ampvoltagediv"><span class="std std-ref">Amplifier with Voltage Divider</span></a>, but try it on your own first.</p></li>
 </ol>
 <p>Now we have a. protected our signal and b. amplified it!</p>
 <ul class="simple">
@@ -570,41 +565,57 @@ We’re going to build the circuit below (note the square wave input, just like 
 <li><p>Does not draw current from cells YES</p></li>
 </ul>
 <p>We want to introduce our reference again. How can we do that, and keep all those other properties we worked so hard for?</p>
-<p>First, we will build an inverting op-amp. Why? Because both the input and the feedback need to share the ‘-’ input, so that the amplifier doesn’t saturate. How does that work? By putting the ‘-’ input in the middle of a voltage divider, with the feedback on one side, and the input on the other. We connect ‘+’ to ground. Now the op-amp will output whatever voltage is needed to keep the ‘-’ at ground level, i.e. 0 V (because we connect ‘+’ to ground, if we had another voltage at ground it would keep ‘-’ at that voltage).</p>
+</div>
+<div class="section" id="build-inverting-op-amp">
+<h3>Build inverting op-amp<a class="headerlink" href="#build-inverting-op-amp" title="Permalink to this headline">¶</a></h3>
+<p>Both the input and the feedback need to share the ‘-’ input, so that the amplifier doesn’t saturate. First, we will build an inverting op-amp, by putting the ‘-’ input in the middle of a voltage divider, with the feedback on one side, and the input on the other. We connect ‘+’ to ground. Now the op-amp will output whatever voltage is needed to keep the ‘-’ at ground level, i.e. 0 V (because we connect ‘+’ to ground, if we had another voltage at ground it would keep ‘-’ at that voltage).</p>
 <p>What voltage does the amplifier have to output to keep ‘-‘ at 0V?</p>
 <div class="math notranslate nohighlight">
-\[-1 * Vin\]</div>
-<p>i.e. it has to provide directly opposing voltage to whatever comes in at the input.</p>
+\[Vout = -1 * Vin\]</div>
+<p>i.e. the amplifier has to provide directly opposing voltage to whatever comes in at the input.</p>
 <p>The cool but confusing bit here is that the ‘-’ input is always at 0V, which is why we call it ‘virtual ground’. This circuit works due to the fact that current still flows through the circuit (but never into the amplifier!), even though the voltage of the node is kept at 0.</p>
 <ol class="upperalpha simple" start="4">
 <li><p>Build this inverting op amp. Check in the simulator that this virtual ground really works. If this is still mysterious, watch the section in this video (here: <a class="reference external" href="https://youtu.be/7FYHt5XviKc?t=933">https://youtu.be/7FYHt5XviKc?t=933</a> ).</p></li>
 </ol>
+</div>
+<div class="section" id="replace-ground-with-dc-signal">
+<h3>Replace ground with DC signal<a class="headerlink" href="#replace-ground-with-dc-signal" title="Permalink to this headline">¶</a></h3>
 <p>Ok now we have the inverting amplifier, what good is that? Well, we have freed up the ‘+’ input and  can now replace the ground at the ‘+’ input with something else.</p>
 <ol class="upperalpha simple" start="5">
 <li><p>Add a constant +2.5 V to the input. What happens to the output?</p></li>
 </ol>
 <p>Because the initial input was already inverted, by adding to that we have now effectively subtracted one voltage from another. We are close to having what we want, we just need to replace the stable offset voltage at ‘+’ with the 2nd signal we wish to subtract (our reference).</p>
+</div>
+<div class="section" id="add-reference-input-to">
+<h3>Add reference input to ‘+’<a class="headerlink" href="#add-reference-input-to" title="Permalink to this headline">¶</a></h3>
 <ol class="upperalpha simple" start="6">
-<li><p>Replace the +2.5 signal with your reference electrode. Does this work? What went wrong?</p></li>
+<li><p>Replace the +2.5 signal with your reference electrode.</p></li>
 </ol>
-<p>Try to fix this circuit before looking at the solution below, but don’t get stuck forever.</p>
-<p>Solution: <a class="reference internal" href="soldiffamp.html#soldiffamp"><span class="std std-ref">Differential Amplifier</span></a></p>
+<p>Does this work? What went wrong?
+Try to figure this out but don’t get stuck forever.</p>
+<p>Solution here: <a class="reference internal" href="soldiffamp.html#soldiffamp"><span class="std std-ref">Differential Amplifier Solutions</span></a>.</p>
 <ul class="simple">
 <li><p>Measurement electrode input (spikes) YES</p></li>
 <li><p>Reference electrode input (common noise) YES</p></li>
 <li><p>Output: Reference subtracted from measurement, multiplied by gain NO</p></li>
 <li><p>Does not draw current from cells YES</p></li>
 </ul>
+</div>
+<div class="section" id="final-differential-amplifier">
+<h3>Final Differential Amplifier<a class="headerlink" href="#final-differential-amplifier" title="Permalink to this headline">¶</a></h3>
 <p>Now we’re pretty much there! The only thing left is that right now our amp outputs the difference between our measurement and reference, but inverted. So just swap the inputs and we’re there!</p>
 <ol class="upperalpha simple" start="7">
 <li><p>In the simulator, re-create a differential amplifier.</p></li>
 </ol>
-<ul class="simple">
+<p>Solution here: <a class="reference internal" href="finaldiffamp.html#finaldiffamp"><span class="std std-ref">Final Differential Amplifier</span></a>.</p>
+<blockquote>
+<div><ul class="simple">
 <li><p>Measurement electrode input (spikes) YES</p></li>
 <li><p>Reference electrode input (common noise) YES</p></li>
 <li><p>Output: Reference subtracted from measurement, multiplied by gain YES</p></li>
 <li><p>Does not draw current from cells YES</p></li>
 </ul>
+</div></blockquote>
 <ol class="upperalpha simple" start="8">
 <li><p>If you have this circuit working, start changing the 10M resistor on the top to another value and see what happens.</p></li>
 </ol>
@@ -631,14 +642,15 @@ We’re going to build the circuit below (note the square wave input, just like 
 <p>With material from:</p>
 <ul class="simple">
 <li><p>Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018.</p></li>
-<li><p>Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at <a class="reference external" href="https://www.tenss.ro/">TENSS</a>)</p></li>
-<li><p>Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for <a class="reference external" href="https://www.tenss.ro/">TENSS</a>)</p></li>
+<li><p>Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at TENSS)</p></li>
+<li><p>Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for TENSS)</p></li>
 <li><p>Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp</p></li>
 </ul>
 </div>
 <div class="section" id="licensing">
 <h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
-<p>This work is licensed under CC BY-SA 4.0. To view a copy of this license, visit <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></p>
+<p>This work is licensed under CC BY-SA 4.0.</p>
+<p>To view a copy of this license, visit <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></p>
 </div>
 </div>
 

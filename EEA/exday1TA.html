@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercises Day 1 (TA) &#8212; Open Ephys EEA Course Materials 0.0.0 documentation</title>
+    <title>Exercises Day 1 TA &#8212; Open Ephys EEA Course Materials 0.0.0 documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -151,10 +151,17 @@
    Theory Day 2
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="exday2.html">
    Exercises Day 2
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Firmata.html">
@@ -183,10 +190,10 @@
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   Exercises Day 1 (TA)
+   Exercises Day 1 TA
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -202,18 +209,13 @@
   <a class="reference internal" href="exday2TA.html">
    Exercises Day 2 TA
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="simple">
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Firmata.html">
-   Firmata
-  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="exday3TA.html">
@@ -341,21 +343,15 @@
               <div>
                 
   <span class="target" id="refeday1ta"></span><div class="section" id="exercises-day-1-ta">
-<h1>Exercises Day 1 (TA)<a class="headerlink" href="#exercises-day-1-ta" title="Permalink to this headline">¶</a></h1>
+<h1>Exercises Day 1 TA<a class="headerlink" href="#exercises-day-1-ta" title="Permalink to this headline">¶</a></h1>
 <p><em>These docs have notes for teachers to help them give the course, it could also be helpful for people following the course on their own who need some help/hints/solutions.</em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It’s best to take everyone through day 1 as a group, show them the different probes for the oscilloscope, make sure they have AC/DC setting correct. Check that everyone has a nice signal each time before moving on.</p>
 </div>
 <p>We’re going to go through the basic electronics you will need to understand the equivalent circuit of the electrode, below:</p>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-9.png" class="card-img-top">
-      <div class="card-body">
-      <h5 class="card-title" > Figure 1: The equivalent circuit of the electrode</h5>
-      </div>
-    </div>
-</div><div class="section" id="using-a-multimeter">
+<img alt="../_images/eea_fig-9.png" class="align-center" src="../_images/eea_fig-9.png" />
+<div class="section" id="using-a-multimeter">
 <h2>1.      Using a multimeter<a class="headerlink" href="#using-a-multimeter" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ol class="upperalpha simple">
@@ -371,11 +367,8 @@
 <p>In your kit you will find a Teensy 3.2. This is a small microcontroller that we can control in software, and use to generate output or collect input voltage signals. We’re going to attach it to our solderless breadboard.
 If you need to, refer back to the reading material for the overview on how to use a breadboard, it also includes some basic troubleshooting which may prove useful if you run into problems. The most important thing is to remember which holes are connected. Your long breadboard is actually made up of two separate breadboards; + and – rails run through rows 0-30 and 31-60.
 If you want to use the entire length of the breadboard, you will have to connect these rails together with wires.</p>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-10.png" class="card-img-top">
-      </div>
-</div><ol class="upperalpha simple" start="4">
+<img alt="../_images/eea_fig-10.png" class="align-center" src="../_images/eea_fig-10.png" />
+<ol class="upperalpha simple" start="4">
 <li><p>Attach the teensy to the left of your breadboard as shown above. If you make sure the breadboard is in the same orientation as this schematic, it will make the following exercises easier to follow. Removing and replacing the teensy can sometimes bend the pins, so we’re going to leave it here for the whole course.</p></li>
 <li><p>Use the USB to micro-USB cable in your kit to connect the Teensy to your computer. The Teensy comes with a default programme already loaded onto the board, so you should see the LED on the board start to blink slowly as soon as it is powered on.</p></li>
 </ol>
@@ -386,11 +379,8 @@ If you want to use the entire length of the breadboard, you will have to connect
 - The selected port Tools/Port</p>
 </div>
 <p>The kit includes a Teensy pinout card:</p>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-11.png" class="card-img-top">
-      </div>
-</div><p>Each gold circle (‘via’) on this pinout represents an input or output of the Teensy. Your teensy already has pins attached, so that you can use it in your breadboard later. This diagram (‘pinout’) shows us what each pin of the Teensy can do. It’s important to distinguish between:</p>
+<img alt="../_images/eea_fig-11.png" class="align-center" src="../_images/eea_fig-11.png" />
+<p>Each gold circle (‘via’) on this pinout represents an input or output of the Teensy. Your teensy already has pins attached, so that you can use it in your breadboard later. This diagram (‘pinout’) shows us what each pin of the Teensy can do. It’s important to distinguish between:</p>
 <ul class="simple">
 <li><p>Ground pins (GND)</p></li>
 <li><p>Analog pins, that can read varying voltages, such as a wave.</p></li>
@@ -403,17 +393,9 @@ If you want to use the entire length of the breadboard, you will have to connect
 <p class="admonition-title">Note</p>
 <p>Should be around 3.3V.</p>
 </div>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-12.png" class="card-img-top">
-      </div>
+<img alt="../_images/eea_fig-12.png" class="align-center" src="../_images/eea_fig-12.png" />
+<img alt="../_images/eea_fig-13.png" class="align-center" src="../_images/eea_fig-13.png" />
 </div>
-
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-13.png" class="card-img-top">
-      </div>
-</div></div>
 <div class="section" id="using-an-oscilloscope">
 <h2>2.      Using an oscilloscope<a class="headerlink" href="#using-an-oscilloscope" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
@@ -423,11 +405,8 @@ If you want to use the entire length of the breadboard, you will have to connect
 <li><p>Set the slider on the probe itself to ‘1x’. Connect your PicoScope to your pc and open up the Picoscope software.</p></li>
 <li><p>Use the PicoScope to measure the blink signal at the readout wires, as you did with your multimeter. Make sure you play around to find nice X and Y scaling. What shape &amp; amplitude does the signal have?</p></li>
 </ol>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-14.png" class="card-img-top">
-      </div>
-</div><p>If you see something odd, check:</p>
+<img alt="../_images/eea_fig-14.png" class="align-center" src="../_images/eea_fig-14.png" />
+<p>If you see something odd, check:</p>
 <ul class="simple">
 <li><p>x-axis scaling (ms/div )</p></li>
 <li><p>y-axis scaling (Auto doesn’t always work)</p></li>
@@ -437,11 +416,8 @@ If you want to use the entire length of the breadboard, you will have to connect
 <p class="admonition-title">Note</p>
 <p>Should see a clear square wave of around 3.3 amplitude. NB: sometimes connecting the ground to teensy causes it to charge (you can see it with the scope) and it can end up disconnecting from the PC and making a mess. They don’t actually need the ground of the scope connected to see the large sine wave because of the scope’s high input impedance. That might be confusing now, but should be clearer after talking about impedance tomorrow.</p>
 </div>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 75%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-66.png" class="card-img-top">
-      </div>
-</div><p>We’ll now use the Teensy microcontroller to output a sine wave, instead of the blink example.</p>
+<img alt="../_images/eea_fig-66.png" class="align-center" src="../_images/eea_fig-66.png" />
+<p>We’ll now use the Teensy microcontroller to output a sine wave, instead of the blink example.</p>
 <ol class="upperalpha simple" start="4">
 <li><p>Open the Arduino Software Upload the following code to your teensy:</p></li>
 </ol>
@@ -462,11 +438,8 @@ If you see ‘Done Uploading’, the Teensy will start giving a sine wave as out
 <ol class="upperalpha simple" start="6">
 <li><p>Connect your oscilloscope probe to A14 and visualise the signal in your PicoScope software.</p></li>
 </ol>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-15.png" class="card-img-top">
-      </div>
-</div><div class="admonition note">
+<img alt="../_images/eea_fig-15.png" class="align-center" src="../_images/eea_fig-15.png" />
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These exercises are just to check that they understand the value of having the oscilloscope over the multimeter- that knowing the shape of the signal is important. It helps to keep linking this back to their neural signals- what if you were undersampling them, you wouldn’t see spikes. Make sure they are ok with the idea of alternating signals, and that digital and analog signals are clear as well.</p>
 </div>
@@ -478,24 +451,16 @@ Ohm’s law describes how potential (V), current (I) and resistance (R) are rela
 <div class="math notranslate nohighlight">
 \[V = IR\]</div>
 <p>When looking at a whole circuit, we can use this to calculate how much current will flow. Here is a simple circuit with a battery and two resistors. Current flows from the positive terminal of the battery to ground, which is the negative terminal of the battery.</p>
-<div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-16.png" class="card-img-top">
-    <a href="https://tinyurl.com/y4r8nsnj" class="btn btn-light stretched-link">Simulator Link</a>
-    </div>
-</div><p>1.      Click on the above link to go to the simulator.
+<a class="reference external image-reference" href="https://tinyurl.com/y4r8nsnj"><img alt="../_images/eea_fig-16.png" class="align-center" src="../_images/eea_fig-16.png" /></a>
+<p>1.      Click on the image to go to the simulator.
 Right-click on the top wire in the circuit, and then select Edit to display the current through that wire. Double-click on either of the resistors to decrease their value and see how the
 current in the circuit responds.</p>
 </div>
 <div class="section" id="resistors">
 <h2>4.      Resistors<a class="headerlink" href="#resistors" title="Permalink to this headline">¶</a></h2>
 <p>Here’s another simulation demonstrating Ohm’s law. This time, the current moves from a 5 Volt voltage source (bright green) into ground (grey, earth), across one of two resistors.</p>
-<div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-17.png" class="card-img-top">
-    <a href="https://www.falstad.com/circuit/e-ohms.html" class="btn btn-light stretched-link">Simulator Link</a>
-    </div>
-</div><ol class="upperalpha simple">
+<a class="reference external image-reference" href="https://www.falstad.com/circuit/e-ohms.html"><img alt="../_images/eea_fig-17.png" class="align-center" src="../_images/eea_fig-17.png" /></a>
+<ol class="upperalpha simple">
 <li><p>Display the voltage and current over both resistors in the ‘scope’ (right click/show in new scope). What will happen to the voltage over the left resistor if you double its resistance? What will happen to the current?</p></li>
 <li><p>What will happen to the voltage and current over the left-hand resistor? Double the value in the simulator and see if your predictions were correct.</p></li>
 </ol>
@@ -511,11 +476,8 @@ current in the circuit responds.</p>
 <p>When we measure how much voltage is provided by a voltage source (such as a battery, or the output from the Teensy), we always measure it relative to a point that we consider 0V. In a circuit powered by a battery, we consider the negative terminal to be at 0V. If there is a connection to earth, or ground, this is taken as 0V.</p>
 <p>Voltage (potential energy) ‘drops’ over each resistor, as potential energy is converted to another form of energy (such as heat or light). In a circuit powered by a 9V battery, all 9V of potential energy from our battery source <em>must</em> drop over circuit components, so that we end up back at 0V.</p>
 <p>The higher the value of the resistor, the higher the voltage drop over it, but the total voltage drop over the circuit must equal the provided voltage.</p>
-<div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "width: 150%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-18.png" class="card-img-top">
-    </div>
-</div><p>That means that, in a circuit with multiple resistors in series, the ratio of their resistances determines how much voltage will drop over each. We can therefore split up (divide) the voltage from a source across resistors. If we measure the voltage in between these resistors as V<sub>out</sub>:</p>
+<img alt="../_images/eea_fig-18.png" class="align-center" src="../_images/eea_fig-18.png" />
+<p>That means that, in a circuit with multiple resistors in series, the ratio of their resistances determines how much voltage will drop over each. We can therefore split up (divide) the voltage from a source across resistors. If we measure the voltage in between these resistors as V<sub>out</sub>:</p>
 <div class="math notranslate nohighlight">
 \[|Vout| = |Vin| \frac{R1}{R1+R2}\]</div>
 <ol class="upperalpha simple">
@@ -533,17 +495,9 @@ current in the circuit responds.</p>
 <ol class="upperalpha simple" start="2">
 <li><p>Use the battery holder and two AA batteries to create a 3V source. Use any two resistors from your kit to build a voltage divider, as shown below. If your multimeter doesn’t fit in the breadboard holes, you can place a short piece of wire at each point you want to measure.</p></li>
 </ol>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-19.png" class="card-img-top">
-      </div>
-</div>
-
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-20.png" class="card-img-top">
-      </div>
-</div><div class="admonition hint">
+<img alt="../_images/eea_fig-19.png" class="align-center" src="../_images/eea_fig-19.png" />
+<img alt="../_images/eea_fig-20.png" class="align-center" src="../_images/eea_fig-20.png" />
+<div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>Bonus exercise: Replace one of the resistors to make your output voltage as small as you can get it. What’s the smallest reading you can still pick up with your multimeter? How does this compare to the amplitude of a spike measured in the extracellular space?</p>
 </div>
@@ -563,12 +517,8 @@ current in the circuit responds.</p>
 <p>The amount of charge (Q) a capacitor can separate depends on is its capacitance (C, measured in farads) and the voltage (V) across the capacitor.</p>
 <p>In a direct current circuit, current will flow while the capacitor charges, as charge is pushed or pulled on either plate. Current flow will stop once the capacitor is fully charged. This electric charge can be discharged (and, for instance, used to power something) by providing a path that connects the positive and negative charges of the capacitor.
 In this simulation, you can charge and discharge a capacitor and see the current flow through the circuit.</p>
-<div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 75%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-21.png" class="card-img-top">
-    <a href="https://www.falstad.com/circuit/e-cap.html" class="btn btn-light stretched-link">Simulator Link</a>
-    </div>
-</div><ol class="upperalpha simple">
+<a class="reference external image-reference" href="https://www.falstad.com/circuit/e-cap.html"><img alt="../_images/eea_fig-21.png" class="align-center" src="../_images/eea_fig-21.png" /></a>
+<ol class="upperalpha simple">
 <li><p>Modify the simulation to power an LED (Draw/Outputs and Labels/Add LED) by the capacitor as it discharges. The simulator will turn the LED red when it is on.</p></li>
 </ol>
 <div class="admonition note">
@@ -578,29 +528,18 @@ In this simulation, you can charge and discharge a capacitor and see the current
 <ol class="upperalpha simple" start="2">
 <li><p>Using the breadboard, build this circuit to charge and discharge one of the large capacitors in your kit.</p></li>
 </ol>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-22.png" class="card-img-top">
-      </div>
-</div>
-
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-23.png" class="card-img-top">
-      </div>
-</div><ol class="upperalpha simple" start="3">
+<img alt="../_images/eea_fig-22.png" class="align-center" src="../_images/eea_fig-22.png" />
+<img alt="../_images/eea_fig-23.png" class="align-center" src="../_images/eea_fig-23.png" />
+<ol class="upperalpha simple" start="3">
 <li><p>In this configuration, you will need to move the + leg of the cap (where the oscilloscope probe is) between GND and +3V. In the schematic, the + leg is connected to +3V, in the photo it is connected to GND. You should see it charge and discharge in your PicoScope trace. How long does it take for the capacitor to charge?</p></li>
 <li><p>Change the value of the resistor. What does this change in your trace? Can you explain why?</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Results should look like figure below. Top panel: 220 kOhm, lower panel:very low resistance. Why? Because the resistor is setting the current through the circuit, determining how fast the capacitor is allowed to charge.</p>
+<img alt="../_images/eea_fig-67.png" class="align-center" src="../_images/eea_fig-67.png" />
 </div>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 75%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-67.png" class="card-img-top">
-      </div>
-</div></div>
+</div>
 <div class="section" id="alternating-signal-ac">
 <h3>Alternating signal (AC)<a class="headerlink" href="#alternating-signal-ac" title="Permalink to this headline">¶</a></h3>
 <p>So far, we have mostly used resistances and Ohm’s law to describe how the circuit resists direct current flow. This is applicable to direct current situations (such as batteries), but the action potentials and LFPs we measure from neurons can go in both directions- they are alternating currents. So, how do resistances and capacitors ‘resist’ alternate current flow?
@@ -609,18 +548,10 @@ Here is a demo where an alternating signal increases and decreases in frequency.
 <ol class="upperalpha simple">
 <li><p>Press ‘Play Audio’ to hear how the sound is modulated as the frequency increases.</p></li>
 </ol>
-<div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-24.png" class="card-img-top">
-    <a href="https://tinyurl.com/yyrvugha" class="btn btn-light stretched-link">Simulator Link</a>
-    </div>
-</div><p>When we were only dealing with resistors, changes in our circuit happened instantly. We have seen that introducing a capacitor into our circuit means that we have to take time into account, as it takes time for the capacitor to charge and discharge. Resistors are not sensitive to changes in frequency, but capacitors are.</p>
-<div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 70%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-25.png" class="card-img-top">
-    <a href="https://tinyurl.com/y3sbgfl6" class="btn btn-light stretched-link">Simulator Link</a>
-    </div>
-</div><p>Here are two circuits, both provided by an alternating voltage source with a different frequency. In the scope below, the voltage trace of the source and the capacitor are plotted.</p>
+<a class="reference external image-reference" href="https://tinyurl.com/yyrvugha"><img alt="../_images/eea_fig-24.png" class="align-center" src="../_images/eea_fig-24.png" /></a>
+<p>When we were only dealing with resistors, changes in our circuit happened instantly. We have seen that introducing a capacitor into our circuit means that we have to take time into account, as it takes time for the capacitor to charge and discharge. Resistors are not sensitive to changes in frequency, but capacitors are.</p>
+<a class="reference external image-reference" href="https://tinyurl.com/y3sbgfl6"><img alt="../_images/eea_fig-25.png" class="align-center" src="../_images/eea_fig-25.png" style="width: 567.2px; height: 341.6px;" /></a>
+<p>Here are two circuits, both provided by an alternating voltage source with a different frequency. In the scope below, the voltage trace of the source and the capacitor are plotted.</p>
 <ol class="upperalpha simple" start="2">
 <li><p>Change the simulator oscilloscope to display the current in the circuit (for instance the current flowing through the stretch of wire).</p></li>
 <li><p>Add a third circuit, powered by an alternating voltage source of 120 Hz. What happens as the frequency increases?</p></li>
@@ -634,12 +565,8 @@ Here is a demo where an alternating signal increases and decreases in frequency.
 <div class="section" id="capacitive-voltage-divider">
 <h3>Capacitive voltage divider<a class="headerlink" href="#capacitive-voltage-divider" title="Permalink to this headline">¶</a></h3>
 <p>Because capacitors impede current flow, we can use them to build voltage dividers, just like the resistor divider shown above. Here is an example:</p>
-<div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 70%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-26.png" class="card-img-top">
-    <a href="https://tinyurl.com/y5kq7yct" class="btn btn-light stretched-link">Simulator Link</a>
-    </div>
-</div><ol class="upperalpha simple">
+<a class="reference external image-reference" href="https://tinyurl.com/y5kq7yct"><img alt="../_images/eea_fig-26.png" class="align-center" src="../_images/eea_fig-26.png" /></a>
+<ol class="upperalpha simple">
 <li><p>Try changing the capacitance values C for the first capacitor. How does this change your output voltage?</p></li>
 </ol>
 </div>
@@ -650,12 +577,8 @@ Here is a demo where an alternating signal increases and decreases in frequency.
 <ol class="upperalpha simple">
 <li><p>Use the simulator to build the equivalent circuit of the electrode as shown below:</p></li>
 </ol>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-9.png" class="card-img-top">
-      </div>
-    </div>
-</div><p>Here are some values to use:</p>
+<img alt="../_images/eea_fig-9.png" class="align-center" src="../_images/eea_fig-9.png" />
+<p>Here are some values to use:</p>
 <ul class="simple">
 <li><p>R<sub>m</sub>: the DC resistance of the metal electrode wire, 10-100 Ohms.</p></li>
 <li><p>Ce: the electrode tip capacitance, generated by the double layer generated around the electrode.  C<sub>e</sub> ~ 0.2 pF / µm2, so around 10 - 20 pF (if the electrode is unplated)</p></li>
@@ -720,7 +643,8 @@ Above, we described a voltage divider made of two (or more) resistors. Capacitor
 </div>
 <div class="section" id="licensing">
 <h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
-<p>This work is licensed under CC BY-SA 4.0. To view a copy of this license, visit <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></p>
+<p>This work is licensed under CC BY-SA 4.0.</p>
+<p>To view a copy of this license, visit <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></p>
 </div>
 </div>
 

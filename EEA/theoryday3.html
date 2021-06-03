@@ -151,10 +151,17 @@
    Theory Day 2
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="exday2.html">
    Exercises Day 2
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Firmata.html">
@@ -183,10 +190,10 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="exday1TA.html">
-   Exercises Day 1 (TA)
+   Exercises Day 1 TA
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -202,18 +209,13 @@
   <a class="reference internal" href="exday2TA.html">
    Exercises Day 2 TA
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="simple">
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Firmata.html">
-   Firmata
-  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="exday3TA.html">
@@ -317,7 +319,7 @@
     </div>
 </div><div class="section" id="instrumentation-amplifiers">
 <h2>Instrumentation amplifiers<a class="headerlink" href="#instrumentation-amplifiers" title="Permalink to this headline">¶</a></h2>
-<iframe width="982" height="552" src="https://www.youtube.com/embed/uPcv0gBjqbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>Let’s quickly revisit why we can’t just use 1 operational amplifier to get a nice signal.</p>
+<center><iframe width="982" height="552" src="https://www.youtube.com/embed/uPcv0gBjqbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><p>Let’s quickly revisit why we can’t just use 1 operational amplifier to get a nice signal.</p>
 <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
     <div class="card text-center intro-card border-white">
     <img src="../_static/images/EEA/eea_fig-49.png" class="card-img-top">
@@ -402,7 +404,7 @@ With increasing signal frequency, the impedance of the capacitor decreases (day 
 </div>
 <div class="section" id="why-do-we-need-a-ground-electrode">
 <h2>Why do we need a ground electrode?<a class="headerlink" href="#why-do-we-need-a-ground-electrode" title="Permalink to this headline">¶</a></h2>
-<iframe width="982" height="552" src="https://www.youtube.com/embed/YE2cdXtzlF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>When we build our EMG circuit, we will use three electrodes: measurement (+), reference (-), and ground. Why do we have a ground electrode when we already have ‘+’ and ‘-’ inputs? This is a bit tricky, and there’s multiple ways to understand it. We’ll go over them and discuss as needed.
+<center><iframe width="982" height="552" src="https://www.youtube.com/embed/YE2cdXtzlF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><p>When we build our EMG circuit, we will use three electrodes: measurement (+), reference (-), and ground. Why do we have a ground electrode when we already have ‘+’ and ‘-’ inputs? This is a bit tricky, and there’s multiple ways to understand it. We’ll go over them and discuss as needed.
 First off, remember the common mode rejection ratio. If our amplifier is good at rejecting 99.99% of the common mode, but 0.01% make it through, in the range of volts, this could still be enough to prevent us from resolving microvolt spikes.
 As a more concrete way to think about it regarding the circuit: imagine you just walked across a carpet and you’re charged to 10kV. Now you want to do a differential measurement of EMG (or EEG). In theory, as far as we’ve really talked about till now, this should work via the magic of common-mode rejection. However, remember the circuit that is inside the instrumentation amp:</p>
 <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
