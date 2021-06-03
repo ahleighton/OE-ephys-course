@@ -1,3 +1,5 @@
+.. notoc::
+
 .. _refTDay2:
 
 .. |Ve| replace:: V\ :sub:`e`\

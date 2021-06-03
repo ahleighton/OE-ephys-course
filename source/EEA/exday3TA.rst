@@ -1,5 +1,4 @@
-.. toctree::
-   :hidden:
+:notoc:
 
 .. _refEDay3TA:
 

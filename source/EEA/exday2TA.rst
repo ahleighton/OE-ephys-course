@@ -1,6 +1,5 @@
-.. toctree::
-   :maxdepth: 3
-
+:notoc:
+  
 .. _refEDay2TA:
 
 .. |Ve| replace:: V\ :sub:`e`\

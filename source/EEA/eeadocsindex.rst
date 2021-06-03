@@ -9,12 +9,12 @@ EEA Course Documents
    safety.rst
    software_requirements.rst
    theoryday1.rst
-   exday1.rst
    theoryday2.rst
-   exday2.rst
-   exday3.rst
    theoryday3.rst
    theoryday4.rst
+   exday1.rst
+   exday2.rst
+   exday3.rst
    project.rst
    exday1TA.rst
    exday2TA.rst
