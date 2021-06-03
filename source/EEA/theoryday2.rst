@@ -24,25 +24,19 @@ We are trying to:
 •	Filter frequencies that are not of interest.
 •	Digitize the signal for data visualisation and recording.
 
-.. raw:: html
+.. image:: ../_static/images/EEA/eea_fig-5.png
+  :align: center
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-        <div class="card text-center intro-card border-white">
-        <img src="../_static/images/EEA/eea_fig-5.png" class="card-img-top">
-          <div class="card-body">
-          <h5 class="card-title" > Figure 1: The equivalent circuit of the electrode</h5>
-          </div>
-        </div>
-    </div>
 
 Yesterday, we discussed how the electrode can detect changes in an electric potential difference. Today and tomorrow, we will expand upon what happens in the headstage. This is where the signal is amplified, filtered and digitized. We will cover how we can get as much signal as possible to our computer without drawing (too much) current from the brain and disturbing our system.
 
 Impedance
 ###################################
 
+
 .. raw:: html
 
-  <iframe width="560" height="340" src="https://www.youtube.com/embed/fVloDI4b1ts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <center><iframe width="560" height="340" src="https://www.youtube.com/embed/fVloDI4b1ts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 If we apply an alternating voltage to a resistor, capacitor or circuit, and measure the current flow, we can determine the impedance Z, measured in Ohm. The impedance represents opposition to current flow, allowing us to describe the relationship between voltage and current for time-varying signals. Just as with resistance and Ohm’s Law, the impedance Z assumes an AC current of a specific frequency and can be computed as:
 
@@ -74,23 +68,15 @@ Why is impedance important?
 
 We saw in our equivalent circuits, that currents coming from our neurons can be lost to ground by passing through the electrode circuit and the shunt capacitance (|Csh|), causing a difference between Vec and Vin.
 
-.. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-        <div class="card text-center intro-card border-white">
-        <img src="../_static/images/EEA/eea_fig-9.png" class="card-img-top">
-        </div>
-    </div>
+.. image:: ../_static/images/EEA/eea_fig-9.png
+  :align: center
 
 We can just replace these components with a representation of the impedance (Z) they provide.
 
-.. raw:: html
+.. image:: ../_static/images/EEA/eea_fig-27.png
+  :align: center
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-        <div class="card text-center intro-card border-white">
-        <img src="../_static/images/EEA/eea_fig-27.png" class="card-img-top">
-        </div>
-    </div>
 
 This gives us a voltage divider, similar to the one we built yesterday, where:
 
@@ -128,25 +114,15 @@ Amplifiers
 
 Let’s go over what an operational amplifier does.
 
-.. raw:: html
-
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center mx-auto" style = "max-width: 100%">
-        <div class="card text-center intro-card border-white">
-        <img src="../_static/images/EEA/eea_fig-28.png" class="card-img-top">
-        </div>
-    </div>
+.. image:: ../_static/images/EEA/eea_fig-28.png
+  :align: center
 
 The operational amplifier has two inputs, and basically takes the voltage difference between them. If that difference is positive, it connects its output to one ‘power rail’, like for example 3V, and if it's negative it connects its output to the other rail, that could be ground, or -3V. Another way to say the same thing would be that it amplifies the difference between its input with a huge factor, also called ‘gain’.
 
 While doing that, the operational amplifier draws basically no current on its inputs.
 
-.. raw:: html
-
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center mx-auto" style = "max-width: 100%">
-        <div class="card text-center intro-card border-white">
-        <img src="../_static/images/EEA/eea_fig-29.png" class="card-img-top">
-        </div>
-    </div>
+.. image:: ../_static/images/EEA/eea_fig-29.png
+  :align: center
 
 If we connect the output of the operational amplifier to the ‘-’ input, then the following happens:
 
@@ -160,14 +136,11 @@ We can look at the voltage that is on ‘+’ by just measuring the output of th
 
 You can run this example in the simulator, and see if what we said above about the operational amplifier makes sense. You should see that the operational amplifier stops the cable from drawing current from the electrode, and that the operational amplifier instead manages to ‘drive’ the cable effortlessly, by providing a lot of current.
 
-.. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center mx-auto" style = "max-width: 100%">
-        <div class="card text-center intro-card border-white">
-        <img src="../_static/images/EEA/eea_fig-30.png" class="card-img-top">
-              <a href="https://tinyurl.com/y6pvxdx9" class="btn btn-light stretched-link">Simulator Link</a>
-        </div>
-    </div>
+.. image:: ../_static/images/EEA/eea_fig-30.png
+  :align: center
+  :target: https://tinyurl.com/y6pvxdx9
+
 
 Our electrodes will be attached to a headstage, which contains an amplifier. This amplification step performs several functions:
 
@@ -177,7 +150,7 @@ Our electrodes will be attached to a headstage, which contains an amplifier. Thi
 
 .. raw:: html
 
-  <iframe width="560" height="340" src="https://www.youtube.com/embed/NP6nE5P82e8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <center><iframe width="560" height="340" src="https://www.youtube.com/embed/NP6nE5P82e8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 
 Amplifier Impedance
@@ -186,13 +159,9 @@ The input impedance of an amplifier is very high. This means that the circuit ac
 
 Here is the amplifier added into our circuit diagram:
 
-.. raw:: html
+.. image:: ../_static/images/EEA/eea_fig-31.png
+  :align: center
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center mx-auto" style = "max-width: 100%">
-        <div class="card text-center intro-card border-white">
-        <img src="../_static/images/EEA/eea_fig-31.png" class="card-img-top">
-        </div>
-    </div>
 
 The path from our neuronal currents first crosses the electrode and then goes either through the amplifier to ground, or through shunting routes (|Csh| and |Rsh|) to ground. The amplifier has its own (very high) impedance |Za|.
 
@@ -211,13 +180,8 @@ Effective amplifier input impedance
 **************************************
 The 'effective amplifier input impedance', |Za|’ is the total impedance to the ground seen from the electrode. This includes the path through the amplifier AND the path through the parallel shunting routes (shunt resistance and capacitance) to ground outside the amplifier.
 
-.. raw:: html
-
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center mx-auto" style = "max-width: 50%">
-        <div class="card text-center intro-card border-white">
-        <img src="../_static/images/EEA/eea_fig-32.png" class="card-img-top">
-        </div>
-    </div>
+.. image:: ../_static/images/EEA/eea_fig-32.png
+  :align: center
 
 .. math::
 
@@ -239,7 +203,7 @@ Differential Amplifiers
 
 .. raw:: html
 
-  <iframe width="560" height="340" src="https://www.youtube.com/embed/91SVSdoEFzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <center><iframe width="560" height="340" src="https://www.youtube.com/embed/91SVSdoEFzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 The amplification of the potential difference between the microelectrode and the reference electrode (on the order of microvolts) is a crucial step, and is accomplished with differential amplifiers that amplify the differences, rejecting the noise that is often introduced as common-mode potential in the circuit (i.e., noise identical in the recording and reference electrodes typically caused by motion artifacts and capacitive coupling of the body and electrode lead with power line fields (Nunez & Srinivasan, 2009)). The grounding assists the common-mode rejection properties of the amplifier by allowing it to more accurately measure differences of potential between two recording electrodes (Cadwell and Villarreal, 1999). (Nunez, pag 43,44). Therefore, high gain differential amplifiers are used to boost the signals to the larger voltage levels (Vout = gain x Vin) required by the ADC and to reject common-mode noise.
 

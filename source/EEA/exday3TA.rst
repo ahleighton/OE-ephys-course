@@ -1,7 +1,5 @@
 .. toctree::
-   :maxdepth: 3
-
-   Firmata.rst
+   :hidden:
 
 .. _refEDay3TA:
 
@@ -24,14 +22,8 @@ Exercises Day 3 TA
 
 Today we are going to build an EMG circuit! We'll use the electrodes in your kit, an instrumentation amplifier as our headstage, and the Teensy will be our acquisition board. We now have all the steps of the acquisition in place to simulate a lab experiment.
 
-.. raw:: html
-
-    <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
-        <div class="card text-center intro-card border-white">
-        <img src="../_static/images/EEA/eea_fig-5.png" class="card-img-top">
-        <a href=" https://tinyurl.com/yf9jdf2b " class="btn btn-light stretched-link">Simulator Link</a>
-        </div>
-    </div>
+.. image:: ../_static/images/EEA/eea_fig-5.png
+  :align: center
 
 Electrodes
 ###################################
@@ -50,14 +42,9 @@ Instrumentation Amplifier
 
 `This <https://www.analog.com/media/en/technical-documentation/data-sheets/AD622.pdf>`_ is the datasheet for the instrumentation amplifier in your kit.
 
-.. raw:: html
-
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 50%">
-        <div class="card text-center intro-card border-white">
-        <img src="../_static/images/EEA/eea_fig-61.png" class="card-img-top">
-        </div>
-    </div>
-
+.. image:: ../_static/images/EEA/eea_fig-61.png
+  :scale: 25
+  :align: center
 
 EMG circuit
 ###################################
@@ -68,13 +55,8 @@ First, we’ll wire up our electrodes to our instrumentation amp and read out th
 
 1. Replicate the following circuit:
 
-.. raw:: html
-
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-        <div class="card text-center intro-card border-white">
-        <img src="../_static/images/EEA/eea_fig-62.png" class="card-img-top">
-        </div>
-    </div>
+.. image:: ../_static/images/EEA/eea_fig-62.png
+  :align: center
 
 * Bypass capacitor = 104
 * Resistor: 220 Ohm
@@ -87,14 +69,8 @@ First, we’ll wire up our electrodes to our instrumentation amp and read out th
 
 3. Attach your oscilloscope as shown:
 
-.. raw:: html
-
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-        <div class="card text-center intro-card border-white">
-        <img src="../_static/images/EEA/eea_fig-63.png" class="card-img-top">
-        </div>
-    </div>
-
+.. image:: ../_static/images/EEA/eea_fig-63.png
+  :align: center
 
 If you tap the electrodes, you should see the trace of your PicoScope respond. If not, troubleshoot your circuit until you do.
 
@@ -137,21 +113,13 @@ Shifting the signal
 ***********************************
 The EMG signal is from -3 to +3V, but we can only digitize positive voltages. With a simple trick we can shift the signal up from -3 to 3V exactly into the 0-3V range we want, while still providing the amplifier with a -3 to +3V range.
 
-.. raw:: html
+.. image:: ../_static/images/EEA/eea_fig-64.png
+  :align: center
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-        <div class="card text-center intro-card border-white">
-        <img src="../_static/images/EEA/eea_fig-64.png" class="card-img-top">
-        </div>
-    </div>
 
-.. raw:: html
+.. image:: ../_static/images/EEA/eea_fig-65.png
+  :align: center
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-        <div class="card text-center intro-card border-white">
-        <img src="../_static/images/EEA/eea_fig-65.png" class="card-img-top">
-        </div>
-    </div>
 
 This voltage divider is not going to mess with our signal, because the signal is protected by the amplifier. You could in theory use almost any reasonable values for R, over 1kΩ, because the output impedance of the instrumentation amplifier is low and the input impedance (of the teensy analog input) is decently high. If you make R too small, this will still work on paper, but you’re now asking the op-amp to keep shovelling current into ground (or in this case, the 3V rail) through a small R, and eventually even an op-amp will get unhappy.
 
@@ -175,4 +143,6 @@ With material from:
 Licensing
 ###################################
 
-This work is licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
+This work is licensed under CC BY-SA 4.0.
+
+To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
