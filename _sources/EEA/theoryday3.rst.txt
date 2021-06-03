@@ -1,3 +1,5 @@
+.. notoc::
+
 .. _refTDay3:
 
 .. |Ve| replace:: V\ :sub:`e`\
@@ -31,7 +33,7 @@ Instrumentation amplifiers
 
 .. raw:: html
 
-  <center><iframe width="982" height="552" src="https://www.youtube.com/embed/uPcv0gBjqbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+  <center><iframe width="560" height="340" src="https://www.youtube.com/embed/uPcv0gBjqbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 Let's quickly revisit why we can't just use 1 operational amplifier to get a nice signal.
 
@@ -173,7 +175,11 @@ Why do we need a ground electrode?
 
 .. raw:: html
 
-  <center><iframe width="982" height="552" src="https://www.youtube.com/embed/YE2cdXtzlF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
+    <center><iframe width="560" height="340" src="https://www.youtube.com/embed/YE2cdXtzlF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </center>
+  </div>
+
 
 When we build our EMG circuit, we will use three electrodes: measurement (+), reference (-), and ground. Why do we have a ground electrode when we already have ‘+’ and ‘-’ inputs? This is a bit tricky, and there's multiple ways to understand it. We’ll go over them and discuss as needed.
 First off, remember the common mode rejection ratio. If our amplifier is good at rejecting 99.99% of the common mode, but 0.01% make it through, in the range of volts, this could still be enough to prevent us from resolving microvolt spikes.

@@ -1,7 +1,4 @@
-.. toctree::
-   :hidden:
-
-   Firmata.rst
+:notoc:
 
 .. _refEDay3:
 
@@ -17,6 +14,10 @@
 ***********************************
 Exercises Day 3
 ***********************************
+.. toctree::
+   :hidden:
+
+   Firmata.rst
 
 Today we are going to build an EMG circuit! We'll use the electrodes in your kit, an instrumentation amplifier as our headstage, and the Teensy will be our acquisition board. We now have all the steps of the acquisition in place to simulate a lab experiment.
 

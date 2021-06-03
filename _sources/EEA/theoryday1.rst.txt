@@ -1,3 +1,5 @@
+:notoc:
+
 .. _refTDay1:
 
 .. |Na+| replace:: Na\ :sup:`+`\

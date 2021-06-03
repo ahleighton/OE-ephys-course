@@ -1,5 +1,4 @@
-.. toctree::
-   :maxdepth: 3
+:notoc:
 
 .. _refproject:
 
