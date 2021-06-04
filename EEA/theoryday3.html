@@ -33,7 +33,7 @@
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Theory Day 4:" href="theoryday4.html" />
+    <link rel="next" title="Theory Day 4" href="theoryday4.html" />
     <link rel="prev" title="Theory Day 2" href="theoryday2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -141,7 +141,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="theoryday4.html">
-   Theory Day 4:
+   Theory Day 4
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -240,69 +240,6 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             
-              
-              <div class="toc-item">
-                
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
-
-<nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instrumentation-amplifiers">
-   Instrumentation amplifiers
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#common-mode-rejection-ratio-cmmr">
-     Common mode rejection ratio (CMMR)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#high-pass-and-low-pass-filtering">
-   High pass and low pass filtering
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#low-pass-filters">
-     Low-pass filters
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#high-pass-filters">
-     High-pass filters
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-do-we-need-a-ground-electrode">
-   Why do we need a ground electrode?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#acknowledgements">
-   Acknowledgements
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#licensing">
-   Licensing
-  </a>
- </li>
-</ul>
-
-</nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
           </div>
           
 
@@ -317,34 +254,25 @@
   <span class="target" id="reftday3"></span><div class="section" id="theory-day-3">
 <h1>Theory Day 3<a class="headerlink" href="#theory-day-3" title="Permalink to this headline">¶</a></h1>
 <p>Last time, we saw that an instrumentation amplifier should be pretty good at creating a proper differential signal, even if it is riding on top of a pretty large ‘noise’ signal. Today we will go over filters, put an instrumentation amplifier circuit together, and record some EMG signals.</p>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-5.png" class="card-img-top">
-      <div class="card-body">
-      <h5 class="card-title" > Figure 1: The equivalent circuit of the electrode</h5>
-      </div>
-    </div>
-</div><div class="section" id="instrumentation-amplifiers">
+<img alt="../_images/eea_fig-5.png" class="align-center" src="../_images/eea_fig-5.png" />
+<div class="section" id="instrumentation-amplifiers">
 <h2>Instrumentation amplifiers<a class="headerlink" href="#instrumentation-amplifiers" title="Permalink to this headline">¶</a></h2>
-<center><iframe width="560" height="340" src="https://www.youtube.com/embed/uPcv0gBjqbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><p>Let’s quickly revisit why we can’t just use 1 operational amplifier to get a nice signal.</p>
-<div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-49.png" class="card-img-top">
-    <a href="https://tinyurl.com/y4aps4r2 " class="btn btn-light stretched-link">Simulator Link</a>
-    </div>
-</div><p>To make this circuit differential, we need voltage dividers. But, these are connecting our fragile signal to ground! Plus, remember how any mismatch in the input impedances between ‘+’ and ‘-’ messes up the signal if there is a lot of common mode noise? In practical terms, there is always going to be a mismatch between these resistors; they simply cannot be produced in a way that makes them exactly equal. Why? Because this resistor is <em>also your electrode</em>. If you work with electrodes, have you measured their impedances? How similar are they? If you made these resistors as different as your electrodes are variable, this circuit will not work to eliminate common mode noise and amplify our spikes.</p>
+<div class="section" id="talk">
+<h3>Talk<a class="headerlink" href="#talk" title="Permalink to this headline">¶</a></h3>
+<br>
+<center><iframe width="560" height="340" src="https://www.youtube.com/embed/uPcv0gBjqbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<br></div>
+<div class="section" id="why-do-we-need-instrumentation-amps">
+<h3>Why do we need Instrumentation Amps?<a class="headerlink" href="#why-do-we-need-instrumentation-amps" title="Permalink to this headline">¶</a></h3>
+<p>Let’s quickly revisit why we can’t just use 1 operational amplifier to get a nice signal.</p>
+<a class="reference external image-reference" href="https://tinyurl.com/y4aps4r2"><img alt="../_images/eea_fig-49.png" class="align-center" src="../_images/eea_fig-49.png" /></a>
+<p>To make this circuit differential, we need voltage dividers. But, these are connecting our fragile signal to ground! Plus, remember how any mismatch in the input impedances between ‘+’ and ‘-’ messes up the signal if there is a lot of common mode noise? In practical terms, there is always going to be a mismatch between these resistors; they simply cannot be produced in a way that makes them exactly equal. Why? Because this resistor is <em>also your electrode</em>. If you work with electrodes, have you measured their impedances? How similar are they? If you made these resistors as different as your electrodes are variable, this circuit will not work to eliminate common mode noise and amplify our spikes.</p>
 <p>The solution is to use <em>three</em> op-amps:</p>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 80%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-33.png" class="card-img-top">
-    </div>
-</div><p>Here it is in the simulator:</p>
-<div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-53.png" class="card-img-top">
-    <a href="https://tinyurl.com/yjxekrv5" class="btn btn-light stretched-link">Simulator Link</a>
-    </div>
-</div><div class="section" id="common-mode-rejection-ratio-cmmr">
+<a class="reference internal image-reference" href="../_images/eea_fig-33.png"><img alt="../_images/eea_fig-33.png" class="align-center" src="../_images/eea_fig-33.png" style="width: 564.0px; height: 252.8px;" /></a>
+<p>Here it is in the simulator:</p>
+<a class="reference external image-reference" href="https://tinyurl.com/yjxekrv5"><img alt="../_images/eea_fig-53.png" class="align-center" src="../_images/eea_fig-53.png" /></a>
+</div>
+<div class="section" id="common-mode-rejection-ratio-cmmr">
 <h3>Common mode rejection ratio (CMMR)<a class="headerlink" href="#common-mode-rejection-ratio-cmmr" title="Permalink to this headline">¶</a></h3>
 <p>When the input impedances of the differential amplifier weren’t matched, part of the input signal that was common to both inputs, and thus should be cancelled out, actually appeared in the output. A common way to model how well an amplifier subtracts one input to the other is the following:
 We define each input (+ and -) to be a sum of an individual voltage (V1 or V2) plus a voltage common to both. In our arms, or the brain of an animal, this common voltage (Vc) could be electrical noise or muscle activity we are not interested in and want to discard. In this case, the inputs would be:</p>
@@ -375,54 +303,37 @@ Here, the unwanted, common signals cancel out and only the signal we are interes
 Instrumentation amplifiers are not completely immune to common input noise. They are real circuits and, as such, there are multiple ways for these common signals to bleed out into the output. They have, however, a very high CMRR. Comparing the two devices we’ve been using, the operational amplifier LM358 has a CMRR of 80dB while the instrumentation amplifier has a CMRR of 120dB, 100 times higher! (Sounds underwhelming? Remember decibels are logarithmic; the difference between 80 and 120 dB in terms of sound is the difference between a toilet flushing and a jet engine).</p>
 </div>
 </div>
-<div class="section" id="high-pass-and-low-pass-filtering">
-<h2>High pass and low pass filtering<a class="headerlink" href="#high-pass-and-low-pass-filtering" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="low-and-high-pass-filtering">
+<h2>Low and High pass filtering<a class="headerlink" href="#low-and-high-pass-filtering" title="Permalink to this headline">¶</a></h2>
 <p>Filters are used to remove certain frequencies from our data. We can do this in hardware or in software. Usually hardware filtering (implemented in the amplifier circuit) is used to increase (apparent) signal to noise ratio by rejecting unwanted frequencies and to prevent signal aliasing (e.g., bandpass between 0.5 and 2 kHz).
 Remember the exercise where we measured the voltage across our fingers with the oscilloscope, and saw very high values. Even with a differential amplifier, we usually have a decent amount of slow (~&lt;10Hz or so) voltages that are simply too big for the amplifier or ADC (analog to digital converter). Any voltages above or below the amplifier rails (or above/below the input range of the digitizer) will be ‘clipped’ and all we’ll see is a constant value.
 The solution is to remove the large amplitude slow components, so we can fit the lower amplitude, faster, interesting components into our dynamic range.</p>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-54.png" class="card-img-top">
-    </div>
-</div><p>Therefore, high-pass filters first remove the large DC offsets present at the electrode-extracellular interface, along with any undesired low-frequency signals (e.g., movement artefacts). Additionally, low-pass filters must be configured to less than half of the ADC frequency sampling rate (Nyquist limit) to prevent aliasing, and may also be used to block undesired high-frequency signals and artefacts. For instance, if our sampling frequency is 30 kHz, the low pass filter should be ~15 kHz. Below, an example of the Intan headstage circuit.</p>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-55.png" class="card-img-top">
-    </div>
-</div><div class="section" id="low-pass-filters">
+<img alt="../_images/eea_fig-54.png" class="align-center" src="../_images/eea_fig-54.png" />
+<p>Therefore, high-pass filters first remove the large DC offsets present at the electrode-extracellular interface, along with any undesired low-frequency signals (e.g., movement artefacts). Additionally, low-pass filters must be configured to less than half of the ADC frequency sampling rate (Nyquist limit) to prevent aliasing, and may also be used to block undesired high-frequency signals and artefacts. For instance, if our sampling frequency is 30 kHz, the low pass filter should be ~15 kHz. Below is an example of the Intan headstage circuit.</p>
+<img alt="../_images/eea_fig-55.png" class="align-center" src="../_images/eea_fig-55.png" />
+<div class="section" id="low-pass-filters">
 <h3>Low-pass filters<a class="headerlink" href="#low-pass-filters" title="Permalink to this headline">¶</a></h3>
 <p>These filters block high frequencies. This is basically another voltage divider, with a frequency-dependent component. You’ve already seen one of these when you charged/discharged a capacitor! The exponential decay of the capacitor gets convolved with our signal. Remember that the impedance of our capacitor decreases as the signal frequency increases. At low frequencies, the high impedance of the capacitor means we get a large voltage drop over the capacitor, and more of our input signal can reach our Vout.</p>
-<p>You can test some examples  with the circuit simulator <a class="reference external" href="https://www.falstad.com/circuit/e-filt-lopass.html">here.</a></p>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 50%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-56.png" class="card-img-top">
-    </div>
-</div></div>
+<a class="reference external image-reference" href="https://www.falstad.com/circuit/e-filt-lopass.html"><img alt="../_images/eea_fig-56.png" class="align-center" src="../_images/eea_fig-56.png" style="width: 494.4px; height: 277.8px;" /></a>
+</div>
 <div class="section" id="high-pass-filters">
 <h3>High-pass filters<a class="headerlink" href="#high-pass-filters" title="Permalink to this headline">¶</a></h3>
 <p>This is the same <a class="reference external" href="https://www.falstad.com/circuit/e-filt-hipass.html">idea.</a>
 With increasing signal frequency, the impedance of the capacitor decreases (day 1), reducing the voltage drop over the capacitor and sending more signal to the output.</p>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 50%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-57.png" class="card-img-top">
-    </div>
-</div><p>These are called ‘RC filters’ because they’re built from a resistor (R) and a capacitor (C). Because there’s only one of each, we call them ‘single pole’. In real life, filters are built from more than one pair in order to get specific characteristics. This goes beyond the scope of this course but there are entire classes on this topic.</p>
+<a class="reference external image-reference" href="https://www.falstad.com/circuit/e-filt-hipass.html"><img alt="../_images/eea_fig-57.png" class="align-center" src="../_images/eea_fig-57.png" style="width: 576.8px; height: 324.09999999999997px;" /></a>
+<p>These are called ‘RC filters’ because they’re built from a resistor (R) and a capacitor (C). Because there’s only one of each, we call them ‘single pole’. In real life, filters are built from more than one pair in order to get specific characteristics. This goes beyond the scope of this course but there are entire classes on this topic.</p>
 </div>
 </div>
 <div class="section" id="why-do-we-need-a-ground-electrode">
 <h2>Why do we need a ground electrode?<a class="headerlink" href="#why-do-we-need-a-ground-electrode" title="Permalink to this headline">¶</a></h2>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
-  <center><iframe width="560" height="340" src="https://www.youtube.com/embed/YE2cdXtzlF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </center>
-</div><p>When we build our EMG circuit, we will use three electrodes: measurement (+), reference (-), and ground. Why do we have a ground electrode when we already have ‘+’ and ‘-’ inputs? This is a bit tricky, and there’s multiple ways to understand it. We’ll go over them and discuss as needed.
-First off, remember the common mode rejection ratio. If our amplifier is good at rejecting 99.99% of the common mode, but 0.01% make it through, in the range of volts, this could still be enough to prevent us from resolving microvolt spikes.
+<p>When we build our EMG circuit, we will use three electrodes: measurement (+), reference (-), and ground. Why do we have a ground electrode when we already have ‘+’ and ‘-’ inputs? This is a bit tricky, and there’s multiple ways to understand it.</p>
+<br>
+<center><iframe width="560" height="340" src="https://www.youtube.com/embed/YE2cdXtzlF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+<br><p>First off, remember the common mode rejection ratio. If our amplifier is good at rejecting 99.99% of the common mode, but 0.01% make it through, in the range of volts, this could still be enough to prevent us from resolving microvolt spikes.
 As a more concrete way to think about it regarding the circuit: imagine you just walked across a carpet and you’re charged to 10kV. Now you want to do a differential measurement of EMG (or EEG). In theory, as far as we’ve really talked about till now, this should work via the magic of common-mode rejection. However, remember the circuit that is inside the instrumentation amp:</p>
-<div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
-    <div class="card text-center intro-card border-white">
-    <img src="../_static/images/EEA/eea_fig-53.png" class="card-img-top">
-    <a href=" https://tinyurl.com/yjxekrv5" class="btn btn-light stretched-link">Simulator Link</a>
-    </div>
-</div><p>The ‘-’ inputs of the two input op-amps are connected to ground, via a bunch of resistors. If you are charged to 10kV compared to ground, we’re asking these op-amps to deal with pretty high values individually, and they will saturate. Even if here we did not include rails in the simulation, remember that each op-amp can only go as high or low as its voltage rails (3V in our case, so with a 100x gain, a 0.03V input saturates the amplifier).</p>
+<a class="reference external image-reference" href="https://tinyurl.com/yjxekrv5"><img alt="../_images/eea_fig-53.png" class="align-center" src="../_images/eea_fig-53.png" /></a>
+<p>The ‘-’ inputs of the two input op-amps are connected to ground, via a bunch of resistors. If you are charged to 10kV compared to ground, we’re asking these op-amps to deal with pretty high values individually, and they will saturate. Even if here we did not include rails in the simulation, remember that each op-amp can only go as high or low as its voltage rails (3V in our case, so with a 100x gain, a 0.03V input saturates the amplifier).</p>
 <p>One way to think about it is that we first bring our body to a reasonable voltage level - for example the voltage that our computer considers ground. Or the ground in the wall power sockets. Once we’ve done that, our entire body is not floating at 10kV anymore but at, for us, 0V. The remaining fluctuations, so stuff we consider noise and want to remove via our differential measurement, is not as big anymore. We will still have residual 50 or 60Hz noise from the mains supply, plus other muscles, electrostatic charge, bodies moving through the fields in the room and so on, but these can all be handled by the amplifier.</p>
 <p>The last, related, issue is that the output of the whole thing is relative to ground. At some point you want to connect this to a PC, which sits at ground level. A possible solution of course is if we make the entire thing battery powered - this is actually a great idea in our exercises, if you have a laptop.</p>
 <p>Practically, all this means that we want to ground our subjects as well as possible. For tetrode recordings in mice, we use a large ‘ground screw’ with low impedance to ground, so that we can effectively discharge the mouse.</p>
@@ -448,7 +359,8 @@ As a more concrete way to think about it regarding the circuit: imagine you just
 </div>
 <div class="section" id="licensing">
 <h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
-<p>This work is licensed under CC BY-SA 4.0. To view a copy of this license, visit <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></p>
+<p>This work is licensed under CC BY-SA 4.0.</p>
+<p>To view a copy of this license, visit <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></p>
 </div>
 </div>
 
@@ -459,7 +371,7 @@ As a more concrete way to think about it regarding the circuit: imagine you just
               <div class='prev-next-bottom'>
                 
     <a class='left-prev' id="prev-link" href="theoryday2.html" title="previous page">Theory Day 2</a>
-    <a class='right-next' id="next-link" href="theoryday4.html" title="next page">Theory Day 4:</a>
+    <a class='right-next' id="next-link" href="theoryday4.html" title="next page">Theory Day 4</a>
 
               </div>
               

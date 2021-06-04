@@ -16,7 +16,9 @@ Introduction
 
 .. raw:: html
 
+  <br>
   <center><iframe width="560" height="340" src="https://www.youtube.com/embed/vE5lZWPT4hQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+  <br>
 
 Several biological processes in the body generate electrical signals, that we can then detect using an electrode made of a conducting material (see Table 1 for an overview). We can record signals generated through skeletal muscle contraction (EMG), or heartbeat (ECG). In Neuroscience, we often use intracranial electrodes to measure action potential firing (spikes) or local field potentials (LFP). Electrodes outside the skull allow us to detect EEG non-invasively.
 
@@ -282,7 +284,9 @@ With material from:
 Licensing
 ###################################
 
-This work is licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
+This work is licensed under CC BY-SA 4.0.
+
+To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
 
 
 References

@@ -24,24 +24,29 @@ To follow this course, you can either:
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
                 <div class="card text-center intro-card shadow">
-                <img src="_static/images/homepage_icons-02.jpg" class="card-img-top" alt="Ephys Fundamentals" height="90">
-                <div class="card-body flex-fill">
+
+.. figure:: _static/images/EEA/eea_fig-70.png
+  :target: EEA/kitlist.html
 
 .. container:: custom-button
 
     :ref:`NeuroKit Equipment List <refkitlist>`
 
+|
+
 Equipment needed for the hands-on exercises
+
+|
 
 .. raw:: html
 
                 </div>
-                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
                 <div class="card text-center intro-card shadow">
-                <img src="_static/images/homepage_icons-03.jpg" class="card-img-top" alt="Reading Materials and Exercises" height="90">
-                <div class="card-body flex-fill">
+
+.. figure:: _static/images/EEA/eea_fig-69.png
+  :target: EEA/eeadocsindex.html
 
 .. container:: custom-button
 
@@ -49,8 +54,11 @@ Equipment needed for the hands-on exercises
 
 Documents with theory and exercises per day
 
+|
+
 .. raw:: html
 
               </div>
-              </div>
-            </div>
+          </div>
+        </div>
+    </div>
