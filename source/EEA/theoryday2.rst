@@ -1,4 +1,4 @@
-.. notoc::
+:notoc:
 
 .. _refTDay2:
 
@@ -19,7 +19,7 @@
 Theory Day 2
 ***********************************
 
-We are trying to:
+To get our measurements of neural activity, we are trying to:
 
 •	Detect an electric potential difference.
 •	Amplify this tiny signal.
@@ -207,7 +207,7 @@ Differential Amplifiers
 
   <center><iframe width="560" height="340" src="https://www.youtube.com/embed/91SVSdoEFzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-The amplification of the potential difference between the microelectrode and the reference electrode (on the order of microvolts) is a crucial step, and is accomplished with differential amplifiers that amplify the differences, rejecting the noise that is often introduced as common-mode potential in the circuit (i.e., noise identical in the recording and reference electrodes typically caused by motion artifacts and capacitive coupling of the body and electrode lead with power line fields (Nunez & Srinivasan, 2009)). The grounding assists the common-mode rejection properties of the amplifier by allowing it to more accurately measure differences of potential between two recording electrodes (Cadwell and Villarreal, 1999). (Nunez, pag 43,44). Therefore, high gain differential amplifiers are used to boost the signals to the larger voltage levels (Vout = gain x Vin) required by the ADC and to reject common-mode noise.
+The amplification of the potential difference between the microelectrode and the reference electrode (on the order of microvolts) is a crucial step, and is accomplished with differential amplifiers that amplify the differences, rejecting the noise that is often introduced as common-mode potential in the circuit (i.e., noise identical in the recording and reference electrodes typically caused by motion artifacts and capacitive coupling of the body and electrode lead with power line fields (Nunez & Srinivasan, 2009)). The grounding assists the common-mode rejection properties of the amplifier by allowing it to more accurately measure differences of potential between two recording electrodes (Cadwell and Villarreal, 1999). (Nunez, pag 43,44). Therefore, high gain differential amplifiers are used to boost the signals to the larger voltage levels (|Vout| = gain x |Vin|) required by the ADC and to reject common-mode noise.
 
 Acknowledgements
 ###################################
@@ -229,7 +229,9 @@ With material from:
 Licensing
 ###################################
 
-This work is licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
+This work is licensed under CC BY-SA 4.0.
+
+To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
 
 References
 ###################################
