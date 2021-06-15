@@ -1,6 +1,8 @@
-:notoc:
-
 .. _refTDay2:
+
+***********************************
+Theory Day 2
+***********************************
 
 .. |Ve| replace:: V\ :sub:`e`\
 .. |Ce| replace:: C\ :sub:`e`\
@@ -15,10 +17,6 @@
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
 
-***********************************
-Theory Day 2
-***********************************
-
 To get our measurements of neural activity, we are trying to:
 
 •	Detect an electric potential difference.
@@ -32,6 +30,8 @@ To get our measurements of neural activity, we are trying to:
 
 Yesterday, we discussed how the electrode can detect changes in an electric potential difference. Today and tomorrow, we will expand upon what happens in the headstage. This is where the signal is amplified, filtered and digitized. We will cover how we can get as much signal as possible to our computer without drawing (too much) current from the brain and disturbing our system.
 
+.. _refimpedanceintro:
+
 Impedance
 ###################################
 
@@ -39,6 +39,7 @@ Impedance
 .. raw:: html
 
   <center><iframe width="560" height="340" src="https://www.youtube.com/embed/fVloDI4b1ts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+  <br>
 
 If we apply an alternating voltage to a resistor, capacitor or circuit, and measure the current flow, we can determine the impedance Z, measured in Ohm. The impedance represents opposition to current flow, allowing us to describe the relationship between voltage and current for time-varying signals. Just as with resistance and Ohm’s Law, the impedance Z assumes an AC current of a specific frequency and can be computed as:
 
@@ -111,6 +112,8 @@ Recording System Impedance
 ***********************************
 The building blocks of the recording system are amplifiers. These integrated circuits provide incredibly high ‘input impedance’. It is as if any input has to cross a huge resistor first before getting to the amplifier.
 
+.. _refamplifierintro:
+
 Amplifiers
 ###################################
 
@@ -138,6 +141,7 @@ We can look at the voltage that is on ‘+’ by just measuring the output of th
 
 You can run this example in the simulator, and see if what we said above about the operational amplifier makes sense. You should see that the operational amplifier stops the cable from drawing current from the electrode, and that the operational amplifier instead manages to ‘drive’ the cable effortlessly, by providing a lot of current.
 
+|
 
 .. image:: ../_static/images/EEA/eea_fig-30.png
   :align: center
@@ -190,7 +194,9 @@ The 'effective amplifier input impedance', |Za|’ is the total impedance to the
   Vin = \frac{Za'}{Za' + Ze} Ve
 
 |Za|' = 'effective amplifier' impedance (|Za| + Z |Csh| + |Rsh|)
+
 |Ze| = electrode impedance
+
 
 The ratio between the effective amplifier impedance and the electrode impedance determines how much of our precious signal we can pick up. This is particularly important when the electrodes have a large impedance themselves and are therefore more susceptible to attenuation by shunt capacitance (Obien et al., 2015; Robinson, 1968). For instance, the shunt capacitance for a tungsten wire (~50 to 100 pF) is usually higher than for a silicon probe (5-20 pF/cm). (Why? Think of what makes a capacitor, and the relative shape and conductances of these electrodes).
 

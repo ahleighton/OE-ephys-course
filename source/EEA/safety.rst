@@ -1,10 +1,9 @@
-:notoc:
-
 .. _refeeasafety:
 
 ***********************************
 Safety & Good Practices
 ***********************************
+
 Read this carefully before starting the exercises, to make sure you protect yourself & the equipment.
 Working with these circuits is safe as long as you follow these rules.
 

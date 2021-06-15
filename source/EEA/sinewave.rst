@@ -1,5 +1,3 @@
-:notoc:
-
 .. _Sinewave:
 
 ***********************************
@@ -8,22 +6,25 @@ Sinewave
 
 // Copy this text to a new sketch in the Arduino software (clear the default 'void loop etc first) and save as Sinewave.ino
 
-// Simple DAC sine wave test, 7Hz
+.. code-block::
 
-float phase = 0.0;
-float twopi = 3.14159 * 2;
-elapsedMicros usec = 0;
-float pin = A14;
+    <code>
+  // Simple DAC sine wave test, 7Hz
 
-void setup() {
-  analogWriteResolution(12);
-}
+  float phase = 0.0;
+  float twopi = 3.14159 * 2;
+  elapsedMicros usec = 0;
+  float pin = A14;
 
-void loop() {
-  float val = sin(phase) * 2000.0 + 2050.0;
-  analogWrite(pin, (int)val);
-  phase = phase + 0.02;
-  if (phase >= twopi) phase = 0;
-  while (usec < 500) ; // wait
-  usec = usec - 500;
-}
+  void setup() {
+    analogWriteResolution(12);
+  }
+
+  void loop() {
+    float val = sin(phase) * 2000.0 + 2050.0;
+    analogWrite(pin, (int)val);
+    phase = phase + 0.02;
+    if (phase >= twopi) phase = 0;
+    while (usec < 500) ; // wait
+    usec = usec - 500;
+  }

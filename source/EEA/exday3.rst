@@ -1,6 +1,8 @@
-:notoc:
-
 .. _refEDay3:
+
+***********************************
+Exercises Day 3
+***********************************
 
 .. |Ve| replace:: V\ :sub:`e`\
 .. |Ce| replace:: C\ :sub:`e`\
@@ -11,13 +13,6 @@
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
 
-***********************************
-Exercises Day 3
-***********************************
-.. toctree::
-   :hidden:
-
-   Firmata.rst
 
 Today we are going to build an EMG circuit! We'll use the electrodes in your kit, an instrumentation amplifier as our headstage, and the Teensy will be our acquisition board. We now have all the steps of the acquisition in place to simulate a lab experiment.
 
@@ -42,7 +37,6 @@ Instrumentation Amplifier
 `This <https://www.analog.com/media/en/technical-documentation/data-sheets/AD622.pdf>`_ is the datasheet for the instrumentation amplifier in your kit.
 
 .. image:: ../_static/images/EEA/eea_fig-61.png
-  :scale: 25
   :align: center
 
 EMG circuit
@@ -87,6 +81,11 @@ Place the measurement and reference electrode very close together, on the part o
 
 Streaming data from a microcontroller
 ****************************************
+
+.. toctree::
+  :hidden:
+
+  Firmata.rst
 
 We’re going to start streaming data to the pc, by using our Teensy microcontroller to digitize the analog signals we collect.
 

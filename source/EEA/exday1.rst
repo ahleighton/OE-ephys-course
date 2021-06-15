@@ -1,6 +1,8 @@
-:notoc:
-
 .. _refEDay1:
+
+***********************************
+Exercises Day 1
+***********************************
 
 .. |Ve| replace:: V\ :sub:`e`\
 .. |Ce| replace:: C\ :sub:`e`\
@@ -10,10 +12,6 @@
 .. |Vin| replace:: V\ :sub:`in`\
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
-
-***********************************
-Exercises Day 1
-***********************************
 
 We’re going to go through the basic electronics you will need to understand the equivalent circuit of the electrode, below:
 
@@ -128,6 +126,8 @@ Here’s another simulation demonstrating Ohm’s law. This time, the current mo
 A.	Display the voltage and current over both resistors in the ‘scope’ (right click/show in new scope). What will happen to the voltage over the left resistor if you double its resistance? What will happen to the current?
 B.	What will happen to the voltage and current over the left-hand resistor? Double the value in the simulator and see if your predictions were correct.
 
+.. _refvoltagedivider:
+
 5.	Voltage Divider
 ###################################
 In simulator
@@ -218,7 +218,6 @@ When we were only dealing with resistors, changes in our circuit happened instan
 
 .. image:: ../_static/images/EEA/eea_fig-25.png
   :align: center
-  :scale: 80
   :target: https://tinyurl.com/y3sbgfl6
 
 Here are two circuits, both provided by an alternating voltage source with a different frequency. In the scope below, the voltage trace of the source and the capacitor are plotted.
@@ -247,6 +246,8 @@ Because capacitors impede current flow, we can use them to build voltage divider
 
 
 A.	Try changing the capacitance values C for the first capacitor. How does this change your output voltage?
+
+.. _refelectrodeeqcir:
 
 7. The equivalent circuit of the electrode
 ##############################################
@@ -293,7 +294,7 @@ Written by:
 
 With material from:
 
-* Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018.
+* Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018
 * Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at TENSS)
 * Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for TENSS)
 * Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp.

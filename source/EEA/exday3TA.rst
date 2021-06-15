@@ -1,6 +1,8 @@
-:notoc:
-
 .. _refEDay3TA:
+
+***********************************
+Exercises Day 3 TA
+***********************************
 
 .. |Ve| replace:: V\ :sub:`e`\
 .. |Ce| replace:: C\ :sub:`e`\
@@ -10,10 +12,6 @@
 .. |Vin| replace:: V\ :sub:`in`\
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
-
-***********************************
-Exercises Day 3 TA
-***********************************
 
 .. note::
   By the end of day everyone should have EMG working. Signals don't have to be perfect, but movement should be detectable. This day is usually a lot of debugging and going over things that have been covered before, making sure everyone understands what is going on.
@@ -42,7 +40,6 @@ Instrumentation Amplifier
 `This <https://www.analog.com/media/en/technical-documentation/data-sheets/AD622.pdf>`_ is the datasheet for the instrumentation amplifier in your kit.
 
 .. image:: ../_static/images/EEA/eea_fig-61.png
-  :scale: 25
   :align: center
 
 EMG circuit
@@ -94,6 +91,11 @@ Place the measurement and reference electrode very close together, on the part o
 
 Streaming data from a microcontroller
 ****************************************
+
+.. toctree::
+  :hidden:
+
+  Firmata.rst
 
 We’re going to start streaming data to the pc, by using our Teensy microcontroller to digitize the analog signals we collect.
 

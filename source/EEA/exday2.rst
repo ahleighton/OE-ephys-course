@@ -1,6 +1,8 @@
-.. notoc::
-
 .. _refEDay2:
+
+***********************************
+Exercises Day 2
+***********************************
 
 .. |Ve| replace:: V\ :sub:`e`\
 .. |Ce| replace:: C\ :sub:`e`\
@@ -10,10 +12,6 @@
 .. |Vin| replace:: V\ :sub:`in`\
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
-
-***********************************
-Exercises Day 2
-***********************************
 
 Impedance
 ###################################
@@ -25,6 +23,8 @@ Previously, we built the circuit below using the circuit simulator. We saw that 
   :target: https://tinyurl.com/yf9jdf2b
 
 A.	Open the simulator link. In the long wire configuration, swap out the 20pF and 100pF capacitor for a 1MOhm and 22kOhm resistor. What changes?
+
+.. _refopampex:
 
 Operational Amplifiers
 ###################################
@@ -115,7 +115,6 @@ This is the op-amp you have.  Make sure you’re looking at the op-amp (LM358P),
 
 .. image:: ../_static/images/EEA/eea_fig-41.png
   :align: center
-  :scale: 50
 
 1.	Place the op-amp on your breadboard, with the semicircle cutout on the left.
 2.	Connect the +3 voltage rail to ‘Vcc+’ and the -3 voltage rail to ‘Vcc-‘
@@ -151,15 +150,10 @@ Now measure the same three points as before and complete this table:
 .. hint::
   The wire now cannot destroy our signal, because even though we did not amplify it at all (we only have unity gain) we ‘buffered’ it. Now the op-amp can push as much current into the wire as is needed and your signal makes it through.
 
+.. _refdiffampex:
+
 Differential Signals
 ###################################
-.. toctree::
-  :hidden:
-
-  Differential Amplifier
-  Amplifier with Voltage divider
-  Final Differential Amplifier
-
 
 A.	Measure across your fingers with the oscilloscope 1x probe. How big is the amplitude of this signal? Compare this to the size of a spike, around 100 µV.  Could you see a spike on top of that noise?
 
@@ -300,10 +294,11 @@ Written by:
 
 With material from:
 
-* Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018.
+* Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018
 * Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at TENSS)
 * Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for TENSS)
 * Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp
+
 
 Licensing
 ###################################

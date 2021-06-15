@@ -1,10 +1,9 @@
-:notoc:
-
 .. _refkitlist:
 
 ====================
 NeuroKit Contents
 ====================
+
 A list of equipment provided in the Neurokit (see below for absolute minimum requirements)
 
 .. csv-table:: NeuroKit Contents
