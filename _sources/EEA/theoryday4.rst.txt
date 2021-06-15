@@ -1,5 +1,3 @@
-.. notoc::
-
 .. _refTDay4:
 
 ***********************************
@@ -14,7 +12,7 @@ Now that we have all the steps of our acquisition system, we can talk about how 
 
 
 Talk: Acquisition and Synchronization
-###################################
+########################################
 One of the most common pitfalls in Neuroscience is correctly synchronizing multiple datastreams. How do you know whether your imaging and electrophysiology are aligned in time? How many different clocks do you have on your set up, and which of those can you trust?
 
 .. raw:: html
@@ -22,6 +20,8 @@ One of the most common pitfalls in Neuroscience is correctly synchronizing multi
   <br>
   <center><iframe width="560" height="340" src="https://www.youtube.com/embed/F0uwA3RUlB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
   <br>
+
+.. _refdigitization:
 
 Digitization
 ###################################
@@ -39,18 +39,16 @@ Here’s what this may look like:
 .. image:: ../_static/images/EEA/eea_fig-59.png
   :align: center
   :target: https://tinyurl.com/yadu834g
-  :scale: 60
 
 In practice, many ADCs still use the same basic idea of using op-amps as comparators, but instead of comparing millions of values to obtain a precise measurement, they generate a reference voltage from an internal DAC and adjust that until it matches the input voltage, or use some other clever tricks.
 
 .. image:: ../_static/images/EEA/eea_fig-60.png
   :align: center
-  :scale: 60
 
 Typically AD converters have 12 to 16 bit resolution (4096 to 65536 discrete values) for neural signals, which is usually enough because of the size of the signals we want (spikes etc), and because the thermal noise floor of typical electrodes is similar to the achievable resolution anyway: better digitizers would just measure more of that noise. If you want to read more about that, have a look `here. <http://deuterontech.com/wp-content/uploads/2015/10/Deuteron_Noise_and_Interference.pdf>`_
 
 Acquiring and synchronizing data with Bonsai
-###################################
+##############################################
 If you want to use Bonsai to work more on your EMG acquisition, you can find a helpful introduction `here <https://neurogears.org/wustl-2019/worksheets/acquisition/>`_. The most relevant of these exercises are available as a pdf here, :download:`ex_day_4 <../_static/images/EEA/day_4_bonsai.pdf>`, slightly adjusted for this course.
 
 Project

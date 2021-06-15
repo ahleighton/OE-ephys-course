@@ -161,24 +161,17 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Exercises Day 2
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="exday3.html">
    Exercises Day 3
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -199,8 +192,8 @@
   <a class="reference internal" href="exday1TA.html">
    Exercises Day 1 TA
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -216,18 +209,45 @@
   <a class="reference internal" href="exday2TA.html">
    Exercises Day 2 TA
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ampvoltagediv.html">
+     Amplifier with Voltage Divider
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="soldiffamp.html">
+     Differential Amplifier Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="finaldiffamp.html">
+     Final Differential Amplifier
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="exday3TA.html">
+   Exercises Day 3 TA
+  </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Firmata.html">
+     Firmata
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exday3TA.html">
-   Exercises Day 3 TA
-  </a>
  </li>
 </ul>
 
@@ -354,8 +374,8 @@
               
               <div>
                 
-  <span class="target" id="refeday2"></span><div class="section" id="exercises-day-2">
-<h1>Exercises Day 2<a class="headerlink" href="#exercises-day-2" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="exercises-day-2">
+<span id="refeday2"></span><h1>Exercises Day 2<a class="headerlink" href="#exercises-day-2" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="impedance">
 <h2>Impedance<a class="headerlink" href="#impedance" title="Permalink to this headline">¶</a></h2>
 <p>Previously, we built the circuit below using the circuit simulator. We saw that the electrode cannot drive a cable that has a shunt capacitance, but that an amplifier can protect our signal source and provide current to power the rest of the circuit.</p>
@@ -365,7 +385,7 @@
 </ol>
 </div>
 <div class="section" id="operational-amplifiers">
-<h2>Operational Amplifiers<a class="headerlink" href="#operational-amplifiers" title="Permalink to this headline">¶</a></h2>
+<span id="refopampex"></span><h2>Operational Amplifiers<a class="headerlink" href="#operational-amplifiers" title="Permalink to this headline">¶</a></h2>
 <p>Using an operational amplifier (op-amp) means we draw (almost) no current, which means we can measure voltages even if they come from things that can’t deliver current (like our cells).
 Let’s build the above example from the simulator in real life, on the breadboard! We’ll treat the ‘Blink’ example as our neuronal data and see what happens to this signal if we just have a wire, and then see the effect of replacing this wire with an op-amp.</p>
 <div class="section" id="build-voltage-rails">
@@ -454,7 +474,7 @@ We’re going to build the circuit below (note the square wave input, just like 
 <h3>Replace ‘long wire’ with ‘headstage’<a class="headerlink" href="#replace-long-wire-with-headstage" title="Permalink to this headline">¶</a></h3>
 <p>Now we will keep almost everything the same, but we will replace our long wire with a ‘headstage’. We will use only the most basic part of the headstage, an operational amplifier.</p>
 <p>This is the op-amp you have.  Make sure you’re looking at the op-amp (LM358P), not the instrumentation amp (AD622). The op-amp should say ‘LM358’ on it.</p>
-<a class="reference internal image-reference" href="../_images/eea_fig-41.png"><img alt="../_images/eea_fig-41.png" class="align-center" src="../_images/eea_fig-41.png" style="width: 284.0px; height: 265.0px;" /></a>
+<img alt="../_images/eea_fig-41.png" class="align-center" src="../_images/eea_fig-41.png" />
 <ol class="arabic simple">
 <li><p>Place the op-amp on your breadboard, with the semicircle cutout on the left.</p></li>
 <li><p>Connect the +3 voltage rail to ‘Vcc+’ and the -3 voltage rail to ‘Vcc-‘</p></li>
@@ -510,9 +530,7 @@ We’re going to build the circuit below (note the square wave input, just like 
 </div>
 </div>
 <div class="section" id="differential-signals">
-<h2>Differential Signals<a class="headerlink" href="#differential-signals" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-</div>
+<span id="refdiffampex"></span><h2>Differential Signals<a class="headerlink" href="#differential-signals" title="Permalink to this headline">¶</a></h2>
 <ol class="upperalpha simple">
 <li><p>Measure across your fingers with the oscilloscope 1x probe. How big is the amplitude of this signal? Compare this to the size of a spike, around 100 µV.  Could you see a spike on top of that noise?</p></li>
 </ol>
@@ -646,7 +664,7 @@ Try to figure this out but don’t get stuck forever.</p>
 </ul>
 <p>With material from:</p>
 <ul class="simple">
-<li><p>Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018.</p></li>
+<li><p>Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018</p></li>
 <li><p>Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at TENSS)</p></li>
 <li><p>Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for TENSS)</p></li>
 <li><p>Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp</p></li>

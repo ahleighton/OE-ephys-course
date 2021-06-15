@@ -29,27 +29,55 @@ Preparation
 
 :ref:`Safety <refeeasafety>`
 
-Day 1
+Day 1: Detecting Signals
 =====================================================
-:ref:`Theory <refTDay1>`
+:ref:`Theory <refTDay1>`:
 
-:ref:`Exercises <refEDay1>`
+.. raw:: html
 
-Day 2
+  <p><i><a class="reference internal" href="theoryday1.html#reftday1"><span class="std std-ref">Introduction</span></a>, <a class="reference internal" href="theoryday1.html#refwot"><span class="std std-ref">Neuronal signals</span></a>, <a class="reference internal" href="theoryday1.html#refepot"><span class="std std-ref">Electric Potential</span></a>, <a class="reference internal" href="theoryday1.html#refelectrodes"><span class="std std-ref">Electrodes</span></a></i></p>
+
+:ref:`Exercises <refEDay1>`:
+
+.. raw:: html
+
+  <p><i><a class="reference internal" href="exday1.html#refeday1"><span class="std std-ref">Electronics Refresher</span></a>, <a class="reference internal" href="exday1.html#refvoltagedivider"><span class="std std-ref">Voltage Dividers</span></a>, <a class="reference internal" href="exday1.html#refelectrodeeqcir"><span class="std std-ref">Electrode Equivalent Circuit</span></a></i></p>
+
+Day 2: Protecting Signals
 =====================================================
-:ref:`Theory <refTDay2>`
+:ref:`Theory <refTDay2>`:
 
-:ref:`Exercises <refEDay2>`
+.. raw:: html
 
-Day 3
+  <p><i><a class="reference internal" href="theoryday2.html#reftday2"><span class="std std-ref">Impedance</span></a>, <a class="reference internal" href="theoryday2.html#refamplifierintro"><span class="std std-ref">Amplifiers</span></a></i></p>
+
+:ref:`Exercises <refEDay2>`:
+
+.. raw:: html
+
+  <p><i><a class="reference internal" href="exday2.html#refeday2"><span class="std std-ref">Impedance</span></a>, <a class="reference internal" href="exday2.html#refopampex"><span class="std std-ref">Operational Amplifiers</span></a>, <a class="reference internal" href="exday2.html#refdiffampex"><span class="std std-ref">Differential Amplifiers</span></a></i></p>
+
+Day 3: Referencing and Filtering
 =====================================================
-:ref:`Theory <refTDay3>`
+:ref:`Theory <refTDay3>`:
 
-:ref:`Exercises <refEDay3>`
+.. raw:: html
 
-Day 4
+  <p><i><a class="reference internal" href="theoryday3.html#reftday3"><span class="std std-ref">Instrumentation Amplifiers</span></a>, <a class="reference internal" href="theoryday3.html#reffilter"><span class="std std-ref">Filtering</span></a>, <a class="reference internal" href="theoryday3.html#refgroundref"><span class="std std-ref">Ground vs Reference</span></a></i></p>
+
+:ref:`Exercises <refEDay3>`:
+
+.. raw:: html
+
+  <p><i><a class="reference internal" href="exday3.html#refeday3"><span class="std std-ref">Build an EMG circuit</span></a></i></p>
+
+Day 4: Synchronization and Digitization
 =====================================================
-:ref:`Theory <refTDay4>`
+:ref:`Theory <refTDay4>`:
+
+.. raw:: html
+
+  <p><i><a class="reference internal" href="theoryday4.html#reftday4"><span class="std std-ref">Synchronization</span></a>, <a class="reference internal" href="theoryday4.html#refdigitization"><span class="std std-ref">Digitization</span></a></i></p>
 
 :ref:`Project <refproject>`
 

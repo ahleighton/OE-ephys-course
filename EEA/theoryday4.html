@@ -160,24 +160,17 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="exday2.html">
    Exercises Day 2
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="exday3.html">
    Exercises Day 3
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -198,8 +191,8 @@
   <a class="reference internal" href="exday1TA.html">
    Exercises Day 1 TA
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -215,18 +208,45 @@
   <a class="reference internal" href="exday2TA.html">
    Exercises Day 2 TA
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ampvoltagediv.html">
+     Amplifier with Voltage Divider
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="soldiffamp.html">
+     Differential Amplifier Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="finaldiffamp.html">
+     Final Differential Amplifier
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="exday3TA.html">
+   Exercises Day 3 TA
+  </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Firmata.html">
+     Firmata
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exday3TA.html">
-   Exercises Day 3 TA
-  </a>
  </li>
 </ul>
 
@@ -310,15 +330,15 @@
 <center><iframe width="560" height="340" src="https://www.youtube.com/embed/F0uwA3RUlB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 <br></div>
 <div class="section" id="digitization">
-<h2>Digitization<a class="headerlink" href="#digitization" title="Permalink to this headline">¶</a></h2>
+<span id="refdigitization"></span><h2>Digitization<a class="headerlink" href="#digitization" title="Permalink to this headline">¶</a></h2>
 <p>The purpose of digitization is to convert amplified signals into digital values. Why do we digitize neural signals? So that we can process and store them.
 First, the output of the amplifier (Vout) should match the digitizer dynamic range. Your analog signal should ‘occupy’, as much as possible, all discrete values in the digitization range. In other words, digitization range should match maximum analog signal. If the dynamic range is too small the signal will saturate, and if it is too large it will decrease effective signal resolution.</p>
 <img alt="../_images/eea_fig-58.png" class="align-center" src="../_images/eea_fig-58.png" />
 <p>If you have a voltage divider and an open-loop op-amp (comparator) you can already build a circuit that checks if your analog signal is above or below a certain value. Now instead of one voltage divider, you could have a whole ‘ladder’, creating intermediate values, and compare to these. This is an incredibly inefficient way to make an ADC.</p>
 <p>Here’s what this may look like:</p>
-<a class="reference external image-reference" href="https://tinyurl.com/yadu834g"><img alt="../_images/eea_fig-59.png" class="align-center" src="../_images/eea_fig-59.png" style="width: 558.0px; height: 496.2px;" /></a>
+<a class="reference external image-reference" href="https://tinyurl.com/yadu834g"><img alt="../_images/eea_fig-59.png" class="align-center" src="../_images/eea_fig-59.png" /></a>
 <p>In practice, many ADCs still use the same basic idea of using op-amps as comparators, but instead of comparing millions of values to obtain a precise measurement, they generate a reference voltage from an internal DAC and adjust that until it matches the input voltage, or use some other clever tricks.</p>
-<a class="reference internal image-reference" href="../_images/eea_fig-60.png"><img alt="../_images/eea_fig-60.png" class="align-center" src="../_images/eea_fig-60.png" style="width: 537.6px; height: 481.2px;" /></a>
+<img alt="../_images/eea_fig-60.png" class="align-center" src="../_images/eea_fig-60.png" />
 <p>Typically AD converters have 12 to 16 bit resolution (4096 to 65536 discrete values) for neural signals, which is usually enough because of the size of the signals we want (spikes etc), and because the thermal noise floor of typical electrodes is similar to the achievable resolution anyway: better digitizers would just measure more of that noise. If you want to read more about that, have a look <a class="reference external" href="http://deuterontech.com/wp-content/uploads/2015/10/Deuteron_Noise_and_Interference.pdf">here.</a></p>
 </div>
 <div class="section" id="acquiring-and-synchronizing-data-with-bonsai">

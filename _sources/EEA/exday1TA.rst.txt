@@ -1,6 +1,8 @@
-:notoc:
-
 .. _refEDay1TA:
+
+***********************************
+Exercises Day 1 TA
+***********************************
 
 .. |Ve| replace:: V\ :sub:`e`\
 .. |Ce| replace:: C\ :sub:`e`\
@@ -10,10 +12,6 @@
 .. |Vin| replace:: V\ :sub:`in`\
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
-
-***********************************
-Exercises Day 1 TA
-***********************************
 
 *These docs have notes for teachers to help them give the course, it could also be helpful for people following the course on their own who need some help/hints/solutions.*
 
@@ -98,6 +96,9 @@ If you see something odd, check:
 
 .. note::
   Should see a clear square wave of around 3.3 amplitude. NB: sometimes connecting the ground to teensy causes it to charge (you can see it with the scope) and it can end up disconnecting from the PC and making a mess. They don’t actually need the ground of the scope connected to see the large sine wave because of the scope’s high input impedance. That might be confusing now, but should be clearer after talking about impedance tomorrow.
+
+.. warning::
+  If a student's scope isn't responding to any input, before panicking check that they are not using the 'automotive' version of the Picoscope software as this will make the scope look dead.
 
 .. image:: ../_static/images/EEA/eea_fig-66.png
   :align: center
@@ -269,7 +270,6 @@ When we were only dealing with resistors, changes in our circuit happened instan
 
 .. image:: ../_static/images/EEA/eea_fig-25.png
   :align: center
-  :scale: 80
   :target: https://tinyurl.com/y3sbgfl6
 
 Here are two circuits, both provided by an alternating voltage source with a different frequency. In the scope below, the voltage trace of the source and the capacitor are plotted.

@@ -160,24 +160,17 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="exday2.html">
    Exercises Day 2
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="exday3.html">
    Exercises Day 3
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -198,8 +191,8 @@
   <a class="reference internal" href="exday1TA.html">
    Exercises Day 1 TA
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -215,18 +208,45 @@
   <a class="reference internal" href="exday2TA.html">
    Exercises Day 2 TA
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ampvoltagediv.html">
+     Amplifier with Voltage Divider
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="soldiffamp.html">
+     Differential Amplifier Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="finaldiffamp.html">
+     Final Differential Amplifier
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="exday3TA.html">
+   Exercises Day 3 TA
+  </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Firmata.html">
+     Firmata
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exday3TA.html">
-   Exercises Day 3 TA
-  </a>
  </li>
 </ul>
 
@@ -238,6 +258,20 @@
 
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
             
           </div>
           
@@ -253,26 +287,28 @@
   <div class="section" id="sinewave">
 <span id="id1"></span><h1>Sinewave<a class="headerlink" href="#sinewave" title="Permalink to this headline">¶</a></h1>
 <p>// Copy this text to a new sketch in the Arduino software (clear the default ‘void loop etc first) and save as Sinewave.ino</p>
-<p>// Simple DAC sine wave test, 7Hz</p>
-<p>float phase = 0.0;
-float twopi = 3.14159 * 2;
-elapsedMicros usec = 0;
-float pin = A14;</p>
-<dl class="simple">
-<dt>void setup() {</dt><dd><p>analogWriteResolution(12);</p>
-</dd>
-</dl>
-<p>}</p>
-<dl class="simple">
-<dt>void loop() {</dt><dd><p>float val = sin(phase) * 2000.0 + 2050.0;
-analogWrite(pin, (int)val);
-phase = phase + 0.02;
-if (phase &gt;= twopi) phase = 0;
-while (usec &lt; 500) ; // wait
-usec = usec - 500;</p>
-</dd>
-</dl>
-<p>}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span>
+<span class="o">//</span> <span class="n">Simple</span> <span class="n">DAC</span> <span class="n">sine</span> <span class="n">wave</span> <span class="n">test</span><span class="p">,</span> <span class="mi">7</span><span class="n">Hz</span>
+
+<span class="nb">float</span> <span class="n">phase</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+<span class="nb">float</span> <span class="n">twopi</span> <span class="o">=</span> <span class="mf">3.14159</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+<span class="n">elapsedMicros</span> <span class="n">usec</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nb">float</span> <span class="n">pin</span> <span class="o">=</span> <span class="n">A14</span><span class="p">;</span>
+
+<span class="n">void</span> <span class="n">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">analogWriteResolution</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">void</span> <span class="n">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nb">float</span> <span class="n">val</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">phase</span><span class="p">)</span> <span class="o">*</span> <span class="mf">2000.0</span> <span class="o">+</span> <span class="mf">2050.0</span><span class="p">;</span>
+  <span class="n">analogWrite</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="n">val</span><span class="p">);</span>
+  <span class="n">phase</span> <span class="o">=</span> <span class="n">phase</span> <span class="o">+</span> <span class="mf">0.02</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">phase</span> <span class="o">&gt;=</span> <span class="n">twopi</span><span class="p">)</span> <span class="n">phase</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">usec</span> <span class="o">&lt;</span> <span class="mi">500</span><span class="p">)</span> <span class="p">;</span> <span class="o">//</span> <span class="n">wait</span>
+  <span class="n">usec</span> <span class="o">=</span> <span class="n">usec</span> <span class="o">-</span> <span class="mi">500</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 
 

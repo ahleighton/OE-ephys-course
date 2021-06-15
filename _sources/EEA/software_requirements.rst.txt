@@ -1,9 +1,9 @@
-:notoc:
 .. _refeeasoftware:
 
 ***********************************
 Software Requirements
 ***********************************
+
 1. Download & install the software for the oscilloscope `here: <https://www.picotech.com/downloads>`_
 
     - You have a 2204A.

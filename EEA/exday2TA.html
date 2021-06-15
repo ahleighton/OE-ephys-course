@@ -33,7 +33,7 @@
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Exercises Day 3 TA" href="exday3TA.html" />
+    <link rel="next" title="Amplifier with Voltage Divider" href="ampvoltagediv.html" />
     <link rel="prev" title="Exercises Day 1 TA" href="exday1TA.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -161,24 +161,17 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="exday2.html">
    Exercises Day 2
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="exday3.html">
    Exercises Day 3
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -199,8 +192,8 @@
   <a class="reference internal" href="exday1TA.html">
    Exercises Day 1 TA
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -216,18 +209,45 @@
   <a class="current reference internal" href="#">
    Exercises Day 2 TA
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ampvoltagediv.html">
+     Amplifier with Voltage Divider
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="soldiffamp.html">
+     Differential Amplifier Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="finaldiffamp.html">
+     Final Differential Amplifier
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="exday3TA.html">
+   Exercises Day 3 TA
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Firmata.html">
+     Firmata
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exday3TA.html">
-   Exercises Day 3 TA
-  </a>
  </li>
 </ul>
 
@@ -240,6 +260,114 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#impedance">
+   Impedance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operational-amplifiers">
+   Operational Amplifiers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-voltage-rails">
+     Build voltage rails
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-bypass-capacitors">
+     Add bypass capacitors
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-long-wire-equivalent-circuit">
+     Build ‘long wire’ equivalent circuit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#replace-long-wire-with-headstage">
+     Replace ‘long wire’ with ‘headstage’
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differential-signals">
+   Differential Signals
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#connect-reference-electrode">
+     Connect reference electrode
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#provide-negative-feedback">
+     Provide negative feedback
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#feed-back-only-50-of-signal">
+     Feed back only 50% of signal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-inverting-op-amp">
+     Build inverting op-amp
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#replace-ground-with-dc-signal">
+     Replace ground with DC signal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-reference-input-to">
+     Add reference input to ‘+’
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#final-differential-amplifier">
+     Final Differential Amplifier
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ta-wrap-up">
+   TA Wrap Up
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgements">
+   Acknowledgements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#licensing">
+   Licensing
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
           </div>
           
 
@@ -251,8 +379,8 @@
               
               <div>
                 
-  <span class="target" id="refeday2ta"></span><div class="section" id="exercises-day-2-ta">
-<h1>Exercises Day 2 TA<a class="headerlink" href="#exercises-day-2-ta" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="exercises-day-2-ta">
+<span id="refeday2ta"></span><h1>Exercises Day 2 TA<a class="headerlink" href="#exercises-day-2-ta" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="impedance">
 <h2>Impedance<a class="headerlink" href="#impedance" title="Permalink to this headline">¶</a></h2>
 <p>Previously, we built the circuit below using the circuit simulator. We saw that the electrode cannot drive a cable that has a shunt capacitance, but that an amplifier can protect our signal source and provide current to power the rest of the circuit.</p>
@@ -359,7 +487,7 @@ We’re going to build the circuit below (note the square wave input, just like 
 <h3>Replace ‘long wire’ with ‘headstage’<a class="headerlink" href="#replace-long-wire-with-headstage" title="Permalink to this headline">¶</a></h3>
 <p>Now we will keep almost everything the same, but we will replace our long wire with a ‘headstage’. We will use only the most basic part of the headstage, an operational amplifier.</p>
 <p>This is the op-amp you have.  Make sure you’re looking at the op-amp (LM358P), not the instrumentation amp (AD622). The op-amp should say ‘LM358’ on it.</p>
-<a class="reference internal image-reference" href="../_images/eea_fig-41.png"><img alt="../_images/eea_fig-41.png" class="align-center" src="../_images/eea_fig-41.png" style="width: 284.0px; height: 265.0px;" /></a>
+<img alt="../_images/eea_fig-41.png" class="align-center" src="../_images/eea_fig-41.png" />
 <ol class="arabic simple">
 <li><p>Place the op-amp on your breadboard, with the semicircle cutout on the left.</p></li>
 <li><p>Connect the +3 voltage rail to ‘Vcc+’ and the -3 voltage rail to ‘Vcc-‘</p></li>
@@ -575,7 +703,7 @@ Need to look at difference: want: <a class="reference external" href="https://ti
 </ul>
 <p>With material from:</p>
 <ul class="simple">
-<li><p>Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018.</p></li>
+<li><p>Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018</p></li>
 <li><p>Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at TENSS)</p></li>
 <li><p>Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for TENSS)</p></li>
 <li><p>Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp</p></li>
@@ -595,7 +723,7 @@ Need to look at difference: want: <a class="reference external" href="https://ti
               <div class='prev-next-bottom'>
                 
     <a class='left-prev' id="prev-link" href="exday1TA.html" title="previous page">Exercises Day 1 TA</a>
-    <a class='right-next' id="next-link" href="exday3TA.html" title="next page">Exercises Day 3 TA</a>
+    <a class='right-next' id="next-link" href="ampvoltagediv.html" title="next page">Amplifier with Voltage Divider</a>
 
               </div>
               

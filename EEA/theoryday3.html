@@ -161,24 +161,17 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="exday2.html">
    Exercises Day 2
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="exday3.html">
    Exercises Day 3
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -199,8 +192,8 @@
   <a class="reference internal" href="exday1TA.html">
    Exercises Day 1 TA
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -216,18 +209,45 @@
   <a class="reference internal" href="exday2TA.html">
    Exercises Day 2 TA
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ampvoltagediv.html">
+     Amplifier with Voltage Divider
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="soldiffamp.html">
+     Differential Amplifier Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="finaldiffamp.html">
+     Final Differential Amplifier
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="exday3TA.html">
+   Exercises Day 3 TA
+  </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Firmata.html">
+     Firmata
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exday3TA.html">
-   Exercises Day 3 TA
-  </a>
  </li>
 </ul>
 
@@ -240,6 +260,79 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instrumentation-amplifiers">
+   Instrumentation amplifiers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#talk">
+     Talk
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-do-we-need-instrumentation-amps">
+     Why do we need Instrumentation Amps?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#common-mode-rejection-ratio-cmmr">
+     Common mode rejection ratio (CMMR)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#low-and-high-pass-filtering">
+   Low and High pass filtering
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#low-pass-filters">
+     Low-pass filters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#high-pass-filters">
+     High-pass filters
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-do-we-need-a-ground-electrode">
+   Why do we need a ground electrode?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgements">
+   Acknowledgements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#licensing">
+   Licensing
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
           </div>
           
 
@@ -251,8 +344,8 @@
               
               <div>
                 
-  <span class="target" id="reftday3"></span><div class="section" id="theory-day-3">
-<h1>Theory Day 3<a class="headerlink" href="#theory-day-3" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="theory-day-3">
+<span id="reftday3"></span><h1>Theory Day 3<a class="headerlink" href="#theory-day-3" title="Permalink to this headline">¶</a></h1>
 <p>Last time, we saw that an instrumentation amplifier should be pretty good at creating a proper differential signal, even if it is riding on top of a pretty large ‘noise’ signal. Today we will go over filters, put an instrumentation amplifier circuit together, and record some EMG signals.</p>
 <img alt="../_images/eea_fig-5.png" class="align-center" src="../_images/eea_fig-5.png" />
 <div class="section" id="instrumentation-amplifiers">
@@ -268,7 +361,7 @@
 <a class="reference external image-reference" href="https://tinyurl.com/y4aps4r2"><img alt="../_images/eea_fig-49.png" class="align-center" src="../_images/eea_fig-49.png" /></a>
 <p>To make this circuit differential, we need voltage dividers. But, these are connecting our fragile signal to ground! Plus, remember how any mismatch in the input impedances between ‘+’ and ‘-’ messes up the signal if there is a lot of common mode noise? In practical terms, there is always going to be a mismatch between these resistors; they simply cannot be produced in a way that makes them exactly equal. Why? Because this resistor is <em>also your electrode</em>. If you work with electrodes, have you measured their impedances? How similar are they? If you made these resistors as different as your electrodes are variable, this circuit will not work to eliminate common mode noise and amplify our spikes.</p>
 <p>The solution is to use <em>three</em> op-amps:</p>
-<a class="reference internal image-reference" href="../_images/eea_fig-33.png"><img alt="../_images/eea_fig-33.png" class="align-center" src="../_images/eea_fig-33.png" style="width: 564.0px; height: 252.8px;" /></a>
+<a class="reference internal image-reference" href="../_images/eea_fig-33.png"><img alt="../_images/eea_fig-33.png" class="align-center" src="../_images/eea_fig-33.png" style="width: 568.0px; height: 227.20000000000002px;" /></a>
 <p>Here it is in the simulator:</p>
 <a class="reference external image-reference" href="https://tinyurl.com/yjxekrv5"><img alt="../_images/eea_fig-53.png" class="align-center" src="../_images/eea_fig-53.png" /></a>
 </div>
@@ -304,7 +397,7 @@ Instrumentation amplifiers are not completely immune to common input noise. They
 </div>
 </div>
 <div class="section" id="low-and-high-pass-filtering">
-<h2>Low and High pass filtering<a class="headerlink" href="#low-and-high-pass-filtering" title="Permalink to this headline">¶</a></h2>
+<span id="reffilter"></span><h2>Low and High pass filtering<a class="headerlink" href="#low-and-high-pass-filtering" title="Permalink to this headline">¶</a></h2>
 <p>Filters are used to remove certain frequencies from our data. We can do this in hardware or in software. Usually hardware filtering (implemented in the amplifier circuit) is used to increase (apparent) signal to noise ratio by rejecting unwanted frequencies and to prevent signal aliasing (e.g., bandpass between 0.5 and 2 kHz).
 Remember the exercise where we measured the voltage across our fingers with the oscilloscope, and saw very high values. Even with a differential amplifier, we usually have a decent amount of slow (~&lt;10Hz or so) voltages that are simply too big for the amplifier or ADC (analog to digital converter). Any voltages above or below the amplifier rails (or above/below the input range of the digitizer) will be ‘clipped’ and all we’ll see is a constant value.
 The solution is to remove the large amplitude slow components, so we can fit the lower amplitude, faster, interesting components into our dynamic range.</p>
@@ -314,18 +407,18 @@ The solution is to remove the large amplitude slow components, so we can fit the
 <div class="section" id="low-pass-filters">
 <h3>Low-pass filters<a class="headerlink" href="#low-pass-filters" title="Permalink to this headline">¶</a></h3>
 <p>These filters block high frequencies. This is basically another voltage divider, with a frequency-dependent component. You’ve already seen one of these when you charged/discharged a capacitor! The exponential decay of the capacitor gets convolved with our signal. Remember that the impedance of our capacitor decreases as the signal frequency increases. At low frequencies, the high impedance of the capacitor means we get a large voltage drop over the capacitor, and more of our input signal can reach our Vout.</p>
-<a class="reference external image-reference" href="https://www.falstad.com/circuit/e-filt-lopass.html"><img alt="../_images/eea_fig-56.png" class="align-center" src="../_images/eea_fig-56.png" style="width: 494.4px; height: 277.8px;" /></a>
+<a class="reference external image-reference" href="https://www.falstad.com/circuit/e-filt-lopass.html"><img alt="../_images/eea_fig-56.png" class="align-center" src="../_images/eea_fig-56.png" style="width: 426.0px; height: 171.0px;" /></a>
 </div>
 <div class="section" id="high-pass-filters">
 <h3>High-pass filters<a class="headerlink" href="#high-pass-filters" title="Permalink to this headline">¶</a></h3>
 <p>This is the same <a class="reference external" href="https://www.falstad.com/circuit/e-filt-hipass.html">idea.</a>
 With increasing signal frequency, the impedance of the capacitor decreases (day 1), reducing the voltage drop over the capacitor and sending more signal to the output.</p>
-<a class="reference external image-reference" href="https://www.falstad.com/circuit/e-filt-hipass.html"><img alt="../_images/eea_fig-57.png" class="align-center" src="../_images/eea_fig-57.png" style="width: 576.8px; height: 324.09999999999997px;" /></a>
+<a class="reference external image-reference" href="https://www.falstad.com/circuit/e-filt-hipass.html"><img alt="../_images/eea_fig-57.png" class="align-center" src="../_images/eea_fig-57.png" style="width: 496.99999999999994px; height: 199.5px;" /></a>
 <p>These are called ‘RC filters’ because they’re built from a resistor (R) and a capacitor (C). Because there’s only one of each, we call them ‘single pole’. In real life, filters are built from more than one pair in order to get specific characteristics. This goes beyond the scope of this course but there are entire classes on this topic.</p>
 </div>
 </div>
 <div class="section" id="why-do-we-need-a-ground-electrode">
-<h2>Why do we need a ground electrode?<a class="headerlink" href="#why-do-we-need-a-ground-electrode" title="Permalink to this headline">¶</a></h2>
+<span id="refgroundref"></span><h2>Why do we need a ground electrode?<a class="headerlink" href="#why-do-we-need-a-ground-electrode" title="Permalink to this headline">¶</a></h2>
 <p>When we build our EMG circuit, we will use three electrodes: measurement (+), reference (-), and ground. Why do we have a ground electrode when we already have ‘+’ and ‘-’ inputs? This is a bit tricky, and there’s multiple ways to understand it.</p>
 <br>
 <center><iframe width="560" height="340" src="https://www.youtube.com/embed/YE2cdXtzlF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

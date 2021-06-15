@@ -160,24 +160,17 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="exday2.html">
    Exercises Day 2
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="exday3.html">
    Exercises Day 3
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -198,8 +191,8 @@
   <a class="reference internal" href="exday1TA.html">
    Exercises Day 1 TA
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -215,18 +208,45 @@
   <a class="reference internal" href="exday2TA.html">
    Exercises Day 2 TA
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ampvoltagediv.html">
+     Amplifier with Voltage Divider
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="soldiffamp.html">
+     Differential Amplifier Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="finaldiffamp.html">
+     Final Differential Amplifier
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="exday3TA.html">
+   Exercises Day 3 TA
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Firmata
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exday3TA.html">
-   Exercises Day 3 TA
-  </a>
  </li>
 </ul>
 
@@ -238,6 +258,20 @@
 
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
             
           </div>
           
@@ -253,40 +287,33 @@
   <div class="section" id="firmata">
 <span id="id1"></span><h1>Firmata<a class="headerlink" href="#firmata" title="Permalink to this headline">¶</a></h1>
 <p>// Copy this text to a new sketch in the Arduino software (clear the default ‘void loop etc first) and save as Firmata.ino</p>
-<p>#include &lt;Firmata.h&gt;
-byte analogPin;
-void analogWriteCallback(byte pin, int value)
-{</p>
-<blockquote>
-<div><p>pinMode(pin, OUTPUT);
-analogWrite(pin, value);</p>
-</div></blockquote>
-<p>}
-void setup()
-{</p>
-<blockquote>
-<div><p>Firmata.setFirmwareVersion(FIRMATA_MAJOR_VERSION, FIRMATA_MINOR_VERSION);
-Firmata.attach(ANALOG_MESSAGE, analogWriteCallback);
-Firmata.begin();
-delayMicroseconds(1000);</p>
-</div></blockquote>
-<p>}</p>
-<p>void loop()
-{</p>
-<blockquote>
-<div><dl class="simple">
-<dt>while (Firmata.available()) {</dt><dd><p>Firmata.processInput();</p>
-</dd>
-</dl>
-<p>}
-delayMicroseconds(500);
-for (analogPin = 0; analogPin &lt; TOTAL_ANALOG_PINS; analogPin++) {</p>
-<blockquote>
-<div><p>Firmata.sendAnalog(analogPin, analogRead(analogPin));</p>
-</div></blockquote>
-<p>}</p>
-</div></blockquote>
-<p>}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;Firmata.h&gt;</span>
+<span class="n">byte</span> <span class="n">analogPin</span><span class="p">;</span>
+<span class="n">void</span> <span class="n">analogWriteCallback</span><span class="p">(</span><span class="n">byte</span> <span class="n">pin</span><span class="p">,</span> <span class="nb">int</span> <span class="n">value</span><span class="p">)</span>
+<span class="p">{</span>
+ <span class="n">pinMode</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+ <span class="n">analogWrite</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">void</span> <span class="n">setup</span><span class="p">()</span>
+<span class="p">{</span>
+ <span class="n">Firmata</span><span class="o">.</span><span class="n">setFirmwareVersion</span><span class="p">(</span><span class="n">FIRMATA_MAJOR_VERSION</span><span class="p">,</span> <span class="n">FIRMATA_MINOR_VERSION</span><span class="p">);</span>
+ <span class="n">Firmata</span><span class="o">.</span><span class="n">attach</span><span class="p">(</span><span class="n">ANALOG_MESSAGE</span><span class="p">,</span> <span class="n">analogWriteCallback</span><span class="p">);</span>
+ <span class="n">Firmata</span><span class="o">.</span><span class="n">begin</span><span class="p">();</span>
+ <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">void</span> <span class="n">loop</span><span class="p">()</span>
+<span class="p">{</span>
+ <span class="k">while</span> <span class="p">(</span><span class="n">Firmata</span><span class="o">.</span><span class="n">available</span><span class="p">())</span> <span class="p">{</span>
+   <span class="n">Firmata</span><span class="o">.</span><span class="n">processInput</span><span class="p">();</span>
+ <span class="p">}</span>
+ <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+ <span class="k">for</span> <span class="p">(</span><span class="n">analogPin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">analogPin</span> <span class="o">&lt;</span> <span class="n">TOTAL_ANALOG_PINS</span><span class="p">;</span> <span class="n">analogPin</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">Firmata</span><span class="o">.</span><span class="n">sendAnalog</span><span class="p">(</span><span class="n">analogPin</span><span class="p">,</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">analogPin</span><span class="p">));</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 
 

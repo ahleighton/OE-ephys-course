@@ -1,6 +1,8 @@
-:notoc:
-  
 .. _refEDay2TA:
+
+***********************************
+Exercises Day 2 TA
+***********************************
 
 .. |Ve| replace:: V\ :sub:`e`\
 .. |Ce| replace:: C\ :sub:`e`\
@@ -10,10 +12,6 @@
 .. |Vin| replace:: V\ :sub:`in`\
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
-
-***********************************
-Exercises Day 2 TA
-***********************************
 
 Impedance
 ###################################
@@ -122,7 +120,6 @@ This is the op-amp you have.  Make sure you’re looking at the op-amp (LM358P),
 
 .. image:: ../_static/images/EEA/eea_fig-41.png
   :align: center
-  :scale: 50
 
 1.	Place the op-amp on your breadboard, with the semicircle cutout on the left.
 2.	Connect the +3 voltage rail to ‘Vcc+’ and the -3 voltage rail to ‘Vcc-‘
@@ -163,13 +160,13 @@ Now measure the same three points as before and complete this table:
 
 Differential Signals
 ###################################
+
 .. toctree::
   :hidden:
 
-  Differential Amplifier
-  Amplifier with Voltage divider
-  Final Differential Amplifier
-
+  ampvoltagediv.rst
+  soldiffamp.rst
+  finaldiffamp.rst
 
 A.	Measure across your fingers with the oscilloscope 1x probe. How big is the amplitude of this signal? Compare this to the size of a spike, around 100 µV.  Could you see a spike on top of that noise?
 
@@ -302,6 +299,7 @@ Solution here: :ref:`finaldiffamp`.
   - Does not draw current from cells YES
 
 H.	If you have this circuit working, start changing the 10M resistor on the top to another value and see what happens.
+
    * Change it to 11M or so. This is very roughly what a normal op-amp would look like. We’re getting some noise but it's not horrible yet.
    * Now bump up the common mode noise a bit. Change the voltage on both 60Hz sources from 5V to 50V. What happens?
 
@@ -334,10 +332,11 @@ Written by:
 
 With material from:
 
-* Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018.
+* Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018
 * Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at TENSS)
 * Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for TENSS)
 * Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp
+
 
 Licensing
 ###################################
