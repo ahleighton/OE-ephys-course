@@ -23,6 +23,8 @@ EEA Course Documents
 Materials for students
 ############################
 
+The 'theory' documents are meant for students to read before the online sessions, the 'exercises' documents contain exercises and more theory that will be covered together with the teachers. 
+
 Preparation
 ===================
 :ref:`Software to Download <refeeasoftware>`
