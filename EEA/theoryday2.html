@@ -385,10 +385,7 @@
 <div class="section" id="impedance">
 <span id="refimpedanceintro"></span><h2>Impedance<a class="headerlink" href="#impedance" title="Permalink to this headline">¶</a></h2>
 <center><iframe width="560" height="340" src="https://www.youtube.com/embed/fVloDI4b1ts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-<br><p>If we apply an alternating voltage to a resistor, capacitor or circuit, and measure the current flow, we can determine the impedance Z, measured in Ohm. The impedance represents opposition to current flow, allowing us to describe the relationship between voltage and current for time-varying signals. Just as with resistance and Ohm’s Law, the impedance Z assumes an AC current of a specific frequency and can be computed as:</p>
-<div class="math notranslate nohighlight">
-\[Z = \frac{V(t)}{I(t)}\]</div>
-<p>Impedance can be represented as a vector defined in terms of magnitude and phase (θ). Therefore, impedance provides both the magnitude and phase relationship between V and I over a broad frequency range (from 1 Hz to 10 kHz). Let’s examine the response of resistors and capacitors to an applied sinusoidal voltage (an alternating signal).</p>
+<br><p>If we apply a direct voltage (e.g. a battery) to a resistor or circuit and measure the current flow, we can determine the resistance. What happens when we apply an alternating signal instead, such as a sinusoidal wave or our neuronal signals? In these cases, we need to use Impedance (Z), measured in Ohm. The impedance represents opposition to current flow measured in both magnitude and phase, which allows us to describe the relationship between voltage and current for time-varying signals. We can measure impedance values of a component at different frequencies, so that we understand both the magnitude and phase relationship between V and I over a broad frequency range (from 1 Hz to 10 kHz). Let’s examine the response of resistors and capacitors to an applied sinusoidal voltage (an alternating signal).</p>
 <div class="section" id="resistors">
 <h3>Resistors<a class="headerlink" href="#resistors" title="Permalink to this headline">¶</a></h3>
 <p>For resistors, the impedance magnitude (Z) is constant and does not vary with the frequency of signal applied. The impedance follows Ohm’s Law (V = IR), which doesn’t take the frequency of the signal into account.</p>
@@ -422,11 +419,12 @@
 </ol>
 <div class="section" id="electrode-impedance">
 <h3>Electrode Impedance<a class="headerlink" href="#electrode-impedance" title="Permalink to this headline">¶</a></h3>
-<p>The impedance of an electrode is a measure of its ability to resist the flow of charge across the electrode-solution interface (i.e., across the electronic conductor (metal) and ionic conductor (extracellular fluid)). It is the impedance of the whole electrode equivalent circuit we built yesterday, consisting of the resistance of the solution (R<sub>s</sub>), the resistance of the electrode metal (R<sub>m</sub>) and the resistance (R<sub>e</sub>) and capacitance (C<sub>e</sub>) of the double layer at the electrode-solution interface.
-Since R<sub>e</sub> is large, in the order of several megohms, and R<sub>s</sub> and R<sub>m</sub> are low (Ohms), the equivalent circuit is dominated by the double-layer capacitor, C<sub>e</sub>.  Therefore, in practice, the electrode is primarily a capacitor in series with R<sub>m</sub> and R<sub>s</sub> , whose leakage resistance Re, while not negligible, does not make an important contribution (Robinson, 1968).</p>
+<p>The impedance of an electrode is a measure of its ability to resist the flow of charge across the electrode-solution interface (i.e., across the electronic conductor (metal) and ionic conductor (extracellular fluid)). It is the impedance of the whole electrode equivalent circuit we built yesterday, consisting of the resistance of the solution (R<sub>s</sub>), the resistance of the electrode metal (R<sub>m</sub>) and the resistance (R<sub>e</sub>) and capacitance (C<sub>e</sub>) of the double layer at the electrode-solution interface.</p>
+<img alt="../_images/eea_fig-8.png" class="align-center" src="../_images/eea_fig-8.png" />
+<p>Since R<sub>e</sub> is large, in the order of several megaOhms, only very little current can take this route. Therefore, in practice, the electrode is primarily the double-layer capacitor C<sub>e</sub> in series with R<sub>m</sub> and R<sub>s</sub> (Robinson, 1968).</p>
 <p>So far, we know that the impedance magnitude of a capacitor decreases with increased capacitance, and that electrode impedance is dominated by double layer capacitor, C<sub>e</sub>. Therefore, to decrease our electrode impedance, we need to increase the electrode capacitance C<sub>e</sub>. How can we increase the value of C<sub>e</sub>?</p>
 <div class="math notranslate nohighlight">
-\[C = \frac{\epsilon}{A}\]</div>
+\[C = \frac{\epsilon A}{d}\]</div>
 <p>The capacitance of a capacitor, in Farads, is proportional to the area of the capacitor plates (A) divided by the distance (d) between them. ε is the electrostatic constant. To make C bigger, we can increase A by increasing the surface area of the electrode. We can also coat electrodes with materials complemented with pseudo-capacitance, such as conducting polymers or transition metal oxide films, such as IrOx (Green, Lovell, Wallace, &amp; Poole-Warren, 2008; Musa, 2011).
 Electrode impedance magnitude is often measured at 1 kHz, before and after electrode coating, showing an impedance decrease up to 10-fold (Neto et al., 2018). By increasing the capacitance (C<sub>e</sub>) of our electrode, the electrode impedance (Z<sub>e</sub>) will be smaller, preserving more of our signal amplitude at V<sub>in</sub> (V<sub>in</sub> = V<sub>ec</sub>). Electrodes impedance values are in the kOhm to MOhm range at 1 kHz.</p>
 </div>
@@ -444,8 +442,8 @@ Electrode impedance magnitude is often measured at 1 kHz, before and after elect
 <img alt="../_images/eea_fig-29.png" class="align-center" src="../_images/eea_fig-29.png" />
 <p>If we connect the output of the operational amplifier to the ‘-’ input, then the following happens:</p>
 <ul class="simple">
-<li><p>Initially, the operational amplifier will output a very high voltage if the difference across it inputs is positive, and a very low one if its negative (like we said, the gain is extremely high).</p></li>
-<li><p>If we connect the output back to ‘-’, this behaviour will keep the voltages at its ‘+’ and ‘-’ inputs the same. Any positive difference between its input terminals will lead to a higher voltage applied to the ‘-’ input, bringing them back together, and vice-versa.</p></li>
+<li><p>Initially, if ‘+’ is higher than ‘-‘, the operational amplifier will output a very high voltage.</p></li>
+<li><p>If we connect the output back to ‘-’, the amplifier will continue to output a high voltage, but now this voltage starts to increase the value of ‘-‘, bringing the value of the inputs closer together. This behaviour will keep the voltages at its ‘+’ and ‘-’ inputs the same.</p></li>
 <li><p>Now, <em>the ‘-’ input is always actively driven to follow the voltage on the ‘+’ input</em>. This means that whatever voltage we connect to the ‘+’ input can be measured just by looking at the ‘-’ input (which is connected to / the same as the output).</p></li>
 </ul>
 <p>We can look at the voltage that is on ‘+’ by just measuring the output of the operational amplifier, BUT because the ‘+’ input draws almost no current at all (in other words, very high input impedance), we can now measure weak signals. The output of the operational amplifier on the other hand side has very low output impedance, in other words we can draw a lot of current from it and it will keep its voltage.</p>
@@ -480,7 +478,7 @@ Electrode impedance magnitude is often measured at 1 kHz, before and after elect
 <p>The ‘effective amplifier input impedance’, Z<sub>a</sub>’ is the total impedance to the ground seen from the electrode. This includes the path through the amplifier AND the path through the parallel shunting routes (shunt resistance and capacitance) to ground outside the amplifier.</p>
 <img alt="../_images/eea_fig-32.png" class="align-center" src="../_images/eea_fig-32.png" />
 <div class="math notranslate nohighlight">
-\[Vin = \frac{Za'}{Za' + Ze} Ve\]</div>
+\[Vin = \frac{Za'}{Za' + Ze} Vec\]</div>
 <p>Z<sub>a</sub>’ = ‘effective amplifier’ impedance (Z<sub>a</sub> + Z C<sub>sh</sub> + R<sub>sh</sub>)</p>
 <p>Z<sub>e</sub> = electrode impedance</p>
 <p>The ratio between the effective amplifier impedance and the electrode impedance determines how much of our precious signal we can pick up. This is particularly important when the electrodes have a large impedance themselves and are therefore more susceptible to attenuation by shunt capacitance (Obien et al., 2015; Robinson, 1968). For instance, the shunt capacitance for a tungsten wire (~50 to 100 pF) is usually higher than for a silicon probe (5-20 pF/cm). (Why? Think of what makes a capacitor, and the relative shape and conductances of these electrodes).</p>
@@ -493,7 +491,7 @@ Electrode impedance magnitude is often measured at 1 kHz, before and after elect
 </div>
 <div class="section" id="differential-amplifiers">
 <h2>Differential Amplifiers<a class="headerlink" href="#differential-amplifiers" title="Permalink to this headline">¶</a></h2>
-<center><iframe width="560" height="340" src="https://www.youtube.com/embed/91SVSdoEFzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><p>The amplification of the potential difference between the microelectrode and the reference electrode (on the order of microvolts) is a crucial step, and is accomplished with differential amplifiers that amplify the differences, rejecting the noise that is often introduced as common-mode potential in the circuit (i.e., noise identical in the recording and reference electrodes typically caused by motion artifacts and capacitive coupling of the body and electrode lead with power line fields (Nunez &amp; Srinivasan, 2009)). The grounding assists the common-mode rejection properties of the amplifier by allowing it to more accurately measure differences of potential between two recording electrodes (Cadwell and Villarreal, 1999). (Nunez, pag 43,44). Therefore, high gain differential amplifiers are used to boost the signals to the larger voltage levels (V<sub>out</sub> = gain x V<sub>in</sub>) required by the ADC and to reject common-mode noise.</p>
+<center><iframe width="560" height="340" src="https://www.youtube.com/embed/91SVSdoEFzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><p>The amplification of the potential difference between the microelectrode and the reference electrode (in the order of microvolts) is a crucial step, and is accomplished with differential amplifiers that amplify the differences, rejecting the noise that is often introduced as common-mode potential in the circuit (i.e., noise identical in the recording and reference electrodes typically caused by motion artifacts and capacitive coupling of the body and electrode lead with power line fields (Nunez &amp; Srinivasan, 2009)).</p>
 </div>
 <div class="section" id="acknowledgements">
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
@@ -557,7 +555,7 @@ Electrode impedance magnitude is often measured at 1 kHz, before and after elect
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
 </p>
     </div>
     
