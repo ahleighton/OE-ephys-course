@@ -339,8 +339,10 @@ Wrap Up by TA
 As a group, go through a simulation circuit of the electrode equivalent circuit with an alternating signal. Show that:
 
 * A tetrode can’t drive this long wire with shunt capacitance, because:
+
 a. We draw a load of current
 b. We get tiny output signal
+
 * Replace the wire with an amp. Now it doesn’t matter whether it’s a capacitor or a resistor!
 
 To show this, you can use `this circuit. <https://tinyurl.com/yzh2vvuj>`_

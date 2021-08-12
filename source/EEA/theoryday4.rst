@@ -21,6 +21,11 @@ One of the most common pitfalls in Neuroscience is correctly synchronizing multi
   <center><iframe width="560" height="340" src="https://www.youtube.com/embed/F0uwA3RUlB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
   <br>
 
+
+
+The code for the exercises Filipe shows is available `on google drive <https://drive.google.com/drive/folders/1m_DTRXc1NcFni12a_9AtApX5nMIPPDdk?usp=sharing>`_ if you want to try it out yourself. 
+
+
 .. _refdigitization:
 
 Digitization
