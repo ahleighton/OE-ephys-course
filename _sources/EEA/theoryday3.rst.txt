@@ -146,8 +146,7 @@ These are called ‘RC filters’ because they’re built from a resistor (R) an
 Why do we need a ground electrode?
 ###################################
 
-When we build our EMG circuit, we will use three electrodes: measurement (+), reference (-), and ground. Why do we have a ground electrode when we already have ‘+’ and ‘-’ inputs? This is a bit tricky, and there's multiple ways to understand it.
-
+When we build our EMG circuit, we will use three electrodes: measurement (+), reference (-), and ground. Why do we have a ground electrode (or ground pin or screw) when we already have ‘+’ and ‘-’ inputs? This is a bit tricky, and there's multiple ways to understand it.
 
 .. raw:: html
 
@@ -156,9 +155,7 @@ When we build our EMG circuit, we will use three electrodes: measurement (+), re
     </center>
     <br>
 
-
-First off, remember the common mode rejection ratio. If our amplifier is good at rejecting 99.99% of the common mode, but 0.01% make it through, in the range of volts, this could still be enough to prevent us from resolving microvolt spikes.
-As a more concrete way to think about it regarding the circuit: imagine you just walked across a carpet and you're charged to 10kV. Now you want to do a differential measurement of EMG (or EEG). In theory, as far as we've really talked about till now, this should work via the magic of common-mode rejection. However, remember the circuit that is inside the instrumentation amp:
+Imagine you just walked across a carpet and you're charged to 10kV. Now you want to do a differential measurement of EMG (or EEG). In theory, as far as we've really talked about till now, this should work via the magic of common-mode rejection. However, remember the circuit that is inside the instrumentation amp:
 
 
 .. image:: ../_static/images/EEA/eea_fig-53.png
@@ -166,9 +163,10 @@ As a more concrete way to think about it regarding the circuit: imagine you just
   :target: https://tinyurl.com/yjxekrv5
 
 
-The ‘-’ inputs of the two input op-amps are connected to ground, via a bunch of resistors. If you are charged to 10kV compared to ground, we’re asking these op-amps to deal with pretty high values individually, and they will saturate. Even if here we did not include rails in the simulation, remember that each op-amp can only go as high or low as its voltage rails (3V in our case, so with a 100x gain, a 0.03V input saturates the amplifier).
+The ‘-’ inputs of the two input op-amps are connected to ground, via a bunch of resistors. If you are charged to 10kV compared to g round, we’re asking these op-amps to deal with pretty high values individually, and they will saturate. Even if here we did not include rails in the simulation, remember that each op-amp can only go as high or low as its voltage rails (3V in our case, so with a 100x gain, a 0.03V input saturates the amplifier).
+Attaching a ground electrode to ourselves, and then connecting this to the ground of our acquisition system, brings our body to 0V from the perspective of the acquisition system. The remaining noise fluctuations are still there, but the voltage difference  is not as big anymore. We will still have residual 50 or 60Hz noise from the mains supply, plus other muscles, electrostatic charge, bodies moving through the fields in the room and so on, but these can all be handled by the amplifier.
 
-One way to think about it is that we first bring our body to a reasonable voltage level - for example the voltage that our computer considers ground. Or the ground in the wall power sockets. Once we’ve done that, our entire body is not floating at 10kV anymore but at, for us, 0V. The remaining fluctuations, so stuff we consider noise and want to remove via our differential measurement, is not as big anymore. We will still have residual 50 or 60Hz noise from the mains supply, plus other muscles, electrostatic charge, bodies moving through the fields in the room and so on, but these can all be handled by the amplifier.
+Remember the common mode rejection ratio. If our amplifier is good at rejecting 99.99% of the common mode, but 0.01% makes it through, in the range of volts, this could still be enough to prevent us from resolving microvolt spikes.
 
 The last, related, issue is that the output of the whole thing is relative to ground. At some point you want to connect this to a PC, which sits at ground level. A possible solution of course is if we make the entire thing battery powered - this is actually a great idea in our exercises, if you have a laptop.
 
