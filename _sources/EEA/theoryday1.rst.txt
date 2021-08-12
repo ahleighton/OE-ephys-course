@@ -25,7 +25,7 @@ Welcome to the Open Ephys course on extracellular electrophysiology acquisition!
 .. raw:: html
 
   <br>
-  <center><iframe width="560" height="340" src="https://youtu.be/eaAKn61R6MY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/eaAKn61R6MY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <br>
 
 Several biological processes in the body generate electrical signals, that we can then detect using an electrode made of a conducting material (see Table 1 for an overview). We can record signals generated through skeletal muscle contraction (Electromyography, EMG), or heartbeat (electrocardiogram, ECG). In neuroscience, we often use intracranial electrodes to measure action potential firing (spikes) or local field potentials (LFP). Electrodes outside the skull allow us to detect EEG non-invasively.
