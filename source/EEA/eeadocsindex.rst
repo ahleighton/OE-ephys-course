@@ -4,7 +4,7 @@
 EEA Course Documents
 *******************************
 .. toctree::
-   :hidden:
+   :maxdepth: 1
 
    safety.rst
    software_requirements.rst
