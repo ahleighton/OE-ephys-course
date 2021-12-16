@@ -54,33 +54,28 @@
 
 /* navigation bar colors*/
 .navbar {
-  background: #5fb5dc !important;
+  background: #FEDB81 !important;
   font-family: 'Proxima Nova';
   font-size: 1em;
 }
 
 .navbar-nav > .active > .nav-link {
-  background-color: #f4d050 !important;
-  color: #e6f7ff!important;
-  font-weight: normal !important;
-  transition-duration: 0.4s;
-}
-
-.navbar-nav > .active > .nav-link:hover {
-  color: #519141 !important;
+  background-color: #E9C875 !important;
+  color: #black !important;
+  font-weight: bold !important;
   transition-duration: 0.4s;
 }
 
 .navbar a {
-  color: white !important;
+  color: black !important;
   font-family: "Proxima Nova", sans-serif;
   transition-duration: 0.4s;
   margin-right: 10px;
 }
 
 .navbar a:hover {
-  color: #f9f2d5 !important;
-  transition-duration: 0.4s;
+  color: #D39824 !important;
+  transition-duration: 0.2s;
 }
 
 /* left side links */
@@ -104,23 +99,44 @@
 }
 
 /* body links (external) */
-a.reference.external {
-  color: #5CAFBC;
+a {
+  color: #0086b3;
 }
 
-a.reference.external:hover {
-  color: #82D3E0;
+a:hover {
+  color: #004d66;
   text-decoration: none;
 }
 
-/* body links (internal) */
-a.reference.internal {
-  color: #5CAFBC;
+a.reference.external:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: ' \f35d';
+  font-size: 0.5em;
+  vertical-align: super;
 }
 
-a.reference.internal:hover {
-  color: #82D3E0;
-  text-decoration: none;
+a.external-link:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: ' \f35d';
+  font-size: 0.5em;
+  vertical-align: super;
+}
+
+/* get rid of external link icon on linked images*/
+a.reference.external.image-reference:after {
+  content: ' ';
+  font-size: 0.5em;
+  vertical-align: super;
+}
+
+p.card-reference {
+  margin: 2.75rem 0 1.05rem;
+  font-family: "Bitter", sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+  font-size: 1.1em;
 }
 
 /* header links */
@@ -167,7 +183,7 @@ h2 {
 }
 
 h3 {
-  margin: 2.75rem 0 1.05rem;
+  margin: 2rem 0 1.05rem;
   font-family:"Miso", sans-serif;
   font-weight: 400;
   line-height: 1.15;
@@ -176,7 +192,7 @@ h3 {
 }
 
 h4 {
-  margin: 2.75rem 0 1.05rem;
+  margin: 2rem 0 1.05rem;
   font-family: "Proxima Nova", sans-serif;
   font-weight: 400;
   line-height: 1.15;
@@ -185,7 +201,7 @@ h4 {
 }
 
 h5 {
-  margin: 2.75rem 0 1.05rem;
+  margin: 2rem 0 1.05rem;
   font-family: "Proxima Nova", sans-serif;
   font-style: italic;
   font-weight: 400;
@@ -196,7 +212,7 @@ h5 {
 }
 
 h6 {
-  margin: 2.75rem 0 1.05rem;
+  margin: 2rem 0 1.05rem;
   font-family: "Proxima Nova", sans-serif;
   font-weight: 400;
   line-height: 1.15;
@@ -301,6 +317,19 @@ h6 {
   color: #519141 !important;
 }
 
+
+.admonition.tanote {
+  border-color: #5fb5dc;
+}
+
+.tanote > .admonition-title {
+  background-color: #d9e7f3 !important;
+}
+
+.tanote > .admonition-title:before {
+  color: #5fb5dc !important;
+}
+
 /* logo */
 .navbar-brand {
   position: relative;
@@ -333,6 +362,18 @@ form:focus {
   outline: black !important;
   box-shadow: none !important;
   border: 1px !important;
+}
+
+/* custom format for exercise questions */
+
+.exercise {
+   border-color: #c8c8c8 ;
+   border-style: solid ;
+   border-width: 1px ;
+   font-size: 0.9em ;
+   font-style: italic;
+   padding: 1rem 10px;
+   margin: 10px;
 }
 
 /* override table width restrictions */

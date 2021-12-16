@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Exercises Day 4 TA &#8212; Open Ephys EEA 2021 0.0.0 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../index.html">
+<p class="title">Open Ephys EEA 2021</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Firmata.html">
+   Firmata
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bonsai">
+   Bonsai
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-and-install-bonsai">
+     Download and install Bonsai
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#video-acquisition">
+     Video Acquisition
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exercise-1-saving-a-video">
+       Exercise 1: Saving a video
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#audio-acquisition">
+     Audio Acquisition
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exercise-2-saving-a-wav-file">
+       Exercise 2: Saving a WAV file
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exercise-3-trigger-an-auditory-stimulus">
+       Exercise 3: Trigger an auditory stimulus
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#digital-output">
+     Digital Output
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exercise-4-control-an-led">
+       Exercise 4: Control an LED
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analog-inputs">
+     Analog Inputs
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exercise-5-touch-detector">
+       Exercise 5: Touch detector
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#emg-into-pc">
+   EMG into PC
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shifting-the-signal">
+     Shifting the signal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#streaming-data-from-the-microcontroller">
+     Streaming data from the microcontroller
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="exercises-day-4-ta">
+<span id="refeday4ta"></span><h1>Exercises Day 4 TA<a class="headerlink" href="#exercises-day-4-ta" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#bonsai" id="id1">Bonsai</a></p>
+<ul>
+<li><p><a class="reference internal" href="#download-and-install-bonsai" id="id2">Download and install Bonsai</a></p></li>
+<li><p><a class="reference internal" href="#video-acquisition" id="id3">Video Acquisition</a></p></li>
+<li><p><a class="reference internal" href="#audio-acquisition" id="id4">Audio Acquisition</a></p></li>
+<li><p><a class="reference internal" href="#digital-output" id="id5">Digital Output</a></p></li>
+<li><p><a class="reference internal" href="#analog-inputs" id="id6">Analog Inputs</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#emg-into-pc" id="id7">EMG into PC</a></p>
+<ul>
+<li><p><a class="reference internal" href="#shifting-the-signal" id="id8">Shifting the signal</a></p></li>
+<li><p><a class="reference internal" href="#streaming-data-from-the-microcontroller" id="id9">Streaming data from the microcontroller</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="bonsai">
+<h2><a class="toc-backref" href="#id1">Bonsai</a><a class="headerlink" href="#bonsai" title="Permalink to this headline">¶</a></h2>
+<p>Bonsai is a visual reactive programming language. It’s great for data acquisition, because it can easily deal with multiple datastreams.</p>
+<p>Some of these exercises were adapted from from Neurogears &#64; Wustl19, <a class="reference external" href="https://neurogears.org/wustl-2019/worksheets/acquisition/">https://neurogears.org/wustl-2019/worksheets/acquisition/</a></p>
+<section id="download-and-install-bonsai">
+<h3><a class="toc-backref" href="#id2">Download and install Bonsai</a><a class="headerlink" href="#download-and-install-bonsai" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Download Bonsai from <a class="reference external" href="http://bonsai-rx.org">http://bonsai-rx.org</a>.</p></li>
+<li><p>Install Bonsai - Starter Pack from the package manager.</p></li>
+</ul>
+</section>
+<section id="video-acquisition">
+<h3><a class="toc-backref" href="#id3">Video Acquisition</a><a class="headerlink" href="#video-acquisition" title="Permalink to this headline">¶</a></h3>
+<p>Bonsai can be used to acquire and record data from many different devices. The first data type we will discuss is an image, which is represented as a 2D matrix of pixels. Each pixel represents either a brightness value in a grayscale image, or a BGR colour value in a colour image.</p>
+<section id="exercise-1-saving-a-video">
+<h4>Exercise 1: Saving a video<a class="headerlink" href="#exercise-1-saving-a-video" title="Permalink to this headline">¶</a></h4>
+<img alt="../_images/videowriter.png" class="align-center" src="../_images/videowriter.png" />
+<ul class="simple">
+<li><p>Insert a CameraCapture source.</p></li>
+<li><p>Insert a VideoWriter sink.</p></li>
+<li><p>Configure the FileName property of the VideoWriter operator with a file name ending in .avi.</p></li>
+<li><p>Run the workflow and check that it generates a valid video file.</p></li>
+</ul>
+</section>
+</section>
+<section id="audio-acquisition">
+<h3><a class="toc-backref" href="#id4">Audio Acquisition</a><a class="headerlink" href="#audio-acquisition" title="Permalink to this headline">¶</a></h3>
+<p>Audio data is captured at much higher temporal sampling frequencies than video. However, the data is typically buffered into chunks of multiple samples before being sent to the computer. Also, multiple audio channels can be acquired simultaneously in the case of a stereo microphone, or high-density ephys probes. For this reason, such multi-sample, multi-channel data is also typically represented as a 2D matrix of amplitude values, where rows represent channels, and columns represent time.</p>
+<section id="exercise-2-saving-a-wav-file">
+<h4>Exercise 2: Saving a WAV file<a class="headerlink" href="#exercise-2-saving-a-wav-file" title="Permalink to this headline">¶</a></h4>
+<img alt="../_images/audiocapture.png" class="align-center" src="../_images/audiocapture.png" />
+<ul class="simple">
+<li><p>Insert an AudioCapture source.</p></li>
+<li><p>Insert an AudioWriter sink.</p></li>
+<li><p>Configure the FileName property of the AudioWriter operator with a file name ending in .wav.</p></li>
+<li><p>Make sure that the SamplingFrequency property of the AudioWriter matches the frequency of audio capture.</p></li>
+<li><p>Run the workflow for some seconds to record a file.</p></li>
+</ul>
+</section>
+<section id="exercise-3-trigger-an-auditory-stimulus">
+<h4>Exercise 3: Trigger an auditory stimulus<a class="headerlink" href="#exercise-3-trigger-an-auditory-stimulus" title="Permalink to this headline">¶</a></h4>
+<img alt="../_images/audioplayback.png" class="align-center" src="../_images/audioplayback.png" />
+<ul class="simple">
+<li><p>Insert an AudioReader source.</p></li>
+<li><p>Configure the FileName property to point to the audio file you recorded in Exercise 3.</p></li>
+<li><p>Insert an AudioPlayback sink.</p></li>
+<li><p>Run the workflow and check that the sound is played correctly.</p></li>
+</ul>
+<img alt="../_images/audiokeydown.png" class="align-center" src="../_images/audiokeydown.png" />
+<ul class="simple">
+<li><p>Insert a KeyDown source (Windows.input).</p></li>
+<li><p>Set the BufferLength property of the AudioReader to zero, so that all audio data is read into a single buffer.</p></li>
+<li><p>Combine the key press with the audio data using the WithLatestFrom combinator.</p></li>
+<li><p>Right-click the WithLatestFrom operator. Select Output &gt; Item2 from the context menu.</p></li>
+<li><p>Move the AudioPlayback sink so that it follows the selected Item2 member.</p></li>
+<li><p>Run the workflow and press a key. What happens if you press several keys?</p></li>
+</ul>
+</section>
+</section>
+<section id="digital-output">
+<h3><a class="toc-backref" href="#id5">Digital Output</a><a class="headerlink" href="#digital-output" title="Permalink to this headline">¶</a></h3>
+<section id="exercise-4-control-an-led">
+<h4>Exercise 4: Control an LED<a class="headerlink" href="#exercise-4-control-an-led" title="Permalink to this headline">¶</a></h4>
+<img alt="../_images/ledon.png" class="align-center" src="../_images/ledon.png" />
+<ul class="simple">
+<li><p>Upload StandardFirmata to your teensy in the Arduino software (File/Examples/Firmata/StandardFirmata)</p></li>
+<li><p>In Bonsai: Insert a Boolean source.</p></li>
+<li><p>Insert a DigitalOutput sink.</p></li>
+<li><p>Set the Pin property of the DigitalOutput operator to 13. This is the LED pin of the teensy- it turns on the LED that is already attached to the board.</p></li>
+<li><p>Configure the PortName property to the COM of your Teensy.</p></li>
+<li><p>Run the workflow and change the Value property of the Boolean operator to toggle the LED on the Teensy on and off.</p></li>
+<li><p>Optional: Change the output pin to a different digital output pin. Connect an LED and a resistor to this pin through the breadboard and turn the LED on with Bonsai. The LEDs in your kit have three pins, you can treat them as a normal LED by leaving one of the short pins unconnected.</p></li>
+</ul>
+</section>
+</section>
+<section id="analog-inputs">
+<h3><a class="toc-backref" href="#id6">Analog Inputs</a><a class="headerlink" href="#analog-inputs" title="Permalink to this headline">¶</a></h3>
+<section id="exercise-5-touch-detector">
+<h4>Exercise 5: Touch detector<a class="headerlink" href="#exercise-5-touch-detector" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Upload this <a class="reference internal" href="Firmata.html#firmata"><span class="std std-ref">Firmata</span></a> to your Teensy</p></li>
+<li><p>In Bonsai, insert an AnalogInput node and configure it to Analog Pin 9.</p></li>
+<li><p>Run the workflow and tap the pin on the Teensy.</p></li>
+<li><p>Use the GreaterThan node to create a ‘touch detector’ that gives a 1 each time you tap the teensy.</p></li>
+<li><p>Run the workflow and tap the pin on the Teensy. What do you see?</p></li>
+</ul>
+<p>This workflow is detecting each sample.</p>
+<ul class="simple">
+<li><p>Use the ‘Buffer (Dsp)’ and ‘Average’ nodes to run the detection over more than 1 sample. You will need to output only the first value from Average (it will by default return 4 values, and then the other nodes won’t work as they can only receive 1 value.) Do this by right-clicking on Average/Output/Val0.</p></li>
+<li><p>Run the workflow and tap the pin on the Teensy.</p></li>
+</ul>
+<details><summary> Workflow here:
+</summary><img alt="../_images/Analogdetectbuffered.svg" class="align-center" src="../_images/Analogdetectbuffered.svg" /></section>
+</section>
+</section>
+<section id="emg-into-pc">
+<h2><a class="toc-backref" href="#id7">EMG into PC</a><a class="headerlink" href="#emg-into-pc" title="Permalink to this headline">¶</a></h2>
+<p>Use the circuit from yesterday. Instead of reading into our oscilloscope, we will feed the signals to our pc through the Teensy microcontroller.</p>
+<section id="shifting-the-signal">
+<h3><a class="toc-backref" href="#id8">Shifting the signal</a><a class="headerlink" href="#shifting-the-signal" title="Permalink to this headline">¶</a></h3>
+<p>The EMG signal is from -3 to +3V, but we can only digitize positive voltages. With a simple trick we can shift the signal up from -3 to 3V exactly into the 0-3V range we want, while still providing the amplifier with a -3 to +3V range.</p>
+<div class="exercise docutils container">
+<ol class="upperalpha simple">
+<li><p>Add a voltage divider to your EMG circuit</p></li>
+</ol>
+<blockquote>
+<div><img alt="../_images/eea_fig-64.png" class="align-center" src="../_images/eea_fig-64.png" />
+<img alt="../_images/eea_fig-86.png" class="align-center" src="../_images/eea_fig-86.png" />
+<img alt="../_images/eea_fig-65.png" class="align-center" src="../_images/eea_fig-65.png" />
+</div></blockquote>
+</div>
+<p>This voltage divider is not going to mess with our signal, because the signal is protected by the amplifier. You could in theory use almost any reasonable values for R, over 1kΩ, because the output impedance of the instrumentation amplifier is low and the input impedance (of the teensy analog input) is decently high. If you make R too small, this will still work on paper, but you’re now asking the op-amp to keep shovelling current into ground (or in this case, the 3V rail) through a small R, and eventually even an op-amp will get unhappy.</p>
+<div class="admonition-tanote admonition">
+<p class="admonition-title">TAnote</p>
+<p>With two equal resistances, it is splitting the difference between the instrumental amplifier output and +3V in two.
+For low amplitude values of our amplified signal, say -2.6V, the difference is 5.6V and thus it adds 2.8V to -2.6V giving a voltage divider output of +0.2V.
+For large amplitude values of our amplified signal, say +2.6V, the difference is 0.4V and thus it adds 0.2V to +2.6V, giving a voltage divider output of 2.8V.
+Our signal is then transformed to the 0.2-2.6V range, ready for the digitizing pin of the Teensy.</p>
+<p>Simulator to show this in action: <a class="reference external" href="https://tinyurl.com/yyv98thr">https://tinyurl.com/yyv98thr</a></p>
+</div>
+</section>
+<section id="streaming-data-from-the-microcontroller">
+<h3><a class="toc-backref" href="#id9">Streaming data from the microcontroller</a><a class="headerlink" href="#streaming-data-from-the-microcontroller" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+</div>
+<p>We’re going to start streaming data to the pc, by using our Teensy microcontroller to digitize the analog signals we collect.</p>
+<div class="exercise docutils container">
+<ol class="upperalpha simple">
+<li><p>Connect the output from your amplifier to an analog input node on the Teensy as shown below. This is a 220 Ohm resistor across the instrumentation amplifier, and a voltage divider made of two equal resistors (anything above 1KOhm, see the text on ‘shifting the bipolar signal up’ below).</p></li>
+<li><p>Upload ‘Firmata.ino’ to the Teensy (code here: <a class="reference internal" href="Firmata.html#firmata"><span class="std std-ref">Firmata</span></a> )</p></li>
+<li><p>Open Bonsai and create an Analog Input node. Double-click to visualise your signal.</p></li>
+<li><p>Connect this to a ‘Csv Writer’ node to save your signals.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It should work with just ‘AnalogInput’. It’s nicer to use the ‘CreateArduino’ node and specify the Teensy, this also allows you to set the sampling interval, so you can increase it if the computer is struggling.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2010-2021, Open Ephys, OEPS &amp; Contributors.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
