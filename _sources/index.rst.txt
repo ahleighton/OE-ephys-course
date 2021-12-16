@@ -29,7 +29,7 @@ To follow this course, you can either:
                 <div class="card text-center intro-card shadow">
 
 .. figure:: _static/images/EEA/eea_fig-85.png
-  :target: Materials/kitlist.html
+  :target: EEA/kitlist.html
 
 .. container:: custom-button
 
@@ -43,7 +43,7 @@ To follow this course, you can either:
                 <div class="card text-center intro-card shadow">
 
 .. figure:: _static/images/EEA/eea_fig-69.png
-  :target: Materials/eeadocsindex.html
+  :target: EEA/eeadocsindex.html
 
 .. container:: custom-button
 
