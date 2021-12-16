@@ -4,34 +4,33 @@
 Theory Day 4
 ***********************************
 
-Now that we have all the steps of our acquisition system, we can talk about how to digitize our signals and combine multiple datastreams.
+.. |Na+| replace:: Na\ :sup:`+`\
+.. |Cl-| replace:: Cl\ :sup:`-`\
+.. |Ca2+| replace:: Ca\ :sup:`2+`\
+.. |K+| replace:: K\ :sup:`+`\
+.. |Rs| replace:: R\ :sub:`s`\
+.. |Rm| replace:: R\ :sub:`m`\
+.. |Re| replace:: R\ :sub:`e`\
+.. |Rsh| replace:: R\ :sub:`sh`\
+.. |Ce| replace:: C\ :sub:`e`\
+.. |Csh| replace:: C\ :sub:`sh`\
+.. |Vin| replace:: V\ :sub:`in`\
+.. |Vec| replace:: V\ :sub:`ec`\
+.. |Vout| replace:: V\ :sub:`out`\
+.. |Ve| replace:: V\ :sub:`e`\
+.. |Za| replace:: Z\ :sub:`a`\
+.. |Ze| replace:: Z\ :sub:`e`\
 
-
-.. image:: ../_static/images/EEA/eea_fig-5.png
-  :align: center
-
-
-Talk: Acquisition and Synchronization
-########################################
-One of the most common pitfalls in Neuroscience is correctly synchronizing multiple datastreams. How do you know whether your imaging and electrophysiology are aligned in time? How many different clocks do you have on your set up, and which of those can you trust?
-
-.. raw:: html
-
-  <br>
-  <center><iframe width="560" height="340" src="https://www.youtube.com/embed/F0uwA3RUlB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-  <br>
-
-
-
-The code for the exercises Filipe shows is available `on google drive <https://drive.google.com/drive/folders/1m_DTRXc1NcFni12a_9AtApX5nMIPPDdk?usp=sharing>`_ if you want to try it out yourself. 
-
+.. contents:: Table of Contents
+  :depth: 2
+  :local:
 
 .. _refdigitization:
 
 Digitization
 ###################################
-The purpose of digitization is to convert amplified signals into digital values. Why do we digitize neural signals? So that we can process and store them.
-First, the output of the amplifier (Vout) should match the digitizer dynamic range. Your analog signal should ‘occupy’, as much as possible, all discrete values in the digitization range. In other words, digitization range should match maximum analog signal. If the dynamic range is too small the signal will saturate, and if it is too large it will decrease effective signal resolution.
+The purpose of digitization is to convert amplified signals into digital values. Why do we digitize neural signals? To protect them from noise, and so that we can process and store them.
+First, the output of the amplifier (Vout) should match the digitizer dynamic range. Your analog signal should ‘occupy’ as much as possible, i.e. all discrete values in the digitization range. In other words, digitization range should match maximum analog signal. If the dynamic range is too small the signal will saturate, and if it is too large it will decrease effective signal resolution.
 
 .. image:: ../_static/images/EEA/eea_fig-58.png
   :align: center
@@ -52,44 +51,15 @@ In practice, many ADCs still use the same basic idea of using op-amps as compara
 
 Typically AD converters have 12 to 16 bit resolution (4096 to 65536 discrete values) for neural signals, which is usually enough because of the size of the signals we want (spikes etc), and because the thermal noise floor of typical electrodes is similar to the achievable resolution anyway: better digitizers would just measure more of that noise. If you want to read more about that, have a look `here. <http://deuterontech.com/wp-content/uploads/2015/10/Deuteron_Noise_and_Interference.pdf>`_
 
-Acquiring and synchronizing data with Bonsai
-##############################################
-If you want to use Bonsai to work more on your EMG acquisition, you can find a helpful introduction `here <https://neurogears.org/wustl-2019/worksheets/acquisition/>`_. The most relevant of these exercises are available as a pdf here, :download:`ex_day_4 <../_static/images/EEA/day_4_bonsai.pdf>`, slightly adjusted for this course.
+Talk: Acquisition and Synchronization
+########################################
+One of the most common pitfalls in Neuroscience is correctly synchronizing multiple datastreams. How do you know whether your imaging and electrophysiology are aligned in time? How many different clocks do you have on your set up, and which of those can you trust?
 
-Project
-###################################
-The final part of the course is to work on your own project. This can really be about anything
-you find interesting. Possibilities are:
+.. raw:: html
 
-- Hardware: expand on the EMG by adding filters or LEDs
-- Software: use Bonsai to make a closed-loop experiment
-- Simulator: build your own simulated circuit with different types of electrodes
-- Theory: dig deeper into the topic that most appealed to you
-
-When deciding on your project, try to break it down into steps. The best projects are designed to be
-successful even if they are not complete.
+  <br>
+  <center><iframe width="560" height="340" src="https://www.youtube.com/embed/F0uwA3RUlB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+  <br>
 
 
-Acknowledgements
-###################################
-Written by:
-
-* Alexandra Leighton
-* Joana Neto
-* Jakob Voigts
-* Aarón Cuevas López
-* Jon Newman
-
-With material from:
-
-* Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018.
-* Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at  `TENSS <https://www.tenss.ro/>`_)
-* Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for `TENSS <https://www.tenss.ro/>`_)
-* Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp
-
-Licensing
-###################################
-
-This work is licensed under CC BY-SA 4.0.
-
-To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
+The code for the exercises Filipe shows is available `on google drive <https://drive.google.com/drive/folders/1m_DTRXc1NcFni12a_9AtApX5nMIPPDdk?usp=sharing>`_ if you want to try it out yourself.

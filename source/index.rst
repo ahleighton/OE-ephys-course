@@ -1,14 +1,18 @@
 ****************************************************************
-Course: Extracellular Electrophysiology Acquisition
+Extracellular Electrophysiology Acquisition
 ****************************************************************
 .. _refeea:
 
 .. toctree::
   :hidden:
 
-  /EEA/kitlist.rst
-  /EEA/eeadocsindex.rst
-  /EEA/disclaimer_terms_conditions.rst
+  /Materials/kitlist.rst
+  /Materials/eeadocsindex.rst
+  /Materials/disclaimer_terms_conditions.rst
+  /Materials/license.rst
+  /Materials/acknowledgements.rst
+
+*Updated December 2021*
 
 These are the course materials for the Open Ephys course on Extracellular Electrophysiology Acquisition.
 This course consists of recorded lectures and hands-on electronics exercises, for which you will need some specific equipment.
@@ -24,18 +28,12 @@ To follow this course, you can either:
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
                 <div class="card text-center intro-card shadow">
 
-.. figure:: _static/images/EEA/eea_fig-70.png
-  :target: EEA/kitlist.html
+.. figure:: _static/images/EEA/eea_fig-85.png
+  :target: Materials/kitlist.html
 
 .. container:: custom-button
 
-    :ref:`NeuroKit Equipment List <refkitlist>`
-
-|
-
-Equipment needed for the hands-on exercises
-
-|
+    :ref:`Kit Equipment List <refkitlist>`
 
 .. raw:: html
 
@@ -45,19 +43,13 @@ Equipment needed for the hands-on exercises
                 <div class="card text-center intro-card shadow">
 
 .. figure:: _static/images/EEA/eea_fig-69.png
-  :target: EEA/eeadocsindex.html
+  :target: Materials/eeadocsindex.html
 
 .. container:: custom-button
 
-    :ref:`Reading Materials and Exercises <refeeadocsindex>`
-
-Documents with theory and exercises per day
-
-|
+    :ref:`Reading and Exercises <refeeadocsindex>`
 
 .. raw:: html
 
-              </div>
-          </div>
-        </div>
-    </div>
+      </div>
+  </div>

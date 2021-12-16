@@ -4,16 +4,27 @@
 Differential Amplifier Solutions
 ***********************************
 
-Add reference to + terminal
-###################################
+Negative feedback with voltage divider:
 
 .. image:: ../_static/images/EEA/eea_fig-52.png
   :align: center
+  :target:  https://tinyurl.com/yzz5ht4f
 
-The signal we just added becomes our new ‘virtual ground’, and that voltage sits in the middle of that voltage divider. To subtract evenly, we need to apply half of the desired signal to the ‘+’ terminal. How do we do that? As always, with a voltage divider:
+The amplifier is doing whatever it can to keep '-' (the 'virtual ground') at the level of '+'.
+The '-' sits in the middle of a voltage divider. The amplifier only has to output current to create spikes at '-'
+when they are received at '+'.
 
-Differential Amp Voltage Divider
-###################################
 
-.. image:: ../_static/images/EEA/eea_fig-48.png
+
+To balance the resistors at the '-' input, we need to apply half of the desired signal to the ‘+’ terminal.
+How do we do that? As always, with a voltage divider:
+
+Differential amplifier:
+https://tinyurl.com/yg63xmm5
+
+
+With 300kOhm resistors (electrodes):
+
+.. image:: ../_static/images/EEA/eea_fig-49.png
   :align: center
+  :target: https://tinyurl.com/ygmn8kf2

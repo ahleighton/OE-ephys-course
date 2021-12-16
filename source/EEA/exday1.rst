@@ -4,51 +4,85 @@
 Exercises Day 1
 ***********************************
 
-.. |Ve| replace:: V\ :sub:`e`\
-.. |Ce| replace:: C\ :sub:`e`\
+.. |Na+| replace:: Na\ :sup:`+`\
+.. |Cl-| replace:: Cl\ :sup:`-`\
+.. |Ca2+| replace:: Ca\ :sup:`2+`\
+.. |K+| replace:: K\ :sup:`+`\
+.. |Rs| replace:: R\ :sub:`s`\
 .. |Rm| replace:: R\ :sub:`m`\
 .. |Re| replace:: R\ :sub:`e`\
-.. |Cs| replace:: C\ :sub:`s`\
+.. |Rsh| replace:: R\ :sub:`sh`\
+.. |Ce| replace:: C\ :sub:`e`\
+.. |Csh| replace:: C\ :sub:`sh`\
 .. |Vin| replace:: V\ :sub:`in`\
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
+.. |Ve| replace:: V\ :sub:`e`\
+.. |Za| replace:: Z\ :sub:`a`\
+.. |Ze| replace:: Z\ :sub:`e`\
 
-We’re going to go through the basic electronics you will need to understand the equivalent circuit of the electrode, below:
+.. contents:: Table of Contents
+  :depth: 2
+  :local:
 
-.. image:: ../_static/images/EEA/eea_fig-9.png
-  :align: center
 
 1.	Using a multimeter
 ###################################
-    A.	Make sure the multimeter has batteries installed and is set to ‘Ω’. Put the red lead in the port marked ‘VmAuA’ and the black one in the port marked COM.
-    B.	Use your multimeter to measure any 3 different resistors in the kit. Check whether the resistance values you read correspond to the bands on the resistors. How is your multimeter measuring this resistance?
-    C.	Measure the voltage across a battery. What does it mean if you record a negative voltage?
 
-In your kit you will find a Teensy 3.2. This is a small microcontroller that we can control in software, and use to generate output or collect input voltage signals. We’re going to attach it to our solderless breadboard.
-If you need to, refer back to the reading material for the overview on how to use a breadboard, it also includes some basic troubleshooting which may prove useful if you run into problems. The most important thing is to remember which holes are connected. Your long breadboard is actually made up of two separate breadboards; + and – rails run through rows 0-30 and 31-60.
-If you want to use the entire length of the breadboard, you will have to connect these rails together with wires.
+.. container:: exercise
+
+    1A.	Make sure the multimeter has batteries installed. Put the red lead in the port marked ‘VmAuA’ and the black one in the port marked COM.
+
+    1B.	Set the multimeter to ‘Ω’. Use your multimeter to measure the resistance of any 3 different resistors in the kit. Check whether the resistance values you read correspond to the bands on the resistors. How is your multimeter measuring this resistance?
+
+    1C.	Now set your multimeter to measure the voltage across a battery. What does it mean if you record a negative voltage?
 
 
-.. image:: ../_static/images/EEA/eea_fig-10.png
+Solderless Breadboard
+***********************************
+To build circuits during the course, we are going to use a solderless breadboard.
+If you need to, refer back to the `reading material <https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/all#anatomy-of-a-breadboard>`_ for the overview on how to use a breadboard, it also includes some basic troubleshooting which may prove useful if you run into problems.
+
+The most important thing is to remember which holes are connected. Your long breadboard is actually made up of two separate breadboards; + and – rails run through rows 0-30 and 31-60. If you want to use the entire length of the breadboard, you will have to connect these rails together with wires.
+
+.. image:: ../_static/images/EEA/eea_fig-79.png
   :align: center
 
-D.	Attach the teensy to the left of your breadboard as shown above. If you make sure the breadboard is in the same orientation as this schematic, it will make the following exercises easier to follow. Removing and replacing the teensy can sometimes bend the pins, so we’re going to leave it here for the whole course.
-E.	Use the USB to micro-USB cable in your kit to connect the Teensy to your computer. The Teensy comes with a default programme already loaded onto the board, so you should see the LED on the board start to blink slowly as soon as it is powered on.
+Teensy Microcontroller
+**********************************
+In your kit you will find a Teensy 3.2. This is a microcontroller (a small computer) that can generate output voltages or collect input voltage signals.
 
+We can control the Teensy through software. In terms of hardware, we interact with the Teensy through its 'pins' or 'vias'. Different vias have different functions.
 
-The kit includes a Teensy pinout card:
+The kit includes a Teensy pinout card. This diagram (‘pinout’) shows us what each pin of the Teensy can do. Each gold circle (‘via’) on this pinout represents an input or output of the Teensy.
+
 
 .. image:: ../_static/images/EEA/eea_fig-11.png
   :align: center
 
+Your teensy already has header pins attached, so that you can click it into your breadboard.
 
-Each gold circle (‘via’) on this pinout represents an input or output of the Teensy. Your teensy already has pins attached, so that you can use it in your breadboard later. This diagram (‘pinout’) shows us what each pin of the Teensy can do. It’s important to distinguish between:
+It’s important to distinguish between:
 
 * Ground pins (GND)
-* Analog pins, that can read varying voltages, such as a wave.
+* Analog pins, that can read varying voltages, such as a wave. There is also an analog ground.
 *	Digital pins, that can read or write HIGH or LOW values.
 
-F.	We can see that digital pin 13 has (LED) written beside it. Attach readout wires to the breadboard, and use your multimeter to find the voltage across the LED.
+We’re going to attach the Teensy to our solderless breadboard. Removing and replacing the teensy can sometimes bend the pins, so we’re going to leave it here for the whole course.
+
+.. warning::
+  If you have to remove the teensy from the board, never hold it by the USB port, as it can easily snap off!
+
+.. image:: ../_static/images/EEA/eea_fig-10.png
+  :align: center
+
+.. container:: exercise
+
+  1D.	Attach the teensy to the left of your breadboard as shown above. If you make sure the breadboard is in the same orientation as this schematic, it will make the following exercises easier to follow.
+
+  1E.	Use the USB to micro-USB cable in your kit to connect the Teensy to your computer. The Teensy comes with a default programme already loaded onto the board, so you should see the LED on the board start to blink slowly as soon as it is powered on.
+
+  1F.	We can see that digital pin 13 has (LED) written beside it. Attach readout wires to the breadboard, and use your multimeter to find the voltage across the LED.
 
 .. image:: ../_static/images/EEA/eea_fig-12.png
   :align: center
@@ -60,39 +94,43 @@ F.	We can see that digital pin 13 has (LED) written beside it. Attach readout wi
 2.	Using an oscilloscope
 ###################################
 
-.. toctree::
-   :hidden:
+Oscilloscopes let us measure time-varying voltages with much higher time resolution than the multimeter.
 
-   sinewave.rst
+.. container:: exercise
 
-A. Your Picoscope comes with two probes, you only need one. Connect it to the ‘A’ port on your oscilloscope.
-B. Set the slider on the probe itself to ‘1x’. Connect your PicoScope to your pc and open up the Picoscope software.
-C. Use the PicoScope to measure the blink signal at the readout wires, as you did with your multimeter. Make sure you play around to find nice X and Y scaling. What shape & amplitude does the signal have?
+    2A. Your Picoscope comes with two probes, you only need one. Connect it to the ‘A’ port on your oscilloscope.
 
-.. image:: ../_static/images/EEA/eea_fig-14.png
-  :align: center
+    2B. Set the slider on the probe itself to ‘1x’. Connect your PicoScope to your computer and open up the Picoscope software.
+
+    2C. Use the PicoScope to measure the blink signal at the readout wires, as you did with your multimeter. Make sure you play around to find nice X and Y scaling. What shape & amplitude does the signal have?
+
+    .. image:: ../_static/images/EEA/eea_fig-14.png
+      :align: center
 
 If you see something odd, check:
 
-*	x-axis scaling (ms/div )
+*	x-axis scaling (ms/div)
 *	y-axis scaling (Auto doesn’t always work)
 *	whether it is set to DC (direct current) or AC (alternating current).
 
 We’ll now use the Teensy microcontroller to output a sine wave, instead of the blink example.
 
-D. Open the Arduino Software Upload the following code to your teensy:
+.. container:: exercise
 
-:ref:`sinewave`
+  2D. Open the Arduino Software Upload the following code to your teensy:
 
-Make sure that under ‘Tools/ Board’ your Teensy 3.2 has been found, and check which USB (COM) port it’s in (‘Tools/Port:).
-If you see ‘Done Uploading’, the Teensy will start giving a sine wave as output from one of the analog output pins.
+  :ref:`sinewave`
 
-E.	Measure the output with your multimeter, from pin A14.
+  Make sure that under ‘Tools/ Board’ your Teensy 3.2 has been found, and check which USB (COM) port it’s in (‘Tools/Port:).
+  If you see ‘Done Uploading’, the Teensy will start giving a sine wave as output from one of the analog output pins.
 
-F.	Connect your oscilloscope probe to A14 and visualise the signal in your PicoScope software.
+  2E.	Measure the output with your multimeter, from pin A14.
 
-.. image:: ../_static/images/EEA/eea_fig-15.png
-  :align: center
+
+  2F.	Connect your oscilloscope probe to A14 and visualise the signal in your PicoScope software.
+
+  .. image:: ../_static/images/EEA/eea_fig-15.png
+    :align: center
 
 3. Ohm’s Law
 ###################################
@@ -110,10 +148,10 @@ When looking at a whole circuit, we can use this to calculate how much current w
   :align: center
   :target: https://tinyurl.com/y4r8nsnj
 
+.. container:: exercise
 
-1.	Click on the image to go to the simulator.
-Right-click on the top wire in the circuit, and then select Edit to display the current through that wire. Double-click on either of the resistors to decrease their value and see how the
-current in the circuit responds.
+3A. Click on the image to go to the simulator.
+Right-click on the top wire in the circuit, and then select Edit to display the current through that wire. Double-click on either of the resistors to decrease their value and see how the current in the circuit responds.
 
 4.	Resistors
 ###################################
@@ -123,10 +161,12 @@ Here’s another simulation demonstrating Ohm’s law. This time, the current mo
   :align: center
   :target: https://www.falstad.com/circuit/e-ohms.html
 
-A.	Display the voltage and current over both resistors in the ‘scope’ (right click/show in new scope). What will happen to the voltage over the left resistor if you double its resistance? What will happen to the current?
-B.	What will happen to the voltage and current over the left-hand resistor? Double the value in the simulator and see if your predictions were correct.
+.. container:: exercise
 
-.. _refvoltagedivider:
+  4A.	Display the voltage and current over both resistors in the ‘scope’ (right click/show in new scope). What will happen to the voltage over the left resistor if you double its resistance? What will happen to the current?
+
+  4B.	What will happen to the voltage and current over the right-hand resistor? Double the value in the simulator and see if your predictions were correct.
+
 
 5.	Voltage Divider
 ###################################
@@ -136,7 +176,7 @@ When we measure how much voltage is provided by a voltage source (such as a batt
 
 Voltage (potential energy) ‘drops’ over each resistor, as potential energy is converted to another form of energy (such as heat or light). In a circuit powered by a 9V battery, all 9V of potential energy from our battery source *must* drop over circuit components, so that we end up back at 0V.
 
-The higher the value of the resistor, the higher the voltage drop over it, but the total voltage drop over the circuit must equal the provided voltage.
+In each circuit below, the current through R1 and R2 must be same. Given the same current, the higher the value of the resistor, the higher the voltage drop over it (V=IR). The total voltage drop over the circuit must equal the provided voltage.
 
 .. image:: ../_static/images/EEA/eea_fig-18.png
   :align: center
@@ -145,23 +185,28 @@ That means that, in a circuit with multiple resistors in series, the ratio of th
 
 .. math::
 
-  |Vout| = |Vin| \frac{R1}{R1+R2}
+  |Vout| = |Vin| \frac{R2}{R1+R2}
 
-A.	Using the simulator (here’s an empty full-screen https://tinyurl.com/y477e9qd) build a voltage divider circuit in which you use a battery and two resistors to provide an 800 mV output voltage |Vout|.
+
+.. container:: exercise
+
+  5A.	Using the simulator (here’s an empty full-screen https://tinyurl.com/y477e9qd) build a voltage divider circuit in which you use a 3V battery and two resistors to provide an 272 mV output voltage |Vout|.
+
 
 On breadboard
 ***********************************
 We’ll now build the circuit you just designed in real life, using a solderless breadboard.
 
-B.	Use the battery holder and two AA batteries to create a 3V source. Use any two resistors from your kit to build a voltage divider, as shown below. If your multimeter doesn’t fit in the breadboard holes, you can place a short piece of wire at each point you want to measure.
+.. container:: exercise
 
-.. image:: ../_static/images/EEA/eea_fig-19.png
-  :align: center
+  5B.	Use the battery holder and two AA batteries to create a 3V source. Use any two resistors from your kit to build a voltage divider, as shown below. If your multimeter doesn’t fit in the breadboard holes, you can place a short piece of wire at each point you want to measure.
 
-.. image:: ../_static/images/EEA/eea_fig-20.png
-  :align: center
+  .. image:: ../_static/images/EEA/eea_fig-19.png
+    :align: center
 
-.. hint::
+  .. image:: ../_static/images/EEA/eea_fig-20.png
+    :align: center
+
   Bonus exercise: Replace one of the resistors to make your output voltage as small as you can get it. What’s the smallest reading you can still pick up with your multimeter? How does this compare to the amplitude of a spike measured in the extracellular space?
 
 6. Capacitors
@@ -171,6 +216,7 @@ B.	Use the battery holder and two AA batteries to create a 3V source. Use any tw
 
 Capacitors, direct current
 ***********************************
+
 Capacitors are made of two conducting plates, separated by an insulating material that prevents the plates from touching. Charges cannot jump through the insulating layer. Instead, charges collect on one plate, forming an electric field that pushes away similar charges on the opposite plate. This movement of charge is what gives us current flow in the circuit, even though charges cannot flow directly through the capacitor.
 
 .. math::
@@ -187,45 +233,64 @@ In this simulation, you can charge and discharge a capacitor and see the current
   :align: center
   :target: https://www.falstad.com/circuit/e-cap.html
 
-A.	Modify the simulation to power an LED (Draw/Outputs and Labels/Add LED) by the capacitor as it discharges. The simulator will turn the LED red when it is on.
+.. container:: exercise
 
-B.	Using the breadboard, build this circuit to charge and discharge one of the large capacitors in your kit.
+  6A.	Modify the simulation to power an LED (Draw/Outputs and Labels/Add LED) by the capacitor as it discharges. The simulator will turn the LED red when it is on.
+
+  6B.	Using the breadboard, build this circuit to charge and discharge one of the large capacitors in your kit.
+
+  .. image:: ../_static/images/EEA/eea_fig-23.png
+    :align: center
+
+  .. image:: ../_static/images/EEA/eea_fig-22.png
+    :align: center
+
+  6C.	In this configuration, you will need to move the + leg of the cap (where the oscilloscope probe is) between GND and +3V. In the schematic, the + leg is connected to +3V, in the photo it is connected to GND.
+  You should see it charge and discharge in your PicoScope trace. How long does it take for the capacitor to charge?
+
+  6D.	Change the value of the resistor. What does this change in your trace? Can you explain why?
 
 
-.. image:: ../_static/images/EEA/eea_fig-22.png
-  :align: center
-
-.. image:: ../_static/images/EEA/eea_fig-23.png
-  :align: center
-
-C.	In this configuration, you will need to move the + leg of the cap (where the oscilloscope probe is) between GND and +3V. In the schematic, the + leg is connected to +3V, in the photo it is connected to GND. You should see it charge and discharge in your PicoScope trace. How long does it take for the capacitor to charge?
-D.	Change the value of the resistor. What does this change in your trace? Can you explain why?
-
-Alternating signal (AC)
-***********************************
+7. Alternating signal (AC)
+###################################
 So far, we have mostly used resistances and Ohm's law to describe how the circuit resists direct current flow. This is applicable to direct current situations (such as batteries), but the action potentials and LFPs we measure from neurons can go in both directions- they are alternating currents. So, how do resistances and capacitors ‘resist’ alternate current flow?
 Alternating currents have different frequencies. Action potentials cause very fast changes in current (and potential), whereas synaptic inputs and their sums are much slower. We have to make sure the frequencies we are interested in can travel through our recording circuit.
 Here is a demo where an alternating signal increases and decreases in frequency. At the bottom of the page, you can see the wave visualised.
 
+.. note::
 
-A.	Press ‘Play Audio’ to hear how the sound is modulated as the frequency increases.
+  When you have capacitors in the simulator, it is a good idea to click 'reset' whenever you make changes, as they will otherwise store charge and can create weird effects.
 
-.. image:: ../_static/images/EEA/eea_fig-24.png
-  :align: center
-  :target: https://tinyurl.com/yyrvugha
+.. container:: exercise
+
+  7A.	Press ‘Play Audio’ to hear how the sound is modulated as the frequency increases.
+
+  .. image:: ../_static/images/EEA/eea_fig-24.png
+    :align: center
+    :target: https://tinyurl.com/yyrvugha
 
 When we were only dealing with resistors, changes in our circuit happened instantly. We have seen that introducing a capacitor into our circuit means that we have to take time into account, as it takes time for the capacitor to charge and discharge. Resistors are not sensitive to changes in frequency, but capacitors are.
 
-.. image:: ../_static/images/EEA/eea_fig-25.png
-  :align: center
-  :target: https://tinyurl.com/y3sbgfl6
+8. Impedance
+###################################
+To describe restriction of direct current flow, we used resistance (R). To describe opposition to alternating current, we need to use the term Impedance (Z), which takes into account time-varying signals. See the theory handout for more information.
 
-Here are two circuits, both provided by an alternating voltage source with a different frequency. In the scope below, the voltage trace of the source and the capacitor are plotted.
+.. container:: exercise
 
-B.	Change the simulator oscilloscope to display the current in the circuit (for instance the current flowing through the stretch of wire).
-C.	Add a third circuit, powered by an alternating voltage source of 120 Hz. What happens as the frequency increases?
+    .. image:: ../_static/images/EEA/eea_fig-25.png
+      :align: center
+      :target: https://tinyurl.com/y3sbgfl6
 
-To describe restriction of direct current flow, we used resistance (R). To describe opposition to alternating current, we need to use the term Impedance (Z)and takes into account time-varying signals. We will discuss this in more detail tomorrow. For now, it is important to know that the impedance magnitude of a capacitor, also called reactance (X\ :sub:`c`), depends on:
+    Here are two circuits, both provided by an alternating voltage source with a different frequency. In the scope below, the voltage trace of the source and the capacitor are plotted.
+
+    8A.	Visualise the current in the circuit (for instance the current flowing through the stretch of wire). You could add a new scope to do this or double-click the wire and 'show current'. Which circuit has higher current?
+
+    8B.	Add a third circuit, powered by an alternating voltage source of 120 Hz. What happens to the current as the frequency increases?
+
+    (Bonus question: what happens to the voltage drop across the capacitor as frequency increases?)
+
+
+The impedance magnitude of a capacitor, also called reactance (X\ :sub:`c`), depends on:
 
 .. math::
 
@@ -236,72 +301,14 @@ Where f is the frequency with which the current alternates, and C is the capacit
 
 When you see a capacitor in a circuit, you know you need to think about the frequency of the signal. Steady direct current has no frequency, so X\ :sub:`c` is infinite: capacitors only pass alternating signals.
 
-Capacitive voltage divider
-***********************************
-Because capacitors impede current flow, we can use them to build voltage dividers, just like the resistor divider shown above. Here is an example:
-
-.. image:: ../_static/images/EEA/eea_fig-26.png
-  :align: center
-  :target: https://tinyurl.com/y5kq7yct
-
-
-A.	Try changing the capacitance values C for the first capacitor. How does this change your output voltage?
-
-.. _refelectrodeeqcir:
-
-7. The equivalent circuit of the electrode
-##############################################
-In the theory handout, we discussed how we can represent an electrode as a circuit containing a resistance and a capacitance. We’ll now build this equivalent circuit in the simulator. We will use this to examine the relationship between |Vec| and |Vin|, i.e., how faithfully the electrode transfers the signal from our neuron to our recording system.
-
-A.	Use the simulator to build the equivalent circuit of the electrode as shown below:
-
-.. image:: ../_static/images/EEA/eea_fig-9.png
-  :align: center
-
-Here are some values to use:
-
-*	|Rm|: the DC resistance of the metal electrode wire, 10-100 Ohms.
-*	Ce: the electrode tip capacitance, generated by the double layer generated around the electrode.  |Ce| ~ 0.2 pF / µm2, so around 10 - 20 pF (if the electrode is unplated)
-*	|Re|: electrode tip resistance, in parallel with |Ce|. ~ 10 to 100 MOhm.
-*	|Cs| is the input shunt capacitance, due to the capacitance along the insulated portion of the electrode and wire (~50-100 pF).
-
-B.	We can’t see much without an input signal. Add a 1KHz alternating voltage supply to mimic the signal coming from your cell.
-C.	Visualise the 1KHz input in the scope.
-D.	Add a new scope with the signal as seen by the end of the electrode wire. This allows us to compare the signal at the extracellular fluid (|Vec|) with what we’re getting out of our electrode (|Vin|). How are they different?
-
-
-The DC resistance of the wire, |Rm|, is very low, so the voltage drop over it is tiny. We can treat this as a short circuit.
-
-E.	Stop the simulation and remove this resistance. You should see that this hardly influences the relationship between the input and output of your electrode. We can therefore simplify our equivalent circuit by leaving this resistance out.
-F.	|Re| and |Ce| are in parallel, and because |Re| has such a high resistance, little current will actually travel over this resistor: |Ce| will have a much bigger effect on the circuit. Simplify the circuit even further by deleting |Re|.
-
-We’re left with our electrode and the long wire represented by two capacitors (|Ce| and |Cs|).
-Above, we described a voltage divider made of two (or more) resistors. Capacitors in series can act as a voltage divider too, splitting the input voltage up according to the ratio of resistance (impedance in the case of capacitors) that they provide.
-
-G.	What is the ratio between |Ce| and |Cs| at the moment? How much of our voltage |Vec| is reaching the output of our electrode, |Vin|?  What could we change to get more of our voltage signal reaching the output? Try changing values in the simulator to get a larger amplitude output signal.
-
-Save your circuit (export as link/text)!
-
-Acknowledgements
+9. Capacitive voltage divider
 ###################################
-Written by:
+Because capacitors impede current flow, we can use them to build voltage dividers, just like the resistor divider shown above.
 
-* Alexandra Leighton
-* Joana Neto
-* Jakob Voigts
-* Aarón Cuevas López
-* Jon Newman
+.. container:: exercise
 
-With material from:
+  .. image:: ../_static/images/EEA/eea_fig-26.png
+    :align: center
+    :target: https://tinyurl.com/y5kq7yct
 
-* Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018
-* Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at TENSS)
-* Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for TENSS)
-* Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp.
-
-Licensing
-###################################
-
-This work is licensed under CC BY-SA 4.0.
-
-To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
+  9A.	Try changing the capacitance values C for the first capacitor. How does this change your output voltage?

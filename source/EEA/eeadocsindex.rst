@@ -19,11 +19,12 @@ EEA Course Documents
    exday1TA.rst
    exday2TA.rst
    exday3TA.rst
+   exday4TA.rst
 
 Materials for students
 ############################
 
-The 'theory' documents are meant for students to read before the online sessions, the 'exercises' documents contain exercises and more theory that will be covered together with the teachers. 
+The 'theory' documents are meant for students to read before the online sessions, the 'exercises' documents contain exercises and more theory that will be covered together with the teachers.
 
 Preparation
 ===================
@@ -57,7 +58,7 @@ Day 2: Protecting Signals
 
 .. raw:: html
 
-  <p><i><a class="reference internal" href="exday2.html#refeday2"><span class="std std-ref">Impedance</span></a>, <a class="reference internal" href="exday2.html#refopampex"><span class="std std-ref">Operational Amplifiers</span></a>, <a class="reference internal" href="exday2.html#refdiffampex"><span class="std std-ref">Differential Amplifiers</span></a></i></p>
+  <p><i><a class="reference internal" href="exday2.html#refeday2"><span class="std std-ref">Impedance</span></a>, <a class="reference internal" href="exday2.html#refopampex"><span class="std std-ref">Operational Amplifiers</span></a></i></p>
 
 Day 3: Referencing and Filtering
 =====================================================
@@ -71,7 +72,7 @@ Day 3: Referencing and Filtering
 
 .. raw:: html
 
-  <p><i><a class="reference internal" href="exday3.html#refeday3"><span class="std std-ref">Build an EMG circuit</span></a></i></p>
+  <p><i> <a class="reference internal" href="exday2.html#refdiffampex"><span class="std std-ref">Differential Amplifiers</span></a><a class="reference internal" href="exday3.html#refeday3"><span class="std std-ref">Build an EMG circuit</span></a></i></p>
 
 Day 4: Synchronization and Digitization
 =====================================================
@@ -80,6 +81,12 @@ Day 4: Synchronization and Digitization
 .. raw:: html
 
   <p><i><a class="reference internal" href="theoryday4.html#reftday4"><span class="std std-ref">Synchronization</span></a>, <a class="reference internal" href="theoryday4.html#refdigitization"><span class="std std-ref">Digitization</span></a></i></p>
+
+:ref:`Exercises <refEDay4>`:
+
+.. raw:: html
+
+  <p><i> <a class="reference internal" href="exday4.html"><span class="std std-ref">Bonsai </span></a><a class="reference internal" href="exday4.html#id7"><span class="std std-ref">EMG Digitization</span></a></i></p>
 
 :ref:`Project <refproject>`
 
@@ -94,3 +101,5 @@ who are taking the course on their own.
 :ref:`Exercises day 2 TA <refEDay2TA>`
 
 :ref:`Exercises day 3 TA <refEDay3TA>`
+
+:ref:`Exercises day 4 TA <refEDay4TA>`

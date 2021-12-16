@@ -21,7 +21,7 @@ from datetime import datetime, timezone
 
 # -- Project information -----------------------------------------------------
 
-project = "Open Ephys EEA Course Materials"
+project = "Open Ephys EEA 2021"
 copyright = "2010-{}, Open Ephys, OEPS & Contributors".format(datetime.now(timezone.utc).year)
 author = "Open Ephys, OEPS & Contributors"
 
@@ -42,8 +42,9 @@ release = "0.0.0"
 # ones.
 extensions = [
     "sphinx.ext.todo",
-    "sphinx.ext.githubpages"]
-    
+    "sphinx.ext.githubpages",
+]
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
 
@@ -101,7 +102,7 @@ html_style = "_static/theme_overrides.css"
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "oe_eea_docs"
+htmlhelp_basename = "oe_eea_docs_dec2021"
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -198,7 +199,7 @@ html_theme_options = {
 #
 html_context = {
      "github_user": "ahleighton",
-     "github_repo": "OE-ephys-course",
+     "github_repo": "cajal_dec_2021",
      "github_version": "main",
      "doc_path": "source",
      "css_files": ["_static/theme_overrides.css"],

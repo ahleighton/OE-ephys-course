@@ -12,4 +12,4 @@ These materials are provided for educational use. Any action you take upon the d
 
 Links To Other Sites
 ###################################
-These pages contain links that will redirect you to third party websites that are not operated by us.
+These pages contain links that will redirect you to third party websites that are not operated by us and that we do not take responsibility for. 
