@@ -15,6 +15,7 @@ EEA Course Documents
    exday1.rst
    exday2.rst
    exday3.rst
+   exday4.rst
    project.rst
    exday1TA.rst
    exday2TA.rst
