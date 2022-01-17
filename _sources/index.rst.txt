@@ -6,11 +6,11 @@ Extracellular Electrophysiology Acquisition
 .. toctree::
   :hidden:
 
-  /Materials/kitlist.rst
-  /Materials/eeadocsindex.rst
-  /Materials/disclaimer_terms_conditions.rst
-  /Materials/license.rst
-  /Materials/acknowledgements.rst
+  /EEA/kitlist.rst
+  /EEA/eeadocsindex.rst
+  /EEA/disclaimer_terms_conditions.rst
+  /EEA/license.rst
+  /EEA/acknowledgements.rst
 
 *Updated December 2021*
 
