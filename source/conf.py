@@ -21,7 +21,7 @@ from datetime import datetime, timezone
 
 # -- Project information -----------------------------------------------------
 
-project = "Open Ephys EEA 2021"
+project = "Open Ephys EEA 2022"
 copyright = "2010-{}, Open Ephys, OEPS & Contributors".format(datetime.now(timezone.utc).year)
 author = "Open Ephys, OEPS & Contributors"
 
@@ -61,7 +61,6 @@ main_doc = "index"
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -102,7 +101,7 @@ html_style = "_static/theme_overrides.css"
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "oe_eea_docs_dec2021"
+htmlhelp_basename = "oe_eea_docs"
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -175,11 +174,30 @@ epub_title = project
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
+
 html_theme_options = {
+    'external_links': [{'name': 'Open Ephys', 'url': 'https://open-ephys.org'},],
+    'navigation_with_keys': True,
+    'use_edit_page_button': True,
+    'body_max_width': None,
+    'show_toc_level': 1,
+    'icon_links': [
+        dict(name='GitHub',
+             url='https://github.com/ahleighton/OE-ephys-course',
+             icon='fab fa-github'),
+        dict(name='Twitter',
+             url='https://twitter.com/openephys',
+             icon='fab fa-twitter'),
+        dict(name='Discord',
+             url='https://discord.gg/vSg5UDcCwB',
+             icon='fab fa-discord')
+    ],
+    'footer_items': ['copyright', 'sphinx-version'],
+}
+html_favicon = "_static/images/logos/favicon.png"
+
     #"github_url": "https://github.com/open-ephys",
     #"twitter_url": "https://twitter.com/openephys",
-    "navigation_with_keys": True,
-    'body_max_width': None,
     # 'search_bar_position' : "navbar",
     #'canonical_url': '',
     #'analytics_id': '',
@@ -193,13 +211,11 @@ html_theme_options = {
     #    'navigation_depth': 4,
     #'includehidden': True,
     #'titles_only': False
-}
 
-#html_favicon = "_static/images/favicon.png"
 #
 html_context = {
      "github_user": "ahleighton",
-     "github_repo": "cajal_dec_2021",
+     "github_repo": "OE-ephys-course",
      "github_version": "main",
      "doc_path": "source",
      "css_files": ["_static/theme_overrides.css"],

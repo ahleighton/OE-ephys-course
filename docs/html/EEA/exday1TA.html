@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Exercises Day 1 TA &#8212; Open Ephys EEA 2022 0.0.0 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../index.html">
+<p class="title">Open Ephys EEA 2022</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="kitlist.html">
+  NeuroKit Contents
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="eeadocsindex.html">
+  EEA Course Documents
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="disclaimer_terms_conditions.html">
+  Terms and Conditions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="license.html">
+  Licensing
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="acknowledgements.html">
+  Acknowledgements
+ </a>
+</li>
+
+    
+    <li class="nav-item">
+        <a class="nav-link nav-external" href="https://open-ephys.org">Open Ephys<i class="fas fa-external-link-alt"></i></a>
+    </li>
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ahleighton/OE-ephys-course" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/openephys" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://discord.gg/vSg5UDcCwB" rel="noopener" target="_blank" title="Discord"><span><i class="fab fa-discord"></i></span>
+            <label class="sr-only">Discord</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-a-multimeter">
+   1.      Using a multimeter
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solderless-breadboard">
+     Solderless Breadboard
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#teensy-microcontroller">
+     Teensy Microcontroller
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-an-oscilloscope">
+   2.      Using an oscilloscope
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ohms-law">
+   3. Ohm’s Law
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resistors">
+   4.      Resistors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#voltage-divider">
+   5.      Voltage Divider
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-simulator">
+     In simulator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#on-breadboard">
+     On breadboard
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#capacitors">
+   6. Capacitors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alternating-signal-ac">
+   7. Alternating signal (AC)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#impedance">
+   8. Impedance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#capacitive-voltage-divider">
+   9. Capacitive voltage divider
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/ahleighton/OE-ephys-course/edit/main/source/EEA/exday1TA.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="exercises-day-1-ta">
+<span id="refeday1ta"></span><h1>Exercises Day 1 TA<a class="headerlink" href="#exercises-day-1-ta" title="Permalink to this headline">#</a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#using-a-multimeter" id="id1">1.      Using a multimeter</a></p>
+<ul>
+<li><p><a class="reference internal" href="#solderless-breadboard" id="id2">Solderless Breadboard</a></p></li>
+<li><p><a class="reference internal" href="#teensy-microcontroller" id="id3">Teensy Microcontroller</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#using-an-oscilloscope" id="id4">2.      Using an oscilloscope</a></p></li>
+<li><p><a class="reference internal" href="#ohms-law" id="id5">3. Ohm’s Law</a></p></li>
+<li><p><a class="reference internal" href="#resistors" id="id6">4.      Resistors</a></p></li>
+<li><p><a class="reference internal" href="#voltage-divider" id="id7">5.      Voltage Divider</a></p>
+<ul>
+<li><p><a class="reference internal" href="#in-simulator" id="id8">In simulator</a></p></li>
+<li><p><a class="reference internal" href="#on-breadboard" id="id9">On breadboard</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#capacitors" id="id10">6. Capacitors</a></p></li>
+<li><p><a class="reference internal" href="#alternating-signal-ac" id="id11">7. Alternating signal (AC)</a></p></li>
+<li><p><a class="reference internal" href="#impedance" id="id12">8. Impedance</a></p></li>
+<li><p><a class="reference internal" href="#capacitive-voltage-divider" id="id13">9. Capacitive voltage divider</a></p></li>
+</ul>
+</div>
+<div class="tabox docutils container">
+<p>Day 1!
+For many students, day 1 is about getting to know the equipment &amp; using the right names for everything. Unless students are already very confident, it’s best to take everyone through day 1 as a group. Particularly at this point, it’s better to over-explain and repeat than risk people getting lost.</p>
+<ul class="simple">
+<li><p>Show them the probes for the oscilloscope. Explain how to use the little hook, and show them the ground probe.</p></li>
+<li><p>Check they understand the multimeter and oscilloscope and what they’re measuring.</p></li>
+<li><p>Make sure they can scale their picoscope software.</p></li>
+<li><p>Explain which parts of the breadboard are connected, and which are not.</p></li>
+<li><p>Check that everyone has a nice signal each time before moving on.</p></li>
+</ul>
+</div>
+<section id="using-a-multimeter">
+<h2><a class="toc-backref" href="#id1">1.      Using a multimeter</a><a class="headerlink" href="#using-a-multimeter" title="Permalink to this headline">#</a></h2>
+<div class="exercise docutils container">
+<p>Setup:</p>
+<ul class="simple">
+<li><p>Make sure the multimeter has 2x AAA batteries installed.</p></li>
+<li><p>Put the red probe in the port marked ‘VmAuA’ to indicate you want to measure Voltage (V), milliAmps (mA), and Resistance (Ohms). We won’t use it in this course, but the 10Amax port can be used to measure high currents.</p></li>
+<li><p>Insert the black probe in the port marked COM (= Common, which will be your ground).</p></li>
+</ul>
+<p>1A. Set the multimeter dial to ‘Ω’. Use your multimeter to measure the resistance of any 3 different resistors in the kit. Check whether the resistance values you read correspond to the coloured bands on the resistors. How is your multimeter measuring this resistance?</p>
+<p>1B. Now set your multimeter to measure the voltage across a AA battery. What voltage do you measure? What does it mean if you record a negative voltage?</p>
+</div>
+<div class="tabox docutils container">
+<p>Setup: Students have to remove the orange cover of the multimeter to insert the batteries, and need a screwdriver.</p>
+<p>1A: To measure resistance, the multimeter generates a voltage at both probes, and measures the current generated between them.</p>
+<p>1B: Should be around 1.2-1.5 V, unless it’s used. If you record a negative voltage you just have to switch the lead around, it’s convention: the positive side of the battery should be the red. Students can use this later in the course (and in life) during troubleshooting, to make sure depleted batteries are not the issue.</p>
+</div>
+<section id="solderless-breadboard">
+<h3><a class="toc-backref" href="#id2">Solderless Breadboard</a><a class="headerlink" href="#solderless-breadboard" title="Permalink to this headline">#</a></h3>
+<p>We are going to build many circuits during this course using components such as resistors, capacitors, and amplifiers. We are going to use a solderless breadboard to form an electrically conductive connection between these components.</p>
+<p>Below is an example breadboard with the backing peeled off, to show what happens inside. Each hole in the breadboard provides access to a metal bar. Inserting a component into the hole connects it electrically to any other component that touches the same bar. Batteries or a different type of power supply are connected to the long ‘rails’ that run along the side of the board, to power the circuit.</p>
+<img alt="../_images/exposed_breadboard.png" class="align-center" src="../_images/exposed_breadboard.png" />
+<img alt="../_images/breadboard_connectivity.png" class="align-center" src="../_images/breadboard_connectivity.png" />
+<p>The most important thing is to remember which holes are connected. Your long breadboard is actually made up of two separate breadboards; as you can see above, the power rails run through rows 0-30 and 31-60. If you want to use the entire length of the breadboard, you will have to connect these rails together with wires.</p>
+<p>If you need to, refer back to the <a class="reference external" href="https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/all#anatomy-of-a-breadboard">reading material</a> for the overview on how to use a breadboard, it also includes some basic troubleshooting which may prove useful if you run into problems.</p>
+</section>
+<section id="teensy-microcontroller">
+<h3><a class="toc-backref" href="#id3">Teensy Microcontroller</a><a class="headerlink" href="#teensy-microcontroller" title="Permalink to this headline">#</a></h3>
+<p>In your kit you will find a Teensy LC. This is a microcontroller, like an Arduino (just a different brand). It is basically a small computer, that can only run 1 program at a time. Using the USB cable provided, you can upload a new programme to the Teensy. Whenever the Teensy is provided with a power source it will try to run that programme.</p>
+<p>The Teensy can perform many different functions, such as generating output voltages or collecting input signals. To do so, it has specialised connectors around the edges of the board. These are called ‘vias’ or ‘pins’. The ‘pinout’ below tells you what each pin of the Teensy can do. For instance, the pin marked ‘20’ on the board is Digital Pin 20 (grey) and Analog pin 6.</p>
+<img alt="../_images/teensy_LC.png" class="align-center" src="../_images/teensy_LC.png" />
+<p>It’s important to distinguish between:</p>
+<ul class="simple">
+<li><p>Ground pins (GND)</p></li>
+<li><p>Analog pins, that can read varying voltages, such as a wave.</p></li>
+<li><p>Digital pins, that can read or write HIGH or LOW values.</p></li>
+</ul>
+<p>Some pins can perform multiple functions. For instance, the pin marked ‘20’ on the board is Digital Pin 20 (grey) and Analog pin 6.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We’re going to attach the Teensy to our solderless breadboard. Removing and replacing the teensy can sometimes bend the pins, so we’re going to leave it here for the whole course. If you do have to remove the teensy from the board, never hold it by the USB port, as it can easily snap off and can’t be fixed!</p>
+</div>
+<img alt="../_images/teensy_on_board.png" class="align-center" src="../_images/teensy_on_board.png" />
+<div class="exercise docutils container">
+<blockquote>
+<div><p>Setup:</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Attach the teensy to the left of your breadboard as shown above. If you make sure the breadboard is in the same orientation as this schematic, it will make the following exercises easier to follow.</p></li>
+<li><p>Use the USB to micro-USB cable in your kit to connect the Teensy to your computer.</p></li>
+<li><p>The Teensy comes with a default programme already loaded onto the board, so you should see the LED on the board start to blink slowly as soon as it is powered on.</p></li>
+</ul>
+<p>1C.   We can see that digital pin 13 has (LED) written beside it. Attach readout wires to the breadboard, and use your multimeter to find the voltage across the LED.</p>
+</div>
+<img alt="../_images/readout_teensy_voltage_schematic.png" class="align-center" src="../_images/readout_teensy_voltage_schematic.png" />
+<img alt="../_images/readout_teensy_voltage_photo.png" class="align-center" src="../_images/readout_teensy_voltage_photo.png" />
+<div class="tabox docutils container">
+<p>Setup:</p>
+<p>If they need to upload the programme again, they can open the Arduino software: examples/basics/blink. Any problems, check:</p>
+<ul class="simple">
+<li><p>Whether the board is set to Teensy LC under Tools/Board</p></li>
+<li><p>The selected port Tools/Port</p></li>
+</ul>
+<p>1C:   Should be around 3.3V when high- they will see intermediate values too due to the low time resolution of the multimeter.</p>
+</div>
+</section>
+</section>
+<section id="using-an-oscilloscope">
+<h2><a class="toc-backref" href="#id4">2.      Using an oscilloscope</a><a class="headerlink" href="#using-an-oscilloscope" title="Permalink to this headline">#</a></h2>
+<p>Oscilloscopes let us measure time-varying voltages with much higher time resolution than the multimeter.</p>
+<div class="exercise docutils container">
+<p>Setup:</p>
+<ul class="simple">
+<li><p>Your Picoscope comes with two probes, you only need one. Connect it to the ‘A’ port on your oscilloscope.</p></li>
+<li><p>Set the slider on the probe itself to ‘1x’.</p></li>
+<li><p>Connect your PicoScope to your computer and open up the Picoscope software.</p></li>
+</ul>
+<p>2A. Use the PicoScope to measure the blink signal at the readout wires, as you did with your multimeter. Make sure you play around to find nice X and Y scaling. What shape &amp; amplitude does the signal have?</p>
+<img alt="../_images/readout_teensy_voltage_picoscope.png" class="align-center" src="../_images/readout_teensy_voltage_picoscope.png" />
+<p>If you see something odd, check:</p>
+<ul class="simple">
+<li><p>x-axis scaling (ms/div)</p></li>
+<li><p>y-axis scaling (Auto doesn’t always work)</p></li>
+<li><p>whether it is set to DC (direct current) or AC (alternating current).</p></li>
+</ul>
+</div>
+<div class="tabox docutils container">
+<p>2A: Should see a clear square wave of around 3.3 amplitude.</p>
+<img alt="../_images/blink_readout_picoscope.png" class="align-center" src="../_images/blink_readout_picoscope.png" />
+<p>NB: sometimes connecting the ground directly to the Teensy causes it to charge (you can see it with the scope) and it can end up disconnecting from the PC and making a mess. They don’t actually need the ground of the scope connected to see the large sine wave because of the scope’s high input impedance. That might be confusing now, but should be clearer after talking about impedance tomorrow.</p>
+<p>!!! If a student’s scope isn’t responding to any input, before panicking check that they are not using the ‘automotive’ version of the Picoscope software as this will make the scope look dead.</p>
+</div>
+<div class="exercise docutils container">
+<p>We’ll now upload a program that outputs a sine wave, instead of a blink.</p>
+<p>Setup:</p>
+<ul class="simple">
+<li><p>Open the Arduino Software Upload the following code to your teensy:</p></li>
+</ul>
+<p><a class="reference internal" href="sinewave.html#sinewave"><span class="std std-ref">Sinewave</span></a></p>
+<ul class="simple">
+<li><p>Make sure that under ‘Tools/ Board’ your Teensy 3.2 has been found, and check which USB (COM) port it’s in (‘Tools/Port:).</p></li>
+<li><p>If you see ‘Done Uploading’, the Teensy will start giving a sine wave as output from one of the analog output pins.</p></li>
+</ul>
+<p>2B.   Connect your oscilloscope probe to A12 and visualise the signal in your PicoScope software.</p>
+<img alt="../_images/sinewave_teensy_pico.png" class="align-center" src="../_images/sinewave_teensy_pico.png" />
+</div>
+<div class="tabox docutils container">
+<p>Setup:</p>
+<ul class="simple">
+<li><p>If they get an error ‘redefinition of void setup’ it’s because they dragged the sketch to the software,  then it gets added to the other sketch, needs to be uploaded separately.</p></li>
+</ul>
+<p>2B: Pin A14 is a DAC, digital to analog converter, so it can take the digital representation and output an analog(ish) sinewave. Make sure they don’t get mixed up with digital pin 14 (analog pin 0).
+These exercises are just to check that they understand the value of having the oscilloscope over the multimeter- that knowing the shape of the signal is important. It helps to keep linking this back to their neural signals- what if you were undersampling them, you wouldn’t see spikes. Make sure they are ok with the idea of alternating signals, and that digital and analog signals are clear as well.</p>
+<img alt="../_images/sinewave_output.png" class="align-center" src="../_images/sinewave_output.png" />
+</div>
+</section>
+<section id="ohms-law">
+<h2><a class="toc-backref" href="#id5">3. Ohm’s Law</a><a class="headerlink" href="#ohms-law" title="Permalink to this headline">#</a></h2>
+<p>During this course, we’ll be using a circuit simulator to build circuits online. This allows us to quickly test our ideas and understanding, and make predictions about what will happen when we build the circuit in real life.</p>
+<p>Ohm’s law describes how potential (V), current (I) and resistance (R) are related:</p>
+<div class="math notranslate nohighlight">
+\[V = IR\]</div>
+<p>When looking at a whole circuit, we can use this to calculate how much current will flow. Here is a simple circuit with a battery and two resistors. Current flows from the positive terminal of the battery to the negative terminal of the battery. The resistors are ‘in series’ as there is only 1 path for current flow.</p>
+<a class="reference external image-reference" href="https://tinyurl.com/y4r8nsnj"><img alt="../_images/resistors_series_sim.png" class="align-center" src="../_images/resistors_series_sim.png" /></a>
+<div class="exercise docutils container">
+<p>3A. Click on the image to go to the simulator.
+Right-click on the top wire in the circuit, and then select Edit to display the current through that wire. Double-click on either of the resistors to decrease their value. What happens to the current in the circuit?</p>
+</div>
+<div class="tabox docutils container">
+<p>3A: The current should increase with decreased circuit resistance. The current change affects the entire circuit; current is the same everywhere.</p>
+</div>
+</section>
+<section id="resistors">
+<h2><a class="toc-backref" href="#id6">4.      Resistors</a><a class="headerlink" href="#resistors" title="Permalink to this headline">#</a></h2>
+<p>Here’s another simulation demonstrating Ohm’s law. This time, the current moves from a 5 Volt voltage source (bright green) into ground (grey, earth), across one of two resistors. The resistors are ‘in parallel’ as current can flow cross over one <em>or</em> the other resistor.</p>
+<a class="reference external image-reference" href="https://www.falstad.com/circuit/e-ohms.html"><img alt="../_images/resistors_parallel_sim.png" class="align-center" src="../_images/resistors_parallel_sim.png" /></a>
+<div class="exercise docutils container">
+<p>Setup:</p>
+<ul class="simple">
+<li><p>Click the image open the simulator.</p></li>
+<li><p>Right click on a resistor and select ‘View in new scope’.</p></li>
+<li><p>Do the same for the other resistor. You can click ‘Reset’ to restart the simulation and synchronise the scopes.</p></li>
+</ul>
+<p>4A. What do you predict will happen to the voltage over the left resistor if you double its resistance? What will happen to the current?</p>
+<p>4B.   What will happen to the voltage and current over the right-hand resistor when the other doubles in resistance?</p>
+<p>Now double the value of the left-hand resistor in the simulator and see if your predictions were correct.</p>
+</div>
+<div class="tabox docutils container">
+<p>Students can get confused about using Ohm’s law over a whole closed circuit (to get current) and over individual components (voltage drops). It helps to remind them at which points in the circuit current must be equal and where voltage must be highest and lowest. Check that they understand why the current across these two resistors can be different, but not in the closed circuit above.
+Decreasing the resistance of any of the two resistors increases the current since they are in series and V = I * (R1+R2). Changes the ratio of the resistors changes the voltage drop over each resistor.</p>
+<p>4A: The voltage will not change; voltage over both resistors is the same as they are connected in parallel to a 5V source. The current will vary in proportion to resistance, so it will halve if the resistance doubles.</p>
+<p>4B: Nothing will change for this branch of the circuit.</p>
+<p>Circuit analysis refresher:
+- In series: same current flowing through components.
+- In parallel: same voltage across components.</p>
+<p>Methods for solving a circuit: Equivalent <a class="reference external" href="https://www.khanacademy.org/science/in-in-class10th-physics/in-in-electricity/in-in-solving-a-circuit-with-series-and-parallel-resistors/v/solved-example-finding-current-voltage-in-a-circuit">https://www.khanacademy.org/science/in-in-class10th-physics/in-in-electricity/in-in-solving-a-circuit-with-series-and-parallel-resistors/v/solved-example-finding-current-voltage-in-a-circuit</a> and more advanced methods <a class="reference external" href="https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-dc-circuit-analysis/a/ee-circuit-analysis-overview">https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-dc-circuit-analysis/a/ee-circuit-analysis-overview</a></p>
+</div>
+</section>
+<section id="voltage-divider">
+<h2><a class="toc-backref" href="#id7">5.      Voltage Divider</a><a class="headerlink" href="#voltage-divider" title="Permalink to this headline">#</a></h2>
+<section id="in-simulator">
+<h3><a class="toc-backref" href="#id8">In simulator</a><a class="headerlink" href="#in-simulator" title="Permalink to this headline">#</a></h3>
+<p>Voltage is always measured relative to a point that we consider 0V. For a battery, the negative terminal is 0V.</p>
+<p>Voltage (potential energy) ‘drops’ over each resistor, as potential energy is converted to another form of energy such as heat or light. In a circuit powered by a 9V battery, all 9V of potential energy from our battery source <em>must</em> drop over circuit components, to return to 0V at the negative terminal of the battery.</p>
+<p>In each circuit below, the current through R1 must equal the current through R2, as they are resistors in series. Following Ohm’s law, given the same current, a higher resistor will have a higher voltage drop (V=IR). The total voltage drop over the circuit must equal the provided voltage.</p>
+<img alt="../_images/voltage_divider.png" class="align-center" src="../_images/voltage_divider.png" />
+<p>Therefore, in a circuit with multiple resistors in series, the ratio of their resistances determines how much voltage will drop over each. We can therefore split up (divide) the voltage from a source across resistors to produce an output voltage V<sub>out</sub>:</p>
+<div class="math notranslate nohighlight">
+\[|Vout| = |Vin| \frac{R2}{R1+R2}\]</div>
+<div class="exercise docutils container">
+<p>5A.   Using the simulator (here’s an empty full-screen <a class="reference external" href="https://tinyurl.com/y477e9qd">https://tinyurl.com/y477e9qd</a>) build a voltage divider circuit in which you use:</p>
+<ul class="simple">
+<li><p>a 3V battery (‘Draw’ a 1-terminal voltage source set to 3V)</p></li>
+<li><p>2 resistors</p></li>
+<li><p>a readout wire (right click and ‘Edit’ to show the voltage V<sub>out</sub>)</p></li>
+</ul>
+<p>To provide an 2.1V output voltage V<sub>out</sub> at the readout wire.</p>
+</div>
+<div class="tabox docutils container">
+<p>5A: Example answer:</p>
+<a class="reference external image-reference" href="https://tinyurl.com/y3fshb8c"><img alt="../_images/voltage_divider_sim_solution.png" class="align-center" src="../_images/voltage_divider_sim_solution.png" /></a>
+<p>Sparkfun overview:
+<a class="reference external" href="https://learn.sparkfun.com/tutorials/voltage-dividers/all#extra-credit-proof">https://learn.sparkfun.com/tutorials/voltage-dividers/all#extra-credit-proof</a></p>
+</div>
+</section>
+<section id="on-breadboard">
+<h3><a class="toc-backref" href="#id9">On breadboard</a><a class="headerlink" href="#on-breadboard" title="Permalink to this headline">#</a></h3>
+<p>We’ll now build the circuit you just designed in real life, using a solderless breadboard.</p>
+<div class="exercise docutils container">
+<p>5B.   Use the battery holder and two AA batteries to create a 3V source. Use any two resistors from your kit to build a voltage divider, as shown below. If your multimeter doesn’t fit in the breadboard holes, you can place a short piece of ‘readout’ wire at each point you want to measure.</p>
+<img alt="../_images/voltage_div_breadboard_photo.png" class="align-center" src="../_images/voltage_div_breadboard_photo.png" />
+<img alt="../_images/voltage_div_breadboard_schematic.png" class="align-center" src="../_images/voltage_div_breadboard_schematic.png" />
+<p>Bonus exercise: Replace one of the resistors to make your output voltage as small as you can get it. What’s the smallest reading you can still pick up with your multimeter? How does this compare to the amplitude of a spike measured in the extracellular space?</p>
+</div>
+<div class="tabox docutils container">
+<p>5B: This should work with a 1k and 2.2k resistor as shown.
+Bonus: The amplitude of a spike in extracellular space is around 100 uV. This should help them to realise how little that is.</p>
+</div>
+</section>
+</section>
+<section id="capacitors">
+<h2><a class="toc-backref" href="#id10">6. Capacitors</a><a class="headerlink" href="#capacitors" title="Permalink to this headline">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Always check whether your capacitors are polarised or non-polarised.</p>
+</div>
+<p>Polarised capacitors must be used in a specific orientation. Usually, ceramic (the yellow ones in your kit) capacitors are not polarised and you can use them in either direction, whereas tube-shaped electrolytic capacitors (the black and blue ones in your kit) <strong>are</strong> polarised. The negative pin is indicated by a ‘-’ marking, and the positive leg is often longer.</p>
+<p><a class="reference internal" href="theoryday1.html#refcapacitancetheory"><span class="std std-ref">As discussed in the Theory handout</span></a>, capacitors occur wherever charge can be separated along two conducting surfaces, separated by an insulating material that prevents the plates from touching. Cell membranes are capacitors, as are electrodes.</p>
+<div class="math notranslate nohighlight">
+\[Q = C * V\]</div>
+<p>The amount of charge (Q) a capacitor can separate depends on is its capacitance (C, measured in farads) and the voltage (V) across the capacitor.</p>
+<a class="reference external image-reference" href="https://tinyurl.com/y5nglnv7"><img alt="../_images/capacitor_membrane.png" class="align-center" src="../_images/capacitor_membrane.png" /></a>
+<div class="exercise docutils container">
+<p>Setup:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you have capacitors in the simulator, it is a good idea to click ‘reset’ whenever you make changes, as they will otherwise store charge and can create weird effects.</p>
+</div>
+<p>The simulator shows a simplified ‘cell membrane’ represented as a capacitor and a resistor. Changing the intracellular voltage supply changes the voltage across the cell membrane. The extracellular fluid is always 0 V.</p>
+<p>6A. The initial voltage over the capacitor is -72mV. Click ‘Reset’ to see current move through the circuit until the capacitor is charged to 72mV. Which direction is the current flow? Why does current stop moving?</p>
+<p>6B. Using the ‘Voltage’ slider, set the voltage supply to 0 mVolts, and then to 20mV. What happens to the current flow in the circuit?</p>
+<p>6C. Can you mimic an action potential by changing the intracellular voltage?</p>
+</div>
+<div class="tabox docutils container">
+<p>6A. Direction: Current flows into the cell, towards the power supply, as it is more negative than 0. Current flows until the capacitor is fully charged. Because charges can’t actually move through the capacitor, but have to interact with each other over the insulating material, once the plates are fully charged no more current can flow.</p>
+<p>6B. Current will start to leave the cell. When we increase the voltage difference over the capacitor, we are providing more charges on 1 side of the capacitor, which can then influence the charges on the other side. Equally, when we decrease the voltage difference, charges are released which result in current flow.</p>
+<p>6C. Move from -70mV up to +20mV, back to -90mV and return to -70mV :)</p>
+</div>
+<div class="exercise docutils container">
+<p>Setup:</p>
+<p>Using the breadboard, build a circuit to charge and discharge one of the large capacitors in your kit. Use a 2.2KOhm resistor.</p>
+<img alt="../_images/charging_cap_schematic.png" class="align-center" src="../_images/charging_cap_schematic.png" />
+<p>6E.   Increase the value of the resistor. What does this change in your trace? Can you explain why?</p>
+</div>
+<div class="tabox docutils container">
+<p>6D &amp; E: Results should look like figure below. Top panel: 220 kOhm, lower panel:very low resistance. Why? Because the resistor is setting the current through the circuit, determining how fast the capacitor is allowed to charge.</p>
+<img alt="../_images/cap_charging_picoscope.png" class="align-center" src="../_images/cap_charging_picoscope.png" />
+</div>
+</section>
+<section id="alternating-signal-ac">
+<h2><a class="toc-backref" href="#id11">7. Alternating signal (AC)</a><a class="headerlink" href="#alternating-signal-ac" title="Permalink to this headline">#</a></h2>
+<p>Batteries provide ‘direct current’ in a single direction. In contrast, the action potentials and LFPs we measure from neurons can go in both directions; they are <strong>alternating currents</strong>. You produced an alternating current yourself in exercise 6C.</p>
+<p>Alternating currents have a frequency, which is the rate at which they alternate direction. Action potentials have a very high frequency, whereas synaptic inputs and their sums are much slower.</p>
+<p>Here is a demo where an alternating signal increases and decreases in frequency. At the bottom of the page, you can see the wave visualised.</p>
+<div class="exercise docutils container">
+<p>7A.   Press ‘Play Audio’ to hear how the sound is modulated as the frequency increases.</p>
+<a class="reference external image-reference" href="https://tinyurl.com/yyrvugha"><img alt="../_images/audio_sweep.png" class="align-center" src="../_images/audio_sweep.png" /></a>
+</div>
+</section>
+<section id="impedance">
+<h2><a class="toc-backref" href="#id12">8. Impedance</a><a class="headerlink" href="#impedance" title="Permalink to this headline">#</a></h2>
+<p>Alternating currents have a frequency, so we need to use the term ‘Impedance’ (Z) instead of ‘Resistance’ to describe how circuit components oppose current flow. See the theory handout for more information.</p>
+<p>The impedance magnitude of a capacitor, also called reactance (X<sub>c</sub>), depends on:</p>
+<div class="math notranslate nohighlight">
+\[Xc = \frac{1}{2 \pi fC}\]</div>
+<p>Where f is the frequency with which the current alternates, and C is the capacitance.</p>
+<p>The impedance provided by capacitors varies with frequency. Because we are interested in signals at specific frequencies (e.g. 1000Hz for action potentials), we have to make sure to build our recording circuit so that the frequencies we are interested in experience little opposition.</p>
+<p>When you see a capacitor in a circuit, you know you need to think about the frequency of the signal. Steady direct current has no frequency, so X<sub>c</sub> is infinite: capacitors only pass alternating signals.</p>
+<div class="exercise docutils container">
+<a class="reference external image-reference" href="https://tinyurl.com/y3sbgfl6"><img alt="../_images/cap_freq_circuits.png" class="align-center" src="../_images/cap_freq_circuits.png" /></a>
+<p>Setup:</p>
+<p>Here are two circuits with an alternating voltage source of 15 and 40 Hz, respectively. In the oscilloscope at the bottom of the simulator, the voltage trace of the source and the capacitor are plotted.</p>
+<p>8A. Visualise the current in the circuit (for instance the current flowing through the stretch of wire). You could add a new scope to do this or double-click the wire and ‘show current’. Which circuit has higher amplitude current?</p>
+<p>8B. Add a third circuit, powered by an alternating voltage source of 120 Hz. What happens to the current as the frequency increases?</p>
+<p>(Bonus question: what happens to the voltage drop across the capacitor as frequency increases?)</p>
+</div>
+<div class="tabox docutils container">
+<p>8A. The 40Hz circuit below has a max current of 20mA, the above circuit has a max of only 12mA.</p>
+<p>8B. This new circuit will have a max current of 24.4 mA.</p>
+<p>With increasing frequency, the impedance of the capacitor decreases. That means that:
+- The overall current in the circuit increases (I = V/R with lower R)
+- The ratio of impedance between the 200 Ohm resistor and the capacitor changes. It’s another voltage divider: the 5 volt must still be ‘spent’ in the circuit, but more of it now goes to the 200 Ohm resistor. The voltage drop over the capacitor reduces as its impedance reduces.</p>
+</div>
+</section>
+<section id="capacitive-voltage-divider">
+<h2><a class="toc-backref" href="#id13">9. Capacitive voltage divider</a><a class="headerlink" href="#capacitive-voltage-divider" title="Permalink to this headline">#</a></h2>
+<p>Because capacitors impede current flow, we can use them to build voltage dividers, just like the resistor divider shown above.</p>
+<div class="exercise docutils container">
+<a class="reference external image-reference" href="https://tinyurl.com/yxdwvulv"><img alt="../_images/cap_voltage_div.png" class="align-center" src="../_images/cap_voltage_div.png" /></a>
+<p>9A.   Change the capacitance values C for the first capacitor to test whether the formula for the resistor voltage divider applies for capacitors.</p>
+</div>
+<div class="tabox docutils container">
+<p>9A. At a fixed frequency we can use the ratio of capacitor impedance to create a voltage divider just as for resistors.</p>
+</div>
+<div class="tabox docutils container">
+<p>Wrap Up</p>
+<p>If they don’t make it through all the exercises that’s ok, but concepts that they should understand are:</p>
+<ul class="simple">
+<li><p>What is an oscilloscope measuring?</p></li>
+<li><p>How does a voltage divider work?  (this keeps coming back during the course)</p></li>
+<li><p>What is the important difference between capacitors and resistors? (Frequency-dependent impedance changes of capacitors, also keeps coming back)</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2010-2022, Open Ephys, OEPS &amp; Contributors.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Exercises Day 4 &#8212; Open Ephys EEA 2022 0.0.0 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Firmata 2000" href="Firmata.html" />
+    <link rel="prev" title="Exercises Day 3" href="exday3.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../index.html">
+<p class="title">Open Ephys EEA 2022</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="kitlist.html">
+  NeuroKit Contents
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="eeadocsindex.html">
+  EEA Course Documents
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="disclaimer_terms_conditions.html">
+  Terms and Conditions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="license.html">
+  Licensing
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="acknowledgements.html">
+  Acknowledgements
+ </a>
+</li>
+
+    
+    <li class="nav-item">
+        <a class="nav-link nav-external" href="https://open-ephys.org">Open Ephys<i class="fas fa-external-link-alt"></i></a>
+    </li>
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ahleighton/OE-ephys-course" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/openephys" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://discord.gg/vSg5UDcCwB" rel="noopener" target="_blank" title="Discord"><span><i class="fab fa-discord"></i></span>
+            <label class="sr-only">Discord</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="safety.html">
+   Safety &amp; Good Practices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="software_requirements.html">
+   Software Requirements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="theoryday1.html">
+   Theory Day 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="theoryday2.html">
+   Theory Day 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="theoryday3.html">
+   Theory Day 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="theoryday4.html">
+   Theory Day 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exday1.html">
+   Exercises Day 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exday2.html">
+   Exercises Day 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exday3.html">
+   Exercises Day 3
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Exercises Day 4
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Firmata.html">
+     Firmata 2000
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="projects.html">
+   Project
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exday1_nokit.html">
+   Exercises Day 1: No Hardware
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exday2_nokit.html">
+   Exercises Day 2: No Hardware
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bonsai">
+   Bonsai
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-and-install-bonsai">
+     Download and install Bonsai
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#video-acquisition">
+     Video Acquisition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#audio-acquisition">
+     Audio Acquisition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#digital-output">
+     Digital Output
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analog-inputs">
+     Analog Inputs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#emg-into-pc">
+   EMG into PC
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shifting-the-signal">
+     Shifting the signal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#streaming-data-from-the-microcontroller">
+     Streaming data from the microcontroller
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/ahleighton/OE-ephys-course/edit/main/source/EEA/exday4.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="exercises-day-4">
+<span id="refeday4"></span><h1>Exercises Day 4<a class="headerlink" href="#exercises-day-4" title="Permalink to this headline">#</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#bonsai" id="id1">Bonsai</a></p>
+<ul>
+<li><p><a class="reference internal" href="#download-and-install-bonsai" id="id2">Download and install Bonsai</a></p></li>
+<li><p><a class="reference internal" href="#video-acquisition" id="id3">Video Acquisition</a></p></li>
+<li><p><a class="reference internal" href="#audio-acquisition" id="id4">Audio Acquisition</a></p></li>
+<li><p><a class="reference internal" href="#digital-output" id="id5">Digital Output</a></p></li>
+<li><p><a class="reference internal" href="#analog-inputs" id="id6">Analog Inputs</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#emg-into-pc" id="id7">EMG into PC</a></p>
+<ul>
+<li><p><a class="reference internal" href="#shifting-the-signal" id="id8">Shifting the signal</a></p></li>
+<li><p><a class="reference internal" href="#streaming-data-from-the-microcontroller" id="id9">Streaming data from the microcontroller</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="bonsai">
+<h2><a class="toc-backref" href="#id1">Bonsai</a><a class="headerlink" href="#bonsai" title="Permalink to this headline">#</a></h2>
+<p>Bonsai is a visual reactive programming language. It’s great for data acquisition, because it can easily deal with multiple datastreams.</p>
+<p>Many of these exercises were adapted from from Neurogears &#64; Wustl19, <a class="reference external" href="https://neurogears.org/wustl-2019/worksheets/acquisition/">https://neurogears.org/wustl-2019/worksheets/acquisition/</a></p>
+<section id="download-and-install-bonsai">
+<h3><a class="toc-backref" href="#id2">Download and install Bonsai</a><a class="headerlink" href="#download-and-install-bonsai" title="Permalink to this headline">#</a></h3>
+<div class="exercise docutils container">
+<ul class="simple">
+<li><p>Download Bonsai from <a class="reference external" href="http://bonsai-rx.org">http://bonsai-rx.org</a>.</p></li>
+<li><p>Install Bonsai - Starter Pack from the package manager (Tools/Manage Packages/)</p></li>
+</ul>
+</div>
+</section>
+<section id="video-acquisition">
+<h3><a class="toc-backref" href="#id3">Video Acquisition</a><a class="headerlink" href="#video-acquisition" title="Permalink to this headline">#</a></h3>
+<p>Bonsai can be used to acquire and record data from many different devices. The first data type we will discuss is an image, which is represented as a 2D matrix of pixels. Each pixel represents either a brightness value in a grayscale image, or a BGR colour value in a colour image.</p>
+<div class="exercise docutils container">
+<p><strong>Exercise 1: Saving a video</strong></p>
+<img alt="../_images/videowriter.png" class="align-center" src="../_images/videowriter.png" />
+<ul class="simple">
+<li><p>Insert a CameraCapture source.</p></li>
+<li><p>Insert a VideoWriter sink.</p></li>
+<li><p>Configure the FileName property of the VideoWriter operator with a file name ending in .avi.</p></li>
+<li><p>Run the workflow and check that it generates a valid video file.</p></li>
+</ul>
+</div>
+</section>
+<section id="audio-acquisition">
+<h3><a class="toc-backref" href="#id4">Audio Acquisition</a><a class="headerlink" href="#audio-acquisition" title="Permalink to this headline">#</a></h3>
+<p>Audio data is captured at much higher temporal sampling frequencies than video. However, the data is typically buffered into chunks of multiple samples before being sent to the computer. Also, multiple audio channels can be acquired simultaneously in the case of a stereo microphone, or high-density ephys probes. For this reason, such multi-sample, multi-channel data is also typically represented as a 2D matrix of amplitude values, where rows represent channels, and columns represent time.</p>
+<div class="exercise docutils container">
+<p><strong>Exercise 2: Saving a WAV file</strong></p>
+<img alt="../_images/audiocapture.png" class="align-center" src="../_images/audiocapture.png" />
+<ul class="simple">
+<li><p>Insert an AudioCapture source.</p></li>
+<li><p>Insert an AudioWriter sink.</p></li>
+<li><p>Configure the FileName property of the AudioWriter operator with a file name ending in .wav.</p></li>
+<li><p>Make sure that the SamplingFrequency property of the AudioWriter matches the frequency of audio capture.</p></li>
+<li><p>Run the workflow for some seconds to record a file.</p></li>
+</ul>
+</div>
+<div class="exercise docutils container">
+<p><strong>Exercise 3: Trigger an auditory stimulus</strong></p>
+<img alt="../_images/audioplayback.png" class="align-center" src="../_images/audioplayback.png" />
+<ul class="simple">
+<li><p>Insert an AudioReader source.</p></li>
+<li><p>Configure the FileName property to point to the audio file you recorded in Exercise 3.</p></li>
+<li><p>Insert an AudioPlayback sink.</p></li>
+<li><p>Run the workflow and check that the sound is played correctly.</p></li>
+</ul>
+<img alt="../_images/audiokeydown.png" class="align-center" src="../_images/audiokeydown.png" />
+<ul class="simple">
+<li><p>Insert a KeyDown source (Windows.input).</p></li>
+<li><p>Set the BufferLength property of the AudioReader to zero, so that all audio data is read into a single buffer.</p></li>
+<li><p>Combine the key press with the audio data using the WithLatestFrom combinator.</p></li>
+<li><p>Right-click the WithLatestFrom operator. Select Output &gt; Item2 from the context menu.</p></li>
+<li><p>Move the AudioPlayback sink so that it follows the selected Item2 member.</p></li>
+<li><p>Run the workflow and press a key. What happens if you press several keys?</p></li>
+</ul>
+</div>
+</section>
+<section id="digital-output">
+<h3><a class="toc-backref" href="#id5">Digital Output</a><a class="headerlink" href="#digital-output" title="Permalink to this headline">#</a></h3>
+<div class="exercise docutils container">
+<p><strong>Exercise 4: Control an LED</strong></p>
+<img alt="../_images/ledon.png" class="align-center" src="../_images/ledon.png" />
+<img alt="../_images/teensy_LC.png" class="align-center" src="../_images/teensy_LC.png" />
+<ul class="simple">
+<li><p>Upload StandardFirmata to your teensy in the Arduino software (File/Examples/Firmata/StandardFirmata)</p></li>
+<li><p>In Bonsai: Insert a Boolean source.</p></li>
+<li><p>Insert a DigitalOutput sink.</p></li>
+<li><p>Set the Pin property of the DigitalOutput operator to 13. This is the LED pin of the teensy- it turns on the LED that is already attached to the board.</p></li>
+<li><p>Configure the PortName property to the COM of your Teensy.</p></li>
+<li><p>Run the workflow and change the Value property of the Boolean operator to toggle the LED on the Teensy on and off.</p></li>
+<li><p>Optional: Change the output pin to pin 12. Connect an LED and a resistor in series to this pin through the breadboard and turn the LED on with Bonsai. The LEDs in your kit have three pins, you can treat them as a normal LED by leaving one of the short pins unconnected.</p></li>
+</ul>
+</div>
+</section>
+<section id="analog-inputs">
+<h3><a class="toc-backref" href="#id6">Analog Inputs</a><a class="headerlink" href="#analog-inputs" title="Permalink to this headline">#</a></h3>
+<div class="exercise docutils container">
+<p><strong>Exercise 5: Touch detector</strong></p>
+<ul class="simple">
+<li><p>Make sure StandardFirmata is still running on your Teensy</p></li>
+<li><p>In Bonsai, insert an AnalogInput node and configure it to Analog Pin 9.</p></li>
+<li><p>Run the workflow and tap the pin on the Teensy.</p></li>
+<li><p>Use the GreaterThan node to create a ‘touch detector’ that gives a 1 each time you tap the teensy.</p></li>
+<li><p>Run the workflow and tap the pin on the Teensy. What do you see?</p></li>
+</ul>
+<p>This workflow is detecting each sample.</p>
+<ul class="simple">
+<li><p>Use the ‘Buffer (Dsp)’ and ‘Average’ nodes to run the detection over more than 1 sample. You will need to output only the first value from Average (it will by default return 4 values, and then the other nodes won’t work as they can only receive 1 value.) Do this by right-clicking on Average/Output/Val0.</p></li>
+<li><p>Run the workflow and tap the pin on the Teensy.</p></li>
+</ul>
+<details><summary> Workflow here:
+</summary><img alt="../_images/Analogdetectbuffered.svg" class="align-center" src="../_images/Analogdetectbuffered.svg" /></div>
+</section>
+</section>
+<section id="emg-into-pc">
+<h2><a class="toc-backref" href="#id7">EMG into PC</a><a class="headerlink" href="#emg-into-pc" title="Permalink to this headline">#</a></h2>
+<p>Use the breadboard circuit you built yesterday. Instead of reading the EMG using the PicoScope, we will feed the signals to our PC through the Teensy microcontroller.</p>
+<section id="shifting-the-signal">
+<h3><a class="toc-backref" href="#id8">Shifting the signal</a><a class="headerlink" href="#shifting-the-signal" title="Permalink to this headline">#</a></h3>
+<p>The EMG signal is from -3 to +3V, because of the battery rails we built. However, the Teensy can only digitize positive voltages. With a simple trick we can shift the signal that comes out of the amplifier from -3 to 3V into the 0-3V range we want, while still allowing the amplifier to detect the full -3 to +3V range.</p>
+<img alt="../_images/voltage_divider_teensy.png" class="align-center" src="../_images/voltage_divider_teensy.png" />
+<p>This voltage divider is not going to mess with our signal, because the signal is protected by the amplifier. You could use almost any reasonable values for R, over 1kΩ, because the output impedance of the instrumentation amplifier is low and the input impedance (of the Teensy analog input) is decently high. If you make R too small, this will still work on paper, but you’re now asking the op-amp to keep shovelling current into ground (or in this case, the 3V rail) through a small resistance, and eventually even an op-amp will not be able to provide enough current to do so.</p>
+</section>
+<section id="streaming-data-from-the-microcontroller">
+<h3><a class="toc-backref" href="#id9">Streaming data from the microcontroller</a><a class="headerlink" href="#streaming-data-from-the-microcontroller" title="Permalink to this headline">#</a></h3>
+<div class="toctree-wrapper compound">
+</div>
+<p>We’re going to start streaming data to the PC, by using our Teensy microcontroller to digitize the analog signals we collect.</p>
+<div class="exercise docutils container">
+<p><strong>Stream EMG through the Teensy</strong></p>
+<ol class="upperalpha">
+<li><p>Connect the output from the amplifier to an analog input pin on the Teensy. Make sure that output goes through a voltage divider that divides it in two.</p>
+<blockquote>
+<div><p>Shown is a 220 Ohm resistor across the instrumentation amplifier, and a voltage divider made of two equal resistors (anything above 1KOhm, see the text on ‘shifting the signal’ ).</p>
+<img alt="../_images/board_emg_teensy.png" class="align-center" src="../_images/board_emg_teensy.png" />
+<img alt="../_images/fritz_emg_teensy.png" class="align-center" src="../_images/fritz_emg_teensy.png" />
+</div></blockquote>
+</li>
+<li><p>Upload <a class="reference internal" href="Firmata.html#firmata"><span class="std std-ref">Firmata 2000</span></a> to your teensy in the Arduino software. This will tell the Teensy to  acquire from analog pins at 2000 samples per second.</p></li>
+<li><p>Open Bonsai and create an Analog Input node. Double-click this node to visualise your signal.</p></li>
+<li><p>Connect this to a ‘Csv Writer’ node to save your signals.</p></li>
+</ol>
+</div>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="exday3.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Exercises Day 3</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Firmata.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Firmata 2000</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2010-2022, Open Ephys, OEPS &amp; Contributors.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

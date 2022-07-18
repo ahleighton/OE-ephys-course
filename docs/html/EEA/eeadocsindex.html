@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>EEA Course Documents &#8212; Open Ephys EEA 2022 0.0.0 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Safety &amp; Good Practices" href="safety.html" />
+    <link rel="prev" title="NeuroKit Contents" href="kitlist.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../index.html">
+<p class="title">Open Ephys EEA 2022</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="kitlist.html">
+  NeuroKit Contents
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  EEA Course Documents
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="disclaimer_terms_conditions.html">
+  Terms and Conditions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="license.html">
+  Licensing
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="acknowledgements.html">
+  Acknowledgements
+ </a>
+</li>
+
+    
+    <li class="nav-item">
+        <a class="nav-link nav-external" href="https://open-ephys.org">Open Ephys<i class="fas fa-external-link-alt"></i></a>
+    </li>
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ahleighton/OE-ephys-course" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/openephys" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://discord.gg/vSg5UDcCwB" rel="noopener" target="_blank" title="Discord"><span><i class="fab fa-discord"></i></span>
+            <label class="sr-only">Discord</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="safety.html">
+   Safety &amp; Good Practices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="software_requirements.html">
+   Software Requirements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="theoryday1.html">
+   Theory Day 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="theoryday2.html">
+   Theory Day 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="theoryday3.html">
+   Theory Day 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="theoryday4.html">
+   Theory Day 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exday1.html">
+   Exercises Day 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exday2.html">
+   Exercises Day 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exday3.html">
+   Exercises Day 3
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="exday4.html">
+   Exercises Day 4
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Firmata.html">
+     Firmata 2000
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="projects.html">
+   Project
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exday1_nokit.html">
+   Exercises Day 1: No Hardware
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exday2_nokit.html">
+   Exercises Day 2: No Hardware
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#materials-for-students">
+   Materials for students
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#day-1-detecting-signals">
+     Day 1: Detecting Signals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#day-2-protecting-signals">
+     Day 2: Protecting Signals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#day-3-referencing-and-filtering">
+     Day 3: Referencing and Filtering
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#day-4-synchronization-and-digitization">
+     Day 4: Synchronization and Digitization
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#no-hardware-kit-use-these-links">
+       No Hardware kit? Use these links!
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/ahleighton/OE-ephys-course/edit/main/source/EEA/eeadocsindex.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="eea-course-documents">
+<span id="refeeadocsindex"></span><h1>EEA Course Documents<a class="headerlink" href="#eea-course-documents" title="Permalink to this headline">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety &amp; Good Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_requirements.html">Software Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theoryday1.html">Theory Day 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theoryday2.html">Theory Day 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theoryday3.html">Theory Day 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theoryday4.html">Theory Day 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exday1.html">Exercises Day 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exday2.html">Exercises Day 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exday3.html">Exercises Day 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exday4.html">Exercises Day 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exday1_nokit.html">Exercises Day 1: No Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exday2_nokit.html">Exercises Day 2: No Hardware</a></li>
+</ul>
+</div>
+<section id="materials-for-students">
+<h2>Materials for students<a class="headerlink" href="#materials-for-students" title="Permalink to this headline">#</a></h2>
+<p>Read the ‘theory’ documents and other assigned reading materials carefully before the start of each session. The ‘exercises’ documents contain exercises and more theory that will be covered together with the teachers. They do contain a lot of text, so reading through the exercises in advance may help you feel more prepared for the session.</p>
+<section id="day-1-detecting-signals">
+<h3>Day 1: Detecting Signals<a class="headerlink" href="#day-1-detecting-signals" title="Permalink to this headline">#</a></h3>
+<p>To read before Day 1:</p>
+<p><a class="reference internal" href="software_requirements.html#refeeasoftware"><span class="std std-ref">Software to Download</span></a></p>
+<p><a class="reference internal" href="safety.html#refeeasafety"><span class="std std-ref">Safety</span></a></p>
+<p><a class="reference external" href="https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/all#anatomy-of-a-breadboard">How to use a breadboard</a></p>
+<p><a class="reference internal" href="theoryday1.html#reftday1"><span class="std std-ref">Theory</span></a>:</p>
+<p><i><a class="reference internal" href="theoryday1.html#reftday1"><span class="std std-ref">Introduction</span></a>, <a class="reference internal" href="theoryday1.html#refwot"><span class="std std-ref">Neuronal signals</span></a>, <a class="reference internal" href="theoryday1.html#refepot"><span class="std std-ref">Electric Potential</span></a>, <a class="reference internal" href="theoryday1.html#refelectrodes"><span class="std std-ref">Electrodes</span></a></i></p><p><a class="reference internal" href="exday1.html#refeday1"><span class="std std-ref">Exercises</span></a>:</p>
+<p><i><a class="reference internal" href="exday1.html#refeday1"><span class="std std-ref">Electronics Refresher</span></a>, <a class="reference internal" href="exday1.html#refvoltagedivider"><span class="std std-ref">Voltage Dividers</span></a>, <a class="reference internal" href="exday1.html#refelectrodeeqcir"><span class="std std-ref">Electrode Equivalent Circuit</span></a></i></p></section>
+<section id="day-2-protecting-signals">
+<h3>Day 2: Protecting Signals<a class="headerlink" href="#day-2-protecting-signals" title="Permalink to this headline">#</a></h3>
+<p><a class="reference internal" href="theoryday2.html#reftday2"><span class="std std-ref">Theory</span></a>:</p>
+<p><i><a class="reference internal" href="theoryday2.html#reftday2"><span class="std std-ref">Impedance</span></a>, <a class="reference internal" href="theoryday2.html#refamplifierintro"><span class="std std-ref">Amplifiers</span></a></i></p><p><a class="reference internal" href="exday2.html#refeday2"><span class="std std-ref">Exercises</span></a>:</p>
+<p><i><a class="reference internal" href="exday2.html#refeday2"><span class="std std-ref">Impedance</span></a>, <a class="reference internal" href="exday2.html#refopampex"><span class="std std-ref">Operational Amplifiers</span></a></i></p></section>
+<section id="day-3-referencing-and-filtering">
+<h3>Day 3: Referencing and Filtering<a class="headerlink" href="#day-3-referencing-and-filtering" title="Permalink to this headline">#</a></h3>
+<p><a class="reference internal" href="theoryday3.html#reftday3"><span class="std std-ref">Theory</span></a>:</p>
+<p><i><a class="reference internal" href="theoryday3.html#reftday3"><span class="std std-ref">Instrumentation Amplifiers</span></a>, <a class="reference internal" href="theoryday3.html#reffilter"><span class="std std-ref">Filtering</span></a>, <a class="reference internal" href="theoryday3.html#refgroundref"><span class="std std-ref">Ground vs Reference</span></a></i></p><p><a class="reference internal" href="exday3.html#refeday3"><span class="std std-ref">Exercises</span></a>:</p>
+<p><i> <a class="reference internal" href="exday2.html#refdiffampex"><span class="std std-ref">Differential Amplifiers</span></a><a class="reference internal" href="exday3.html#refeday3"><span class="std std-ref">Build an EMG circuit</span></a></i></p></section>
+<section id="day-4-synchronization-and-digitization">
+<h3>Day 4: Synchronization and Digitization<a class="headerlink" href="#day-4-synchronization-and-digitization" title="Permalink to this headline">#</a></h3>
+<p><a class="reference internal" href="theoryday4.html#reftday4"><span class="std std-ref">Theory</span></a>:</p>
+<p><i><a class="reference internal" href="theoryday4.html#reftday4"><span class="std std-ref">Synchronization</span></a>, <a class="reference internal" href="theoryday4.html#refdigitization"><span class="std std-ref">Digitization</span></a></i></p><p><a class="reference internal" href="exday4.html#refeday4"><span class="std std-ref">Exercises</span></a>:</p>
+<p><i> <a class="reference internal" href="exday4.html"><span class="std std-ref">Bonsai </span></a><a class="reference internal" href="exday4.html#id7"><span class="std std-ref">EMG Digitization</span></a></i></p><p><a class="reference internal" href="projects.html#refproject"><span class="std std-ref">Project</span></a></p>
+<section id="no-hardware-kit-use-these-links">
+<h4>No Hardware kit? Use these links!<a class="headerlink" href="#no-hardware-kit-use-these-links" title="Permalink to this headline">#</a></h4>
+<p>exday1_nokit.rst
+exday2_nokit.rst</p>
+</section>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="kitlist.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">NeuroKit Contents</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="safety.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Safety &amp; Good Practices</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2010-2022, Open Ephys, OEPS &amp; Contributors.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
