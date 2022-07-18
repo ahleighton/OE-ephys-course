@@ -10,7 +10,7 @@ Sinewave
 
   // Simple DAC sine wave test, 7Hz
 
-  float pin = A14;
+  float pin = A12;
   float freq = 5; // [Hz]
   float adc_depth = 12;
 

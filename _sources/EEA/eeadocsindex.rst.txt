@@ -16,25 +16,26 @@ EEA Course Documents
    exday2.rst
    exday3.rst
    exday4.rst
-   project.rst
-   exday1TA.rst
-   exday2TA.rst
-   exday3TA.rst
-   exday4TA.rst
+   projects.rst
+   exday1_nokit.rst
+   exday2_nokit.rst
 
 Materials for students
 ############################
 
-The 'theory' documents are meant for students to read before the online sessions, the 'exercises' documents contain exercises and more theory that will be covered together with the teachers.
+Read the 'theory' documents and other assigned reading materials carefully before the start of each session. The 'exercises' documents contain exercises and more theory that will be covered together with the teachers. They do contain a lot of text, so reading through the exercises in advance may help you feel more prepared for the session.
 
-Preparation
-===================
+Day 1: Detecting Signals
+=====================================================
+
+To read before Day 1:
+
 :ref:`Software to Download <refeeasoftware>`
 
 :ref:`Safety <refeeasafety>`
 
-Day 1: Detecting Signals
-=====================================================
+`How to use a breadboard <https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/all#anatomy-of-a-breadboard>`_
+
 :ref:`Theory <refTDay1>`:
 
 .. raw:: html
@@ -92,15 +93,9 @@ Day 4: Synchronization and Digitization
 :ref:`Project <refproject>`
 
 
-Versions for teaching/teaching assistants
-###########################################
-These versions include some teaching notes, and may also be useful for students
-who are taking the course on their own.
 
-:ref:`Exercises day 1 TA <refEDay1TA>`
+No Hardware kit? Use these links!
+*********************************************
 
-:ref:`Exercises day 2 TA <refEDay2TA>`
-
-:ref:`Exercises day 3 TA <refEDay3TA>`
-
-:ref:`Exercises day 4 TA <refEDay4TA>`
+exday1_nokit.rst
+exday2_nokit.rst

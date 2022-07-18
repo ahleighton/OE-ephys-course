@@ -9,7 +9,12 @@ Working with these circuits is safe as long as you follow these rules.
 
 1.	Short-circuiting
 ###################################
-A.	Never connect the + and – terminals of your batteries, without a resistor in between. A ‘short-circuit’ is a path of very low resistance, such as a wire. Because of the low resistance, a lot of current can flow (Ohm’s law!). This current will do things like heat up and melt stuff (like your battery holders) *very* quickly.
+A.	**Never** connect the red and black wires of your battery holders to each other, without a resistor in between.
+
+.. image:: ../_static/images/EEA/battery_terminal_spark.png
+  :align: center
+
+A ‘short-circuit’ is a path of very low resistance (like a wire) between two points. Over this low resistance, a lot of current can flow from the 3V terminal of your battery to the 0V terminal (Ohm’s law!). This current will do things like heat up and melt stuff like your battery holders *very* quickly and can even cause fires. 
 B.	It's good practice to wire up your circuit first, and double check connections, before connecting your batteries. Disconnect them again before changing your circuit.
 C.	When you are not using the batteries, either remove them from the battery holder or cover the ends of the wires of the batter holder in tape, to make sure they cannot touch.
 
@@ -22,4 +27,4 @@ C.	If you are using a laptop, disconnect your laptop charger & run from battery 
 
 3.	Amplifiers
 ###################################
-These can be damaged if you provide too much voltage. The configurations we give you in the exercises are ok to use, but double-check you have them wired up correctly before attaching the batteries. If you want to try something new, check the data sheets for the amplifiers first, they will tell you what voltages the amplifiers can handle. 
+These can be damaged if you provide too much voltage. The configurations we give you in the exercises are ok to use, but double-check you have them wired up correctly before attaching the batteries. If you want to try something new, check the data sheets for the amplifiers first, they will tell you what voltages the amplifiers can handle.

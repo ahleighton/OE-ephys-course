@@ -7,6 +7,6 @@ NeuroKit Contents
 A list of equipment provided in the Neurokit
 
 .. csv-table:: NeuroKit Contents
-   :file: ../_static/tables/dec2021kitlist.csv
-   :widths: 30, 50, 20
+   :file: ../_static/tables/may2022kitlist.csv
+   :widths: 80,20
    :header-rows: 1

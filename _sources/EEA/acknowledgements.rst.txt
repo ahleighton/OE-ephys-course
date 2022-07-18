@@ -15,10 +15,11 @@ With material from:
 * Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at  `TENSS <https://www.tenss.ro/>`_)
 * Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for  `TENSS <https://www.tenss.ro/>`_)
 * Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp
+* Breadboard circuit illustration made in Fritzing 
 
 With thoughtful feedback from:
 
 * Antonin Blot
 * Filipe Carvalho
 * Jon Newman
-* Cecilia Herberts
+* Cecilia Herbert

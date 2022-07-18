@@ -40,7 +40,7 @@ Impedance ratios determine signal transmission
 ####################################################
 
 
-.. image:: ../_static/images/EEA/eea_fig-6.png
+.. image:: ../_static/images/EEA/black_box_recording_system.png
   :align: center
 
 The signal |Vec| (V electrode) is measured at the electrode tip. |Vin| is the voltage that enters the acquisition system. |Vout| is the signal output of the acquisition system. Faithfully transferring the signal means not losing (much) signal between |Vec|, |Vin|, and |Vout|. This is all based on the idea of voltage dividers; that the voltage between two impedances in series will be determined by the ratio of their impedances.
@@ -56,19 +56,22 @@ Why is impedance important?
 ***********************************
 The figure below includes the equivalent circuit of the electrode, as discussed yesterday. The signal |Vec| must travel through the electrode, to |Vin|, the voltage before the acquisition system itself. From there, currents coming from our neurons travel to ground. They can do so either by passing through our acquisition system, or (in parallel) they can be lost to ground through shunt impedance. Shunt impedance is primarily capacitive (see section below) and represented as (|Cs|). Shunt capacitances are created by cables or the sides of electrodes; they are 'accidental' but unavoidable capacitances in the system.
 
-.. image:: ../_static/images/EEA/eea_fig-9.png
+.. image:: ../_static/images/EEA/circuit_electrode_shunt_capacitance.png
   :align: center
+  :alt: equivalent circuit of the electrode, with a subsequent capacitance to ground representing shunt capacitance
 
 We can replace these components with a representation of the impedance (Z) they provide.
 
-.. image:: ../_static/images/EEA/eea_fig-77.png
+.. image:: ../_static/images/EEA/circuit_impedance_shunt_capacitance.png
   :align: center
+  :alt: equivalent circuit of electrode, shunt capacitance and acquisition system with each component represented as an impedance.
 
 The impedance of the shunt capacitance, |Zcs| and the impedance of the acquisition system |Za| are impedances in parallel.
 We can simplify our circuit by combining their impedances and calling it |Za|'.
 
-.. image:: ../_static/images/EEA/eea_fig-81.png
+.. image:: ../_static/images/EEA/shunt_amplifier_voltage_divider.png
   :align: center
+  :alt: The electrode impedance and the shunt+amplifier impedance in series, showing how these two parts form a voltage divider.
 
 This gives us a voltage divider, similar to the one we built before, where:
 
@@ -90,7 +93,7 @@ Electrode Impedance
 ***********************************
 The impedance of an electrode is a measure of its ability to resist the flow of charge across the electrode-solution interface (i.e., across the electronic conductor (metal) and ionic conductor (extracellular fluid)). It is the impedance of the whole electrode equivalent circuit we built yesterday, consisting of the resistance of the electrode metal (|Rm|) and the resistance (|Re|) and capacitance (|Ce|) of the double layer at the electrode-solution interface.
 
-.. image:: ../_static/images/EEA/eea_fig-8.png
+.. image:: ../_static/images/EEA/circuit_double_layer_interface.png
   :align: center
 
 In polarized electrodes, the large |Re| prevents much current from taking this route. Therefore, in practice, the electrode is primarily the double-layer capacitor |Ce| in series with |Rm| and |Rs| (Robinson, 1968).
@@ -151,11 +154,12 @@ A perfect 5V voltage source would always provide exactly 5 Volts, no matter what
 
 |
 
-A real voltage source has a bit of output impedance, which means it acts as a voltage source in series with an impedance. This is modelled here (click to open the simulator):
+A real voltage source has a bit of output impedance, which means it acts as a voltage source in series with an impedance. This is modelled here (click to view high-quality version in the simulator):
 
-.. image:: ../_static/images/EEA/eea_fig-83.png
+.. image:: ../_static/images/EEA/output_impedance.png
   :align: center
   :target: https://tinyurl.com/yfvzdxbz
+  :alt: voltage sources passing a resistance to ground. Real and ideal voltage sources are compared, where real voltage sources act as a perfect voltage source in series with a small resistance.
 
 That invisible, small series resistance creates a voltage divider. Though the actual source voltage is the same 5V, the apparent voltage of the source varies depending on the ratio between the output impedance of the source, and the impedance of the rest of the circuit. The lower the impedance of the components used in the rest of the circuit, the higher the relative influence of the source output impedance, and the lower the apparent source voltage (the voltage 'droops').
 
@@ -168,8 +172,9 @@ The operational amplifier
 
 The 'operational amplifier' or 'op-amp' is a crucial building block of our acquisition system. The amplifier has two inputs (+ and -), one output, and two power rails (e.g. a 3 and -3V power rail).
 
-.. image:: ../_static/images/EEA/eea_fig-28.png
+.. image:: ../_static/images/EEA/op-amp-basic.png
   :align: center
+  :alt: an amplifier is represented as a triangle pointing towards the right. It has two inputs (+ and -) and one output.
 
 
 Amplifiers have high input impedance
@@ -178,7 +183,7 @@ The amplifier input impedance, Z\ :sub:`a`\ is very high. The circuit acts as th
 
 Here is the amplifier added into our circuit diagram:
 
-.. image:: ../_static/images/EEA/eea_fig-31.png
+.. image:: ../_static/images/EEA/circuit_electrode_shunt_amp.png
   :align: center
 
 Amplifiers have low output impedance
@@ -189,7 +194,7 @@ Amplifiers output a voltage
 *****************************************************************
 The amplifier outputs the voltage difference between the voltages at its two inputs.
 
-.. image:: ../_static/images/EEA/eea_fig-28.png
+.. image:: ../_static/images/EEA/op-amp-basic.png
   :align: center
 
 How does it do that?
@@ -203,9 +208,10 @@ In this configuration, the amplifier does not distinguish between small or large
 Negative feedback prevents saturation
 ***********************************************************
 
-.. image:: ../_static/images/EEA/eea_fig-29.png
+.. image:: ../_static/images/EEA/op_amp_feedback.png
   :align: center
   :target: https://tinyurl.com/ygby3xqh
+  :alt: an amplifier with the output and negative terminal connected
 
 If we connect the output of the operational amplifier to the ‘-’ input, then the following happens:
 

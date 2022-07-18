@@ -108,8 +108,9 @@ Charged particles exert an electric force on other charged particles.
 
 Coulomb’s law (Eq 1) describes that this force will have both magnitude (it will be bigger if the charges are larger or closer together) and direction (it will either attract or repel, depending on whether the charges have different or the same polarity).
 
-.. image:: ../_static/images/EEA/eea_fig-1.png
+.. image:: ../_static/images/EEA/coulombs_law_visual.png
   :align: center
+  :alt: Representation of a positive and negative charge being attracted towards each other, and two positive charges being repelled from each other.
 
 .. raw:: html
 
@@ -117,8 +118,9 @@ Coulomb’s law (Eq 1) describes that this force will have both magnitude (it wi
 
 We often represent electric force using electric field lines surrounding the particle. These lines show that charges in the vicinity of the particle will be influenced by its force, and that this influence has a particular direction.
 
-.. image:: ../_static/images/EEA/eea_fig-2.png
+.. image:: ../_static/images/EEA/electric_force_field.png
   :align: center
+  :alt: A single positive charge represented as a circle, surrounded by a gradient (which is darkest close to the charge) representing the strength of the electric force, and electric field lines radiating out from the charge.
 
 .. raw:: html
 
@@ -130,10 +132,7 @@ Currents are moving charges
 *********************************************
 Moving charges create a current (I) measured in Ampere. The current tells us how much charge is moving per second.
 
-.. math::
-
-  I = \frac{Q}{t}
-
+.. math::  I = \frac{Q}{t}
 
 .. raw:: html
 
@@ -156,7 +155,7 @@ The bigger the difference in electric potential between A and B, the higher the 
 
 Figure 3 shows a negative and positive charge that are held in a certain position in space. They are not allowed to move, but still exert an attracting force on each other. If we let them, they would move towards each other.
 
-.. image:: ../_static/images/EEA/eea_fig-3.png
+.. image:: ../_static/images/EEA/electric_potential.png
   :align: center
 
 .. raw:: html
@@ -211,6 +210,8 @@ This is described by Ohm's law:
   <center><i> Equation 3: Current (I) is equal to voltage (V) over resistance (R).</i></center>
   <br>
 
+.. _refcapacitancetheory:
+
 Capacitance
 *********************************************
 Capacitors for use in electronics are made of two conducting plates, separated by a thin layer of insulating material that prevents the plates from touching. When a capacitor is connected to a voltage source, such as a battery, charges collect on one of the plates. The charges cannot move through the insulating layer, but they can exert a force through it. This electric force pushes away similar charges on the opposite plate. This movement of charge is what gives us current flow in the circuit, even though charges cannot flow directly through the capacitor.
@@ -225,11 +226,13 @@ Capacitors for use in electronics are made of two conducting plates, separated b
   <br>
 
 
-.. image:: ../_static/images/EEA/eea_fig-3.png
+.. image:: ../_static/images/EEA/capacitor_charge.png
   :align: center
+  :alt: two capacitors are represented as vertical lines. The left capacitor is uncharged, and has balanced positive and negative charges on each side represented as circles with +1 or -1 charge. The capacitor on the right has been charged; a voltage has been applied and now the positive charges are aligned on one side of the plate, and the negative charges on the other.
 
-  An uncharged capacitor has no net charge on either plate (left). A charged capacitor separates charges with positive charges on one plate, and negative charges on the other (right).
+.. raw:: html
 
+  <center><i> Figure 4: An uncharged capacitor has no net charge on either plate (left). A charged capacitor separates charges with positive charges on one plate, and negative charges on the other (right).</i></center>
 
 In a direct current circuit, current will flow while the capacitor charges, as charge is pushed or pulled on either plate. Current flow will stop once the capacitor is fully charged. This electric charge can be discharged (and, for instance, used to power something) by providing a path that connects the positive and negative charges of the capacitor.
 
@@ -298,7 +301,7 @@ Extracellular measurements
 *********************************************
 When we perform extracellular recordings, we are measuring the electric potential induced at the electrode (V\ :sub:`electrode`\ or |Vec| ) by these currents. The effect on the induced electric potential depends on the magnitude, sign and location of the current sources, and on the conductivity of the extracellular medium (Buzsaki et al., 2012; Nunez and Srinivasan, 2006). The effect of these currents diminishes with distance, depending on how well the extracellular fluid conducts electricity. The extracellular potential Vec at position re, with respect to a point at infinity, can be computed with the following equation (Einevoll et al., 2013; Nunez and Srinivasan, 2006):
 
-.. image:: ../_static/images/EEA/eea_fig-68.png
+.. image:: ../_static/images/EEA/point_source_equation.png
   :align: center
 
 .. raw:: html
@@ -315,13 +318,13 @@ Extracellular action potential waveforms usually last on the order of 1-2 ms, an
 
 Fig 5 depicts the (modelled) time-varying extracellular potential measured at 3 different locations close to a neuron. Each extracellular waveform results from the superposition of ionic and capacitive transmembrane currents. The peaks in the potential waveforms correspond to the current (right column) that is dominant at that time-point: the first positive peak of the waveform is attributed to the positive capacitive current resulting from the strong |Na+|  current entering the axon initial segment; the main negative peak is attributed to the influx of |Na+|; and finally, the second positive peak results from repolarizing |K+| current flowing out of the cell (Gold et al., 2006). As the effect of a current decreases with distance, the relative position of the electrode determines the relative contribution of each current and therefore the net overall current shape (left column). For instance, if the electrode is close to the axon initial segment (where many voltage-dependent |Na+| channels are), the |Na+| current will be larger.
 
-.. image:: ../_static/images/EEA/eea_fig-4.png
+.. image:: ../_static/images/EEA/electric_potential_spike.png
   :align: center
 
 .. raw:: html
 
   <center><h5 class="card-title" >Figure 5: Electric potential generated by current sources in a conductive volume.
-    <p style="font-size:12px">  Electric potential generated by current sources in a conductive volume. The extracellular potentials and currents are adapted from Gold et al., 2006. The shape of the extracellular potential waveforms at various spatial positions 're' (marked with black dots) are simulated for a CA1 pyramidal neuron.
+    <p style="font-size:12px; font-weight:200">  Electric potential generated by current sources in a conductive volume. The extracellular potentials and currents are adapted from Gold et al., 2006. The shape of the extracellular potential waveforms at various spatial positions 're' (marked with black dots) are simulated for a CA1 pyramidal neuron.
     Currents: simulated net membrane current (first column) across the soma and proximal dendrites that best estimates the extracellular potential waveform and membrane current components in terms of Na+, K+ and capacitive currents (second column). In the soma, the positive capacitive current coincides with the larger Na+ current. At locations along the apical trunk, the initial capacitive peak becomes visible. In dendritic compartments the membrane depolarization is initially driven by Na+ current from the soma, until local Na+ currents are activated and the action potential regenerates. In the brief time before the local Na+ currents activate, the positive capacitive current is the dominant membrane current and a capacitive-dominant phase is visible in the net current (Gold et al., 2006, adapted by Joana Neto).</p></h5></center>
 
 What does an acquisition system do?
@@ -336,10 +339,14 @@ The extracellular electrophysiology techniques in Table 1 all share the same maj
 
 The signal at the electrode is measured in volts (V) and is very small, in the microvolt range. This is tiny compared to the voltages we encounter elsewhere in the lab: for instance, a battery is around 3V, and the building main power supply  120 or 230V. The world, and your lab, is also an electrically noisy place, which you will know if you have done any ephys before. Electrical equipment, communications devices, but also just walking around (static electricity) creates electric potential differences many orders of magnitude larger than the biological signal you are trying to measure. The acquisition system needs to be designed so that it can detect our tiny signals even in the face of surrounding noise signals generated by other sources.
 
-.. image:: ../_static/images/EEA/eea_fig-6.png
+.. image:: ../_static/images/EEA/black_box_recording_system.png
   :align: center
+  :alt: An extracellular voltage beside a neuron is detected by an electrode. The signal coming out of the electrode is Vin. This goes into a recording system, and the output of that system is called Vout.
 
-  Figure 6: The voltage at the electrode tip (Vec), the voltage after the electrode (Vin) and the voltage we read out (Vout). We can only read Vout, and must design our acquisition system so that it is as similar to Vec as possible.
+.. raw:: html
+
+  <center><h5 class="card-title" >Figure 6: The voltage at the electrode tip (Vec), the voltage after the electrode (Vin) and the voltage we read out (Vout).
+  <p style="font-size:12px; font-weight:200">We can only read Vout, and must design our acquisition system so that it is as similar to Vec as possible.</p></h5></center>
 
 To know what is going on in our cells, we need as much as possible of the signal at the electrode tip (|Vec|) to make it through the electrode (|Vin|) and acquisition system and arrive at our output (|Vout|). If we lose signal magnitude, or lose certain frequencies because of the way our acquisition system is designed, we may miss important data or come to wrong conclusions about our cells. We therefore have to design our acquisition system to pass on signals as faithfully as possible, losing little signal to the environment.
 
@@ -357,8 +364,9 @@ Getting from neuronal activity (|Vec|) to the input to the recording system (|Vi
 
 The transition from ion flow in the extracellular space (neural activity) to electron (electrode) flow is made through the double layer interface. When a metal is placed in a saline solution two phenomena occur: water dipoles close to the metal surface become oriented, and assuming the metal surface is negatively charged, the solution close to the metal surface become depleted of negative ions (anions), leaving behind a cloud of positive ions (cations). This cloud of cations screens the electric field caused by the excess of charge on the metal. Electroneutrality across the interface requires that the charge on the metal is always equal and opposite to the total charge on the solution side of the interface (Musa et al., 2012). The resulting charge distribution - two narrow regions of equal and opposite charge - is known as the electrical double layer (EDL). The double layer region (represented in pink in the schematics) has the ability to separate charges on both sides, and therefore a capacitance '|Ce|'. The double layer also opposes the direct flow of current across it, and therefore has a resistance '|Re|'.
 
-.. image:: ../_static/images/EEA/eea_fig-7.png
+.. image:: ../_static/images/EEA/double_layer_interface.png
   :align: center
+  :alt: Depicts cartoon of metal and solution touching (electrode and extracellular fluid respectively). Negative ions within the metal are attracted to positive charges in the solution.
 
 .. raw:: html
 
@@ -367,8 +375,9 @@ The transition from ion flow in the extracellular space (neural activity) to ele
 
 We can describe the electrical behaviour of electrodes by making an ‘equivalent circuit’, getting rid of the specific shape or material and just representing the electrical properties of the double layer interface:
 
-.. image:: ../_static/images/EEA/eea_fig-8.png
+.. image:: ../_static/images/EEA/circuit_double_layer_interface.png
   :align: center
+  :alt: The components of the double layer interface abstracted as electrical components, where the metal electrode is a resistance called Rm, the double layer interface is a capacitor and resistor in parallel called Re and Ce, and the extracellular solution is a resistance named Rs.
 
 .. raw:: html
 
