@@ -59,7 +59,6 @@
 
 /* navigation bar: text*/
 .navbar a {
-  color: black !important;
   font-family: "Source Sans", sans-serif;
   font-size: 1rem;
   transition-duration: 0.4s;
