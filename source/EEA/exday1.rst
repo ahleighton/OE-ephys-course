@@ -61,7 +61,7 @@ Teensy Microcontroller
 **********************************
 In your kit you will find a Teensy LC. This is a microcontroller, like an Arduino (just a different brand). It is basically a small computer, that can only run 1 program at a time. Using the USB cable provided, you can upload a new programme to the Teensy. Whenever the Teensy is provided with a power source it will try to run that programme.
 
-The Teensy can perform many different functions, such as generating output voltages or collecting input signals. To do so, it has specialised connectors around the edges of the board. These are called 'vias' or 'pins'. The 'pinout' below tells you what each pin of the Teensy can do. For instance, the pin marked '20' on the board is Digital Pin 20 (grey) and Analog pin 6.
+The Teensy can perform many different functions, such as generating output voltages or collecting input signals. To do so, it has specialised connectors around the edges of the board. These are called 'vias' or 'pins'. The 'pinout' below tells you what each pin of the Teensy can do. For instance, the pin marked '20' on the board is Digital Pin 20 (grey) and Analog pin 6 (orange).
 
 .. image:: ../_static/images/EEA/teensy_LC.png
   :align: center
