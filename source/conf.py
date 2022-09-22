@@ -25,10 +25,11 @@ project = "Open Ephys EEA 2022"
 copyright = "2010-{}, Open Ephys, OEPS & Contributors".format(datetime.now(timezone.utc).year)
 author = "Open Ephys, OEPS & Contributors"
 
+
 # The short X.Y version
-version = "0.0"
+# version = "0.0"
 # The full version, including alpha/beta/rc tags
-release = "0.0.0"
+# release = "0.0.0"
 
 
 # -- General configuration ---------------------------------------------------
@@ -78,7 +79,7 @@ todo_include_todos = True
 # a list of builtin themes.
 #
 html_theme = "pydata_sphinx_theme"
-#html_logo = "_static/images/oe_logo_circle.svg"
+html_logo = "_static/images/logos/oe_logo_course.svg"
 html_scaled_image_link = True
 
 

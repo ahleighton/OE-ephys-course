@@ -1,10 +1,10 @@
 .. _Firmata:
 
 ***********************************
-Firmata 2000
+Firmata for Cajal Course
 ***********************************
 
-// Copy this text to a new sketch in the Arduino software (clear the default 'void loop etc first) and save as Firmata_cajal.ino. This Firmata runs every 500 ms.
+// Copy this text to a new sketch in the Arduino software (clear the default 'void loop etc first) and save as firmata_cajal.ino. Compile and upload to your Teensy. 
 
 .. code-block::
 
