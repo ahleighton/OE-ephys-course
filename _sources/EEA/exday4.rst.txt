@@ -93,6 +93,12 @@ Audio data is captured at much higher temporal sampling frequencies than video. 
 Digital Output
 *************************************
 
+.. toctree::
+  :maxdepth: 1
+  :hidden:
+
+  Firmata_cajal.rst
+
 .. container:: exercise
 
     **Exercise 4: Control an LED**
@@ -104,7 +110,7 @@ Digital Output
        :align: center
 
 
-    • Upload StandardFirmata to your teensy in the Arduino software (File/Examples/Firmata/StandardFirmata)
+    • Upload :ref:`Firmata` to your teensy in the Arduino software.
     • In Bonsai: Insert a Boolean source.
     • Insert a DigitalOutput sink.
     • Set the Pin property of the DigitalOutput operator to 13. This is the LED pin of the teensy- it turns on the LED that is already attached to the board.
@@ -120,7 +126,7 @@ Analog Inputs
     **Exercise 5: Touch detector**
 
 
-    • Make sure StandardFirmata is still running on your Teensy
+    • Make sure the same Firmata file as above is still running on your Teensy
     • In Bonsai, insert an AnalogInput node and configure it to Analog Pin 9.
     • Run the workflow and tap the pin on the Teensy.
 
@@ -166,7 +172,7 @@ Streaming data from the microcontroller
   :maxdepth: 1
   :hidden:
 
-  Firmata
+  Firmata_cajal.rst
 
 
 We’re going to start streaming data to the PC, by using our Teensy microcontroller to digitize the analog signals we collect.
@@ -187,7 +193,7 @@ We’re going to start streaming data to the PC, by using our Teensy microcontro
         :align: center
 
 
-  B. Upload :ref:`Firmata` to your teensy in the Arduino software. This will tell the Teensy to  acquire from analog pins at 2000 samples per second.
+  B. Unless still uploaded, reupload :ref:`Firmata` to your teensy in the Arduino software. This will tell the Teensy to acquire from analog pins at 2000 samples per second.
 
   C. Open Bonsai and create an Analog Input node. Double-click this node to visualise your signal.
 

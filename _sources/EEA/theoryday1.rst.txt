@@ -25,6 +25,8 @@ Theory Day 1
   :depth: 2
   :local:
 
+.. _refwot:
+
 Introduction
 ###################################
 Welcome to the Open Ephys Cajal course on extracellular electrophysiology acquisition!
