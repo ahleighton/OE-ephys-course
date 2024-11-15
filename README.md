@@ -1,4 +1,4 @@
-# OE_Neurokits
+# Open Ephys Extracellular Electrophysiology Acquisition NeuroKit Course
 
-These are the materials as used for the Open Ephys/Production Site Course on Extracellular Electrophysiology Acquisition. 
+The course materials for the Open Ephys Extracellular Electrophysiology Acquisition NeuroKit Course are now located [here](https://open-ephys.github.io/ephys-course/>).
 
